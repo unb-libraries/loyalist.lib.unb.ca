@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row clearfix">
+
+    <div class="col-md-3">
+      <a href="">
+        <img id="unb-footer-logo" class="footer-logo left-block"
+        src="/themes/custom/loyalist_lib_unb_ca/images/unb-logo.png">
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="">
+        <img id="dal-footer-logo" class="footer-logo left-block"
+        src="/themes/custom/loyalist_lib_unb_ca/images/dal-logo.png">
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a href="">
+        <img id="sshrc-footer-logo" class="left-logo center-block"
+        src="/themes/custom/loyalist_lib_unb_ca/images/sshrc-logo.png">
+      </a>
+    </div>
+  </div>
+</div>
+
+{% if content %}
+<div id="{{ id }}-wrapper"><footer id="{{ id }}" class="row" role="contentinfo">
+  <div{{ attributes }}>
+    {{ content }}
+  </div>
+</footer><div><!-- /#{{ id }}, /#{{ id }}-wrapper -->
+{% endif %}
+
+{% if logged_in %}
+  <br>
+  <a href="/node/add/loyalist_source">Add Source</a>
+  | <a href="/node/add/loyalist_recipe">Add Recipe</a>
+  | <a href="/all-recipes">All Recipes</a>
+  | <a href="/user/{{ user.id }}/edit">Change Password</a>
+  | <a href="/user/logout">Log Out</a>
+{% else %}
+  <a href="/user">Log in</a>
+{% endif %}

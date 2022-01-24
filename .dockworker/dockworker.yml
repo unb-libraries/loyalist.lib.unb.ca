@@ -1,0 +1,25 @@
+dockworker:
+  version: '4'
+  application:
+    name: loyalist.lib.unb.ca
+    finish_marker: '99_zz_notify_user_URI'
+    project_prefix: LOYALIST
+    upstream_images:
+      - ghcr.io/unb-libraries/drupal:9.x-1.x-unblib
+    uuid: 3113
+  deployment:
+    environments:
+      - dev
+      - prod
+  drupal:
+    major: 9
+  github:
+    repo: loyalist.lib.unb.ca
+    owner: unb-libraries
+  image:
+    push_branches:
+      - dev
+      - prod
+    name: ghcr.io/unb-libraries/loyalist.lib.unb.ca
+    date_tag_image: true
+    repository: ghcr

@@ -1,0 +1,22 @@
+uuid: d7fbcf4b-b6a0-4f43-94bf-10b957cf4d12
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - loyalist_lib_unb_ca
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: loyalist_lib_unb_ca_messages
+theme: loyalist_lib_unb_ca
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,23 @@
+{
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "name": "unb-libraries/loyalist.lib.unb.ca",
+  "description": "Scaffold and provision local development for loyalist.lib.unb.ca",
+  "config": {
+    "preferred-install": {
+      "*": "dist"
+    }
+  },
+  "require": {
+    "unb-libraries/unb_lib_theme": "dev-9.x-bootstrap-3.x"
+  },
+  "require-dev": {
+    "unb-libraries/dockworker-drupal": "~4"
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "vendor/bin/dockworker dockworker:git:setup-hooks"
+    ]
+  }
+}

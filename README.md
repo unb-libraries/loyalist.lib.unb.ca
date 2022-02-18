@@ -1,6 +1,6 @@
 ![loyalist.lib.unb.ca screenshot](https://github.com/unb-libraries/loyalist.lib.unb.ca/raw/prod/.dockworker/screenshot.png "loyalist.lib.unb.ca screenshot")
 # [loyalist.lib.unb.ca](https://loyalist.lib.unb.ca/) : Lean Instance Repository
-[![Build Status](https://github.com/unb-libraries/loyalist.lib.unb.ca/actions/workflows/test-suite.yaml/badge.svg?branch=prod)](https://github.com/unb-libraries/loyalist.lib.unb.ca/actions/workflows/test-suite.yaml)
+[![Build Status](https://github.com/unb-libraries/loyalist.lib.unb.ca/actions/workflows/deployment-workflow.yaml/badge.svg?branch=prod)](https://github.com/unb-libraries/loyalist.lib.unb.ca/actions/workflows/deployment-workflow.yaml)
 [![GitHub license](https://img.shields.io/github/license/unb-libraries/loyalist.lib.unb.ca)](https://github.com/unb-libraries/loyalist.lib.unb.ca/blob/prod/LICENSE)
 ![GitHub repo size](https://img.shields.io/github/repo-size/unb-libraries/loyalist.lib.unb.ca?label=lean%20repo%20size)
 
@@ -30,6 +30,7 @@ Run ```vendor/bin/dockworker``` to list available dockworker commands for this a
 ## Author / Contributors
 This application was created at [![UNB Libraries](https://github.com/unb-libraries/assets/raw/master/unblibbadge.png "UNB Libraries")](https://lib.unb.ca) by the following humans:
 
+<a href="https://github.com/JacobSanford"><img src="https://avatars.githubusercontent.com/u/244894?v=3" title="Jacob Sanford" width="128" height="128"></a>
 
 ## License
 - As part of our 'open' ethos, UNB Libraries licenses its applications and workflows to be freely available to all whenever possible.

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: drupal
-    appMajor: "8"
+    appMajor: "9"
     instance: loyalist.lib.unb.ca
     tier: frontend
     uri: dev-loyalist.lib.unb.ca
@@ -27,7 +27,7 @@ spec:
     metadata:
       labels:
         app: drupal
-        appMajor: "8"
+        appMajor: "9"
         instance: loyalist.lib.unb.ca
         tier: frontend
         uri: dev-loyalist.lib.unb.ca
@@ -54,6 +54,12 @@ spec:
             initialDelaySeconds: 60
             timeoutSeconds: 3
             periodSeconds: 15
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 80
+            failureThreshold: 30
+            periodSeconds: 10
           env:
             -
               name: DEPLOY_ENV

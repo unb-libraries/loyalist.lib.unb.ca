@@ -7,7 +7,7 @@ metadata:
     app: drupal
     tier: backup
 spec:
-  schedule: "08 03 * * *"
+  schedule: "56 04 * * *"
   startingDeadlineSeconds: 480
   concurrencyPolicy: Forbid
   jobTemplate:
@@ -76,7 +76,7 @@ metadata:
     app: drupal
     tier: backup
 spec:
-  schedule: "23 03 * * 1"
+  schedule: "28 04 * * 1"
   startingDeadlineSeconds: 480
   concurrencyPolicy: Forbid
   jobTemplate:
@@ -148,7 +148,7 @@ metadata:
     app: drupal
     tier: backup
 spec:
-  schedule: "09 04 18 * *"
+  schedule: "02 04 14 * *"
   startingDeadlineSeconds: 480
   concurrencyPolicy: Forbid
   jobTemplate:

@@ -6,6 +6,8 @@ module:
   file: 0
   filter: 0
   health_check: 0
+  minimal: 1000
+  mysql: 0
   node: 0
   page_cache: 0
   path_alias: 0
@@ -14,7 +16,6 @@ module:
   text: 0
   update: 0
   user: 0
-  minimal: 1000
 theme:
   stark: 0
   bootstrap: 0

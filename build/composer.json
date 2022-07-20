@@ -77,7 +77,7 @@
     "drupal/search_api_solr": "4.2.1",
     "drupal/twig_tweak": "2.9",
     "unb-libraries/drupal-builder": "^9",
-    "unb-libraries/unb_lib_theme": "dev-9.x-bootstrap-3.x"
+    "unb-libraries/unb_lib_theme": "dev-9.x-4.x"
   },
   "require-dev": {
     "unb-libraries/drupal-development-libraries": "^9"

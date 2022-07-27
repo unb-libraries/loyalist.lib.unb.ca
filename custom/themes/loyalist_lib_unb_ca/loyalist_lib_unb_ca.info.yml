@@ -16,12 +16,13 @@ regions:
   header: 'Top Bar'
   highlighted: 'Highlighted'
   help: 'Help'
+  breadcrumb: Breadcrumb
   content: 'Content'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
+  footer_top_first: 'Footer top first'
+  footer_top_second: 'Footer top second'
   footer: 'Footer'
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
 
 ckeditor_stylesheets:
   - css/ckeditor-styles.css

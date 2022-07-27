@@ -13,6 +13,7 @@
   "name": "unb-libraries/loyalist.lib.unb.ca",
   "prefer-stable": true,
   "require": {
+    "twbs/bootstrap": "~4.5.3",
     "unb-libraries/unb_lib_theme": "dev-9.x-4.x"
   },
   "require-dev": {

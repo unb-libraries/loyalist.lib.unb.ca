@@ -1,4 +1,4 @@
-uuid: 0591067e-37b1-45fb-a45e-2a7eeaaebbdd
+uuid: a78ee74c-1b64-401d-a42e-59d7db0e2583
 langcode: en
 status: true
 dependencies:
@@ -7,20 +7,20 @@ dependencies:
   module:
     - system
   theme:
-    - loyalist_lib_unb_ca
+    - seven
 _core:
   default_config_hash: uUF2GYN2x5fcmOu26M-gwqUA-yVWMDD_MRmnYfmPzlM
-id: loyalist_lib_unb_ca_tools
-theme: loyalist_lib_unb_ca
-region: sidebar_first
+id: seven_tools
+theme: seven
+region: header
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'
 settings:
   id: 'system_menu_block:tools'
   label: Tools
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false

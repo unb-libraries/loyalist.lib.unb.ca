@@ -64,25 +64,25 @@
       "url": "https://packages.drupal.org/8"
     },
     {
-      "type": "package",
       "package": {
-        "name": "fortawesome/font-awesome",
-        "version": "5.15.4",
-        "type": "drupal-library",
         "dist": {
           "type": "zip",
           "url": "https://github.com/FortAwesome/Font-Awesome/archive/refs/tags/5.15.4.zip"
         },
         "extra": {
           "installer-name": "fontawesome"
-        }
-      }
+        },
+        "name": "fortawesome/font-awesome",
+        "type": "drupal-library",
+        "version": "5.15.4"
+      },
+      "type": "package"
     }
   ],
   "require": {
     "drupal/admin_toolbar": "3.1.0",
     "drupal/bootstrap_barrio": "5.1.6",
-    "drupal/core": "9.4.3",
+    "drupal/core": "9.4.5",
     "drupal/entity_reference_revisions": "1.9",
     "drupal/fontawesome": "2.19",
     "drupal/google_analytics": "2.5",

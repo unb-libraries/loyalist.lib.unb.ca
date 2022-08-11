@@ -1,15 +1,17 @@
-uuid: feed6551-43c0-4de0-a229-fe09ceaa7be5
+uuid: f006f279-3d16-465f-9645-0684ebc56623
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - loyalist_lib_unb_ca
-id: mainpagecontent
-theme: loyalist_lib_unb_ca
+    - bootstrap5
+_core:
+  default_config_hash: 1o0W13wt232YmsDYiRA5xtlFq0L2WNS7FmIVbBeuhIY
+id: bootstrap5_content
+theme: bootstrap5
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: system_main_block
 settings:

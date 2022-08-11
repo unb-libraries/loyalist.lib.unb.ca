@@ -1,15 +1,15 @@
-uuid: 7513c09c-4ae3-446d-bfd8-6321ef59cf5a
+uuid: 2e2778e4-bfce-4330-afd7-ca0ea25315a0
 langcode: en
 status: true
 dependencies:
   theme:
-    - loyalist_lib_unb_ca
+    - bootstrap5
 _core:
-  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
-id: loyalist_lib_unb_ca_local_actions
-theme: loyalist_lib_unb_ca
+  default_config_hash: MBqG1B5mr5-fPSCDyTR6z2zVTRxZ10XeS_pAw6C7za4
+id: bootstrap5_local_actions
+theme: bootstrap5
 region: content
-weight: -3
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

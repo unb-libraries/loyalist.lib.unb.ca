@@ -1,13 +1,15 @@
-uuid: feed6551-43c0-4de0-a229-fe09ceaa7be5
+uuid: 366373c2-2f2f-4e04-985d-1aae9add7700
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - loyalist_lib_unb_ca
-id: mainpagecontent
-theme: loyalist_lib_unb_ca
+    - claro
+_core:
+  default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
+id: claro_content
+theme: claro
 region: content
 weight: 0
 provider: null

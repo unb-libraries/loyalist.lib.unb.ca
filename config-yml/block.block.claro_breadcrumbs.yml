@@ -1,13 +1,15 @@
-uuid: cd1aca05-608a-48cc-9d6c-ce02a95e9390
+uuid: 14d528df-15c6-418a-8dee-a0085cfa0325
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - loyalist_lib_unb_ca
-id: breadcrumbs
-theme: loyalist_lib_unb_ca
+    - claro
+_core:
+  default_config_hash: NjcxOBrPOiK5-38t56DwFBDVY4yer7YSlbRWXFuHe7A
+id: claro_breadcrumbs
+theme: claro
 region: breadcrumb
 weight: 0
 provider: null

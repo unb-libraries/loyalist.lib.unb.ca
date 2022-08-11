@@ -1,22 +1,22 @@
-uuid: 6a25d468-154e-4ebb-8faf-e1bc3dc3ef09
+uuid: 09802306-09a5-4e93-875c-a47b583d6b12
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - seven
+    - bootstrap5
 _core:
-  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
-id: seven_messages
-theme: seven
-region: highlighted
-weight: 0
+  default_config_hash: 9LdMj38y4GDi23GrIUtIZIV1bJEn1C47N19jrswvcLc
+id: bootstrap5_messages
+theme: bootstrap5
+region: content
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
-  label: 'Status messages'
+  label: Messages
   label_display: '0'
   provider: system
 visibility: {  }

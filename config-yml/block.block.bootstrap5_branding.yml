@@ -1,17 +1,17 @@
-uuid: 57049129-8c3c-4b4b-9e12-67f62d1ff8d8
+uuid: 261af5ae-8855-44e0-8526-bcb16e4be489
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - seven
+    - bootstrap5
 _core:
-  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
-id: seven_branding
-theme: seven
-region: header
-weight: 0
+  default_config_hash: nuW1Z5MdvzbCCEZ9RQojaEWB6Zni32zTq-v5OWbS2sc
+id: bootstrap5_branding
+theme: bootstrap5
+region: nav_branding
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:
@@ -21,5 +21,5 @@ settings:
   provider: system
   use_site_logo: true
   use_site_name: true
-  use_site_slogan: true
+  use_site_slogan: false
 visibility: {  }

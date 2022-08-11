@@ -1,15 +1,15 @@
-uuid: e6512829-cdf4-462d-81e8-d3854a6ee061
+uuid: 26312251-cd8d-42ed-afb3-6298368dedd3
 langcode: en
 status: true
 dependencies:
   theme:
-    - seven
+    - bootstrap5
 _core:
-  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
-id: seven_page_title
-theme: seven
+  default_config_hash: qYppfxaWSy6BwGNKdMch1PeUA24PlRTt39jQft6A6Kg
+id: bootstrap5_page_title
+theme: bootstrap5
 region: content
-weight: -30
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

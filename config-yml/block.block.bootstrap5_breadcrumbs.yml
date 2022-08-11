@@ -1,13 +1,15 @@
-uuid: cd1aca05-608a-48cc-9d6c-ce02a95e9390
+uuid: 205f8ddb-35de-482a-9531-8aae754546a9
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - loyalist_lib_unb_ca
-id: breadcrumbs
-theme: loyalist_lib_unb_ca
+    - bootstrap5
+_core:
+  default_config_hash: VShtwe72J2j41BJzApoNbs8l554EpngM5RTObxM7yiw
+id: bootstrap5_breadcrumbs
+theme: bootstrap5
 region: breadcrumb
 weight: 0
 provider: null

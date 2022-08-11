@@ -2,17 +2,28 @@ favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
   url: 'http://local-loyalist.lib.unb.ca:3113/themes/contrib/unb_lib_theme/favicon.ico'
-  use_default: true
+  use_default: 1
 features:
   comment_user_picture: true
   comment_user_verification: true
-  favicon: true
+  favicon: 1
   node_user_picture: false
 logo:
   path: ''
   url: ''
-  use_default: true
+  use_default: 1
 schemas:
   bootstrap: 8000
   unb_lib_theme: 8000
   loyalist_lib_unb_ca: 8000
+b5_top_container: container
+b5_top_container_config: ''
+b5_body_schema: none
+b5_body_bg_schema: none
+b5_navbar_schema: none
+b5_navbar_bg_schema: none
+b5_footer_schema: dark
+b5_footer_bg_schema: dark
+subtheme_folder: themes/custom
+subtheme_name: 'B5 subtheme'
+subtheme_machine_name: b5subtheme

@@ -1,6 +1,6 @@
 global-styling:
   css:
-    component:
+    theme:
       dist/css/style.css: {}
 
 print-styling:

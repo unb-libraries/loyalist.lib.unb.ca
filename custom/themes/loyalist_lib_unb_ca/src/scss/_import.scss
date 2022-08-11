@@ -1,2 +1,6 @@
-// UNB Lib theme + bootstrap assets.
-@import '../../../../../vendor/unb-libraries/unb_lib_theme/src/scss/style.scss';
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '../../../../../vendor/twbs/bootstrap/scss/functions';
+// 2. Include any default variable overrides here
+@import "overrides/variables";
+// 3. Include remainder of required Bootstrap stylesheets
+@import '../../../../../vendor/twbs/bootstrap/scss/bootstrap';

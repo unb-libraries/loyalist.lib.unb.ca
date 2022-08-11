@@ -1,3 +1,0 @@
-base_url: 'https://intranet.lib.unb.ca/api/hours/'
-refresh_interval: 60000
-max_age: '900'

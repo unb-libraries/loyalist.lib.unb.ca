@@ -1,0 +1,63 @@
+uuid: 30447ccd-d0d9-4188-9369-714dc1c9a97b
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.wysiwyg
+  module:
+    - ckeditor
+format: wysiwyg
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Undo
+            - Redo
+            - Format
+            - RemoveFormat
+            - Bold
+            - Italic
+            - Blockquote
+            - HorizontalRule
+        -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: 'Lists and Tables'
+          items:
+            - Table
+            - BulletedList
+            - NumberedList
+            - Outdent
+            - Indent
+        -
+          name: 'Media and Characters'
+          items:
+            - DrupalImage
+            - SpecialChar
+        -
+          name: Actions
+          items:
+            - Maximize
+            - Source
+  plugins: {  }
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

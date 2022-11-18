@@ -1,5 +1,5 @@
 const host = 'https://loyalist.lib.unb.ca'
-describe('The Loyalist Collection', {baseUrl: host, groups: ['sites']}, () => {
+describe('Loyalist Collection', {baseUrl: host, groups: ['sites']}, () => {
 
   describe('Front page', {baseUrl: host}, () => {
     beforeEach(() => {

@@ -63,7 +63,7 @@
     {% if page.nav_branding or page.nav_main or page.nav_additional %}
       <nav class="{{ nav_classes }}">
         <div class="{{ b5_top_container }} d-flex border-bottom border-4 border-dark pb-4">
-          <div id="header-branding">
+          <div id="header-branding" class="mb-2 mb-md-0">
             {% if is_front %}<div{% else %}<a href="{{ front_page }}"{% endif %} class="d-flex">
               <img src="/{{ active_theme_path() }}/images/loyalist-officer.jpg" alt="Loyalist Officer" class="me-2">
               <h1>{{ site_name }}</h1>

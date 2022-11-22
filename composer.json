@@ -13,7 +13,7 @@
   "name": "unb-libraries/loyalist.lib.unb.ca",
   "prefer-stable": true,
   "require": {
-    "twbs/bootstrap": "~5.2.0"
+    "twbs/bootstrap": "~5.1.3"
   },
   "require-dev": {
     "unb-libraries/dockworker-drupal": "^5"

@@ -20,8 +20,8 @@ b5_top_container: container
 b5_top_container_config: ''
 b5_body_schema: none
 b5_body_bg_schema: none
-b5_navbar_schema: none
-b5_navbar_bg_schema: none
+b5_navbar_schema: light
+b5_navbar_bg_schema: light
 b5_footer_schema: dark
 b5_footer_bg_schema: dark
 subtheme_folder: themes/custom

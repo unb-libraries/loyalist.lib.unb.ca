@@ -1,12 +1,7 @@
 uuid: 5235445d-f309-47d3-a59a-1443352ab0d3
 langcode: en
 status: true
-dependencies:
-  config:
-    - filter.format.wysiwyg
-  module:
-    - filter
-    - system
+dependencies: {  }
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -15,4 +10,3 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
-  - 'use text format wysiwyg'

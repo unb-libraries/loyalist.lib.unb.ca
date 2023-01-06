@@ -82,7 +82,7 @@
   "require": {
     "drupal/admin_toolbar": "3.2.1",
     "drupal/bootstrap5": "2.0.3",
-    "drupal/core": "9.4.8",
+    "drupal/core": "9.5.1",
     "drupal/easy_breadcrumb": "2.0.4",
     "drupal/entity_reference_revisions": "1.9",
     "drupal/fontawesome": "2.23",

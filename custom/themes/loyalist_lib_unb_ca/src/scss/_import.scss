@@ -7,7 +7,7 @@
 @import 'overrides/variables';
 // 4. Include any default map overrides here
 // 5. Include remainder of required parts
-// @import '../../../../../vendor/twbs/bootstrap/scss/maps';
+@import '../../../../../vendor/twbs/bootstrap/scss/maps';
 @import '../../../../../vendor/twbs/bootstrap/scss/mixins';
 @import '../../../../../vendor/twbs/bootstrap/scss/root';
 // 6. Optionally include any other parts as needed

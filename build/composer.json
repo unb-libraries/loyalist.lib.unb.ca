@@ -14,8 +14,10 @@
     "allow-plugins": {
       "composer/installers": true,
       "cweagans/composer-patches": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
       "drupal/core-composer-scaffold": true,
-      "php-http/discover": true
+      "php-http/discover": true,
+      "phpstan/extension-installer": true
     },
     "discard-changes": true,
     "preferred-install": {
@@ -28,6 +30,11 @@
   },
   "description": "Drupal 8 component of loyalist.lib.unb.ca",
   "extra": {
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "./"
+      }
+    },
     "enable-patching": true,
     "installer-paths": {
       "core": [
@@ -47,6 +54,18 @@
       ],
       "themes/contrib/{$name}": [
         "type:drupal-theme"
+      ],
+      "Commands/contrib/{$name}": [
+        "type:drupal-drush"
+      ],
+      "modules/custom/{$name}": [
+        "type:drupal-custom-module"
+      ],
+      "profiles/custom/{$name}": [
+        "type:drupal-custom-profile"
+      ],
+      "themes/custom/{$name}": [
+        "type:drupal-custom-theme"
       ]
     },
     "patches": {
@@ -82,41 +101,27 @@
   ],
   "require": {
     "drupal/admin_toolbar": "3.3.0",
-    "drupal/bootstrap5": "2.0.9",
-    "drupal/core": "9.5.4",
+    "drupal/bootstrap5": "3.0.5",
+    "drupal/core-composer-scaffold": "10.0.5",
+    "drupal/core-recommended": "10.0.5",
+    "drupal/core": "10.0.5",
     "drupal/easy_breadcrumb": "2.0.5",
-    "drupal/entity_reference_revisions": "1.9",
-    "drupal/fontawesome": "2.23",
-    "drupal/google_analytics": "2.5",
-    "drupal/health_check": "1.3",
-    "drupal/paragraphs": "1.14",
+    "drupal/entity_reference_revisions": "1.10",
+    "drupal/fontawesome": "2.25",
+    "drupal/health_check": "2.0.1",
+    "drupal/paragraphs": "1.15",
     "drupal/pathauto": "1.11",
     "drupal/redis": "1.6",
-    "drupal/samlauth": "3.6",
+    "drupal/samlauth": "3.8",
     "drupal/search_api": "1.28",
     "drupal/search_api_solr": "4.2.10",
-    "drupal/twig_tweak": "3.1.3",
+    "drupal/twig_tweak": "3.2.1",
     "fortawesome/font-awesome": "5.15.4",
     "unb-libraries/drupal-builder": "^9",
     "unb-libraries/saml_features": "dev-9.x-1.x"
   },
   "require-dev": {
     "unb-libraries/drupal-development-libraries": "^9"
-  },
-  "scripts": {
-    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-    "post-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ],
-    "post-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ],
-    "pre-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "pre-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ]
   },
   "type": "project"
 }

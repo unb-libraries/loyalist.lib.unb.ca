@@ -1,63 +1,62 @@
-uuid: 30447ccd-d0d9-4188-9369-714dc1c9a97b
+uuid: 1737e36c-3e39-447b-8b61-c0789ce03510
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.wysiwyg
   module:
-    - ckeditor
+    - ckeditor5
 format: wysiwyg
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Undo
-            - Redo
-            - Format
-            - RemoveFormat
-            - Bold
-            - Italic
-            - Blockquote
-            - HorizontalRule
-        -
-          name: Alignment
-          items:
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-        -
-          name: Links
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: 'Lists and Tables'
-          items:
-            - Table
-            - BulletedList
-            - NumberedList
-            - Outdent
-            - Indent
-        -
-          name: 'Media and Characters'
-          items:
-            - DrupalImage
-            - SpecialChar
-        -
-          name: Actions
-          items:
-            - Maximize
-            - Source
-  plugins: {  }
-image_upload:
-  status: false
-  scheme: public
-  directory: inline-images
-  max_size: ''
-  max_dimensions:
-    width: null
-    height: null
+    items:
+      - heading
+      - bold
+      - italic
+      - alignment
+      - '|'
+      - link
+      - blockQuote
+      - specialCharacters
+      - '|'
+      - bulletedList
+      - numberedList
+      - insertTable
+      - horizontalLine
+      - sourceEditing
+  plugins:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<cite>'
+        - '<dl>'
+        - '<dt>'
+        - '<dd>'
+        - '<a hreflang>'
+        - '<blockquote cite>'
+        - '<ul type>'
+        - '<ol type>'
+        - '<img src alt data-entity-type data-entity-uuid data-align data-caption>'
+        - '<h2 id>'
+        - '<h3 id>'
+        - '<h4 id>'
+        - '<h5 id>'
+        - '<h6 id>'
+        - '<p id>'
+    ckeditor5_list:
+      reversed: false
+      startIndex: true
+    ckeditor5_alignment:
+      enabled_alignments:
+        - left
+        - center
+        - right
+        - justify
+image_upload: {  }

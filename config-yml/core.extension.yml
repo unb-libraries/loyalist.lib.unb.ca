@@ -4,7 +4,7 @@ module:
   admin_toolbar: 0
   block: 0
   breakpoint: 0
-  ckeditor: 0
+  ckeditor5: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
@@ -31,6 +31,5 @@ theme:
   loyalist_lib_unb_ca: 0
   bootstrap5: 0
   claro: 0
-  stable: 0
-  classy: 0
+  stable9: 0
 profile: minimal

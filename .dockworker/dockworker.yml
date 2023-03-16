@@ -36,7 +36,7 @@ dockworker:
           - source: dockworker-drupal
             type: deployment-workflow
       image:
-        parent: ghcr.io/unb-libraries/drupal:9.x-2.x-unblib
+        parent: ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
         repositories:
           - name: GitHub
             push_branches:

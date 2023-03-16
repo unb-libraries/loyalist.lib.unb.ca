@@ -28,7 +28,7 @@
   "conflict": {
     "drupal/drupal": "*"
   },
-  "description": "Drupal 8 component of loyalist.lib.unb.ca",
+  "description": "Drupal component of loyalist.lib.unb.ca",
   "extra": {
     "drupal-scaffold": {
       "locations": {
@@ -117,11 +117,10 @@
     "drupal/search_api_solr": "4.2.10",
     "drupal/twig_tweak": "3.2.1",
     "fortawesome/font-awesome": "5.15.4",
-    "unb-libraries/drupal-builder": "^9",
-    "unb-libraries/saml_features": "dev-9.x-1.x"
+    "unb-libraries/composer-drupal-scaffold": "^10"
   },
   "require-dev": {
-    "unb-libraries/drupal-development-libraries": "^9"
+    "unb-libraries/drupal-development-libraries": "^10"
   },
   "type": "project"
 }

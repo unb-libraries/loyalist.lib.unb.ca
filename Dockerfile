@@ -1,8 +1,8 @@
-FROM ghcr.io/unb-libraries/drupal:9.x-2.x-unblib
+FROM ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
 MAINTAINER UNB Libraries <libsupport@unb.ca>
 
 # Install additional OS packages.
-ENV ADDITIONAL_OS_PACKAGES postfix php7-ldap php7-zip php7-redis
+ENV ADDITIONAL_OS_PACKAGES postfix php-ldap php-zip php81-pecl-redis
 ENV DRUPAL_SITE_ID loyalist
 ENV DRUPAL_SITE_URI loyalist.lib.unb.ca
 ENV DRUPAL_SITE_UUID 9ae92cc6-c0b6-41d0-b619-778b7e928952

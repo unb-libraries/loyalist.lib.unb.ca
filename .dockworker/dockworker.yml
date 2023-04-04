@@ -13,11 +13,15 @@ dockworker:
       id: loyalist.lib.unb.ca
       slug: loyalist-lib-unb-ca
       short_slug: loyalist
-      uuid: 3101
+      uuid: 3113
     framework:
       name: Drupal
       version: 10
-      startup_finished_marker: '99_zz_notify_user_URI'
+      startup_finished_marker: '99_startup_sequence_complete'
+      endpoint:
+        name: http
+        port: 80
+        readiness_timeout: 15
     license:
       license: MIT
       holder: University of New Brunswick Libraries

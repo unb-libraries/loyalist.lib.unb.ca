@@ -1,6 +1,7 @@
 .gitkeep
 vendor
-composer.lock
+/build/vendor
+/composer.lock
 tests/behat/features/bootstrap
 scripts/local
 .idea

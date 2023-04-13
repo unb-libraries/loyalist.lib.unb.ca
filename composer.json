@@ -13,10 +13,17 @@
   "minimum-stability": "dev",
   "name": "unb-libraries/loyalist.lib.unb.ca",
   "prefer-stable": true,
-  "require": {
-    "twbs/bootstrap": "~5.2.3"
+  "replace": {
+    "drupal/core": "*"
   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
   "require-dev": {
+    "drupal/bootstrap5": "^3",
     "unb-libraries/dockworker-drupal": "6.x-dev"
   },
   "scripts": {

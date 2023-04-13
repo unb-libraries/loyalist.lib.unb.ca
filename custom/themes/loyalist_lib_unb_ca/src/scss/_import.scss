@@ -1,4 +1,5 @@
-@import "bootstrap-import";
-// 8. Add additional custom code here
-@import "overrides/bootstrap";
+@import "overrides/variables_drupal";
+@import "overrides/variables_bootstrap";
+// Include bootstrap.
+@import '../../../../../vendor/drupal/bootstrap5/scss/style';
 @import "overrides/footer";

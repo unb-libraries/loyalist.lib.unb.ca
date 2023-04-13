@@ -57,16 +57,16 @@
 %}
 
 <div id="content-wrapper" class="d-flex flex-column align-items-end container my-1 px-0">
-  <header class="w-100 mb-4">
+  <header class="w-100 mb-3">
     {{ page.header }}
 
     {% if page.nav_branding or page.nav_main or page.nav_additional %}
       <nav class="{{ nav_classes }}">
-        <div class="{{ b5_top_container }} d-flex border-bottom border-4 border-dark pb-4">
+        <div class="{{ b5_top_container }} d-flex border-bottom border-4 border-dark p-4">
           <div id="header-branding" class="mb-2 mb-md-0">
-            {% if is_front %}<div{% else %}<a href="{{ front_page }}"{% endif %} class="d-flex">
+            {% if is_front %}<div{% else %}<a href="{{ front_page }}"{% endif %} class="d-flex align-items-center">
               <img src="/{{ active_theme_path() }}/images/loyalist-officer.jpg" alt="Loyalist Officer" class="me-3">
-              <h1>{{ site_name }}</h1>
+              <h1 class="mb-0">{{ site_name }}</h1>
             {% if is_front %}</div>{% else %}</a>{% endif %}
           </div>
           {{ page.nav_branding }}
@@ -86,7 +86,7 @@
     {% endif %}
   </header>
 
-  <main class="w-100 mb-auto">
+  <main class="w-100 mb-auto px-3 pb-3">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     {%
@@ -131,7 +131,7 @@
       </div>
     {% endif %}
     <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-between">
+      <div class="d-flex flex-wrap align-items-center justify-content-between px-4">
         <div id="copyright" class="clearfix">
           &copy;&nbsp;{{ 'now' | date('Y') }}
           <a href="https://www.unb.ca/copyright">University of New Brunswick</a>

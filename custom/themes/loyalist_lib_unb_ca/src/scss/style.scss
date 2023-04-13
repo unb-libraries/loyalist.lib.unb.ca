@@ -18,7 +18,14 @@ body {
 
   h1 {
     color: $black;
-    font-family: $font-family-sans-serif;
+    font-family: $font-family-base;
+    font-weight: 700;
+  }
+}
+
+.block-system-main-block {
+  p, li {
+    margin-bottom: 1.1rem;
   }
 }
 
@@ -26,4 +33,8 @@ body {
   background: #fefefe;
   box-shadow: 0 0 .5rem rgb(0 0 0 / 20%);
   flex: 1;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: "»";
 }

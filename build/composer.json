@@ -81,7 +81,7 @@
     }
   ],
   "require": {
-    "drupal/admin_toolbar": "3.3.0",
+    "drupal/admin_toolbar": "3.3.1",
     "drupal/bootstrap5": "3.0.5",
     "drupal/core": "9.5.8",
     "drupal/easy_breadcrumb": "2.0.5",

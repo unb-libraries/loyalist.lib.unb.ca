@@ -112,6 +112,7 @@
     "drupal/health_check": "^2",
     "drupal/migrate_plus": "^6",
     "drupal/migrate_source_csv": "^3",
+    "drupal/migrate_tools": "^6",
     "drupal/paragraphs": "^1",
     "drupal/pathauto": "^1",
     "drupal/redis": "^1",

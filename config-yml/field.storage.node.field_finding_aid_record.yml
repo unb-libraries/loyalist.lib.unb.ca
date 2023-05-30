@@ -1,0 +1,23 @@
+uuid: 558b66a8-fffc-4435-b172-4e4b81e285b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_finding_aid_record
+field_name: field_finding_aid_record
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

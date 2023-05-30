@@ -1,0 +1,27 @@
+uuid: cd678342-4d01-41d8-a2c9-8ebbce08c856
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_finding_aid_record
+    - node.type.loyalist_record
+  module:
+    - file
+id: node.loyalist_record.field_finding_aid_record
+field_name: field_finding_aid_record
+entity_type: node
+bundle: loyalist_record
+label: 'Electronic Finding Aid Record'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf'
+  max_filesize: '50 MB'
+  description_field: false
+field_type: file

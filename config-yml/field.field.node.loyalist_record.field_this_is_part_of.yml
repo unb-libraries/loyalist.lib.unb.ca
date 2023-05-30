@@ -1,0 +1,21 @@
+uuid: 6711a558-5ca9-4959-b1d0-477e65032854
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_this_is_part_of
+    - node.type.loyalist_record
+  module:
+    - text
+id: node.loyalist_record.field_this_is_part_of
+field_name: field_this_is_part_of
+entity_type: node
+bundle: loyalist_record
+label: 'This is Part of'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

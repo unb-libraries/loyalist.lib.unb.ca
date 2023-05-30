@@ -1,0 +1,21 @@
+uuid: 8ba4d88e-a70a-494e-8866-7374fa8df226
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_finding_aids
+    - node.type.loyalist_record
+  module:
+    - text
+id: node.loyalist_record.field_finding_aids
+field_name: field_finding_aids
+entity_type: node
+bundle: loyalist_record
+label: 'Finding Aids'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

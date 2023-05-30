@@ -1,0 +1,19 @@
+uuid: b9cb45ef-d211-48fd-8d6a-d8854eb5caf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gauge
+    - node.type.loyalist_record
+id: node.loyalist_record.field_gauge
+field_name: field_gauge
+entity_type: node
+bundle: loyalist_record
+label: Gauge
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

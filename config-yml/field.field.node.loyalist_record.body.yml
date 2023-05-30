@@ -1,0 +1,23 @@
+uuid: d54d6dca-63df-4e4e-bf9d-a3ff558799ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.loyalist_record
+  module:
+    - text
+id: node.loyalist_record.body
+field_name: body
+entity_type: node
+bundle: loyalist_record
+label: Contents
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

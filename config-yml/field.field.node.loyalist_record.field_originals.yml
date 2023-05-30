@@ -1,0 +1,21 @@
+uuid: f4e58fd4-0d57-4419-ba91-f8ee5494bf71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_originals
+    - node.type.loyalist_record
+  module:
+    - text
+id: node.loyalist_record.field_originals
+field_name: field_originals
+entity_type: node
+bundle: loyalist_record
+label: Originals
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

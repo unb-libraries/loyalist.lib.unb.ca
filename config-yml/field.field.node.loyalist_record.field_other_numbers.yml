@@ -1,0 +1,21 @@
+uuid: ad0ed928-172a-491e-a036-3497132a36b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_numbers
+    - node.type.loyalist_record
+  module:
+    - text
+id: node.loyalist_record.field_other_numbers
+field_name: field_other_numbers
+entity_type: node
+bundle: loyalist_record
+label: 'Archival Ref. No.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

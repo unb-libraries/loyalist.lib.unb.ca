@@ -1,0 +1,19 @@
+uuid: cbaa5eb9-eec6-4065-91bb-40d99323621c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_sources
+    - node.type.loyalist_record
+id: node.loyalist_record.field_number_of_sources
+field_name: field_number_of_sources
+entity_type: node
+bundle: loyalist_record
+label: 'Number of Sources'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

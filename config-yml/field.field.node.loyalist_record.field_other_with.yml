@@ -1,0 +1,21 @@
+uuid: 75b07e0f-f034-4005-b7f5-c6af7edc797f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_with
+    - node.type.loyalist_record
+  module:
+    - text
+id: node.loyalist_record.field_other_with
+field_name: field_other_with
+entity_type: node
+bundle: loyalist_record
+label: 'Other With'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

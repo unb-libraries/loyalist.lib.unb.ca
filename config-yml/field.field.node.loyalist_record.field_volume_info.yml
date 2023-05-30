@@ -1,0 +1,19 @@
+uuid: 2cba4a2f-6887-4220-b1c9-d0764e7cf2f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_volume_info
+    - node.type.loyalist_record
+id: node.loyalist_record.field_volume_info
+field_name: field_volume_info
+entity_type: node
+bundle: loyalist_record
+label: 'Volume Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

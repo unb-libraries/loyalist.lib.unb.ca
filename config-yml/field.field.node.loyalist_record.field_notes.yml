@@ -1,0 +1,21 @@
+uuid: d7073770-d361-4e53-af11-a33691ee343e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes
+    - node.type.loyalist_record
+  module:
+    - text
+id: node.loyalist_record.field_notes
+field_name: field_notes
+entity_type: node
+bundle: loyalist_record
+label: Notes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

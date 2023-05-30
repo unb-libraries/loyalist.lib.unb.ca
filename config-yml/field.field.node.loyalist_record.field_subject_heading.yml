@@ -1,0 +1,29 @@
+uuid: 14bd2c76-6dde-403e-9d41-686d964f480a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subject_heading
+    - node.type.loyalist_record
+    - taxonomy.vocabulary.subject_heading
+id: node.loyalist_record.field_subject_heading
+field_name: field_subject_heading
+entity_type: node
+bundle: loyalist_record
+label: 'Subject Heading'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      subject_heading: subject_heading
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

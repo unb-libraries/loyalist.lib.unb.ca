@@ -1,0 +1,58 @@
+uuid: f6868d62-6a8e-4350-99cb-c837e658a81f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.loyalist_record.body
+    - field.field.node.loyalist_record.field_accompanying_record
+    - field.field.node.loyalist_record.field_background_information
+    - field.field.node.loyalist_record.field_call_number
+    - field.field.node.loyalist_record.field_creator
+    - field.field.node.loyalist_record.field_database_id
+    - field.field.node.loyalist_record.field_finding_aid_record
+    - field.field.node.loyalist_record.field_finding_aids
+    - field.field.node.loyalist_record.field_gauge
+    - field.field.node.loyalist_record.field_media_type
+    - field.field.node.loyalist_record.field_notes
+    - field.field.node.loyalist_record.field_number_of_sources
+    - field.field.node.loyalist_record.field_originals
+    - field.field.node.loyalist_record.field_other_numbers
+    - field.field.node.loyalist_record.field_other_with
+    - field.field.node.loyalist_record.field_record_info
+    - field.field.node.loyalist_record.field_subject_heading
+    - field.field.node.loyalist_record.field_this_is_part_of
+    - field.field.node.loyalist_record.field_volume_info
+    - node.type.loyalist_record
+  module:
+    - user
+id: node.loyalist_record.teaser
+targetEntityType: node
+bundle: loyalist_record
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_accompanying_record: true
+  field_background_information: true
+  field_call_number: true
+  field_creator: true
+  field_database_id: true
+  field_finding_aid_record: true
+  field_finding_aids: true
+  field_gauge: true
+  field_media_type: true
+  field_notes: true
+  field_number_of_sources: true
+  field_originals: true
+  field_other_numbers: true
+  field_other_with: true
+  field_record_info: true
+  field_subject_heading: true
+  field_this_is_part_of: true
+  field_volume_info: true

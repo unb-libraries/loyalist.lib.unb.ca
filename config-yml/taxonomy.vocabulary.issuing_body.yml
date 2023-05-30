@@ -1,0 +1,8 @@
+uuid: c2a8d67d-c305-477a-a8d3-8f2e79a27da1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Issuing Body'
+vid: issuing_body
+description: ''
+weight: 0

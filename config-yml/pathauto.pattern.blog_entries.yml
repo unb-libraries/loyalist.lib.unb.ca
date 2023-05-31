@@ -1,0 +1,22 @@
+uuid: 35450e4f-0144-4ec2-8e19-dafbce74314e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: blog_entries
+label: 'Blog entries'
+type: 'canonical_entities:node'
+pattern: 'atlantic-loyalist-connections/[node:title]'
+selection_criteria:
+  c4336feb-c12d-4ac9-abca-109ac54c4306:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: c4336feb-c12d-4ac9-abca-109ac54c4306
+    context_mapping:
+      node: node
+    bundles:
+      blog_post: blog_post
+selection_logic: and
+weight: -5
+relationships: {  }

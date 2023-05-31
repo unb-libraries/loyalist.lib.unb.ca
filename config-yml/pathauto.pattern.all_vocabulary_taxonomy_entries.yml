@@ -1,0 +1,25 @@
+uuid: 9815a213-85a6-4237-82a8-5a2c2d4d8b47
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: all_vocabulary_taxonomy_entries
+label: 'All vocabulary taxonomy entries'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:vocabulary]/[term:name]'
+selection_criteria:
+  14c013f2-9a53-4239-983d-e461fe977e6a:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 14c013f2-9a53-4239-983d-e461fe977e6a
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      category: category
+      issuing_body: issuing_body
+      media_type: media_type
+      subject_heading: subject_heading
+selection_logic: and
+weight: -5
+relationships: {  }

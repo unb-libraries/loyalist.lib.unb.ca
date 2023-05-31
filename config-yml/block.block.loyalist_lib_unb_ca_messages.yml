@@ -11,7 +11,7 @@ _core:
 id: loyalist_lib_unb_ca_messages
 theme: loyalist_lib_unb_ca
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: system_messages_block
 settings:

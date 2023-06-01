@@ -1,0 +1,10 @@
+name: Migrate Loyalist Taxonomy Terms
+type: module
+description: Based off of Migration scripts examples for Hierarchical Terms migration.
+dependencies:
+  - migrate_plus
+  - migrate_tools
+  - migrate_source_csv
+  - node
+  - taxonomy
+core_version_requirement: ^8 || ^9

@@ -1,6 +1,29 @@
 services:
+  loyalist-lib-unb-ca:
+    build:
+      context: .
+    restart: unless-stopped
+    container_name: loyalist-lib-unb-ca
+    expose:
+      - "80"
+    ports:
+      - "3094:80"
+    env_file:
+      - ./env/drupal.env
+    networks:
+      - loyalist.lib.unb.ca
+    volumes:
+      - drupal-data:/app/html/sites/default
+      - ./configuration:/app/configuration
+      - ./custom/modules:/app/html/modules/custom
+      - ./custom/themes:/app/html/themes/custom
+      - ./tests:/app/tests
+    depends_on:
+      - drupal-mysql-lib-unb-ca
+      - drupal-redis-lib-unb-ca
+      - drupal-solr-lib-unb-ca
   drupal-mysql-lib-unb-ca:
-    image: mysql:5.7
+    image: mariadb:10.11
     restart: unless-stopped
     command: mysqld --skip-name-resolve --max_allowed_packet=64M
     env_file:
@@ -12,7 +35,7 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
   drupal-redis-lib-unb-ca:
-    image: redis:5-alpine
+    image: redis:7-alpine
     restart: unless-stopped
     expose:
       - "6379"
@@ -21,42 +44,17 @@ services:
     env_file:
       - ./env/redis.env
   drupal-solr-lib-unb-ca:
-    image: ghcr.io/unb-libraries/solr-drupal:8.x-4.x
+    image: ghcr.io/unb-libraries/solr-drupal:8.x-10.x
     restart: unless-stopped
-    env_file:
-      - ./env/solr.env
     expose:
       - "8983"
     networks:
       - loyalist.lib.unb.ca
     entrypoint:
       - docker-entrypoint-multiple.sh
-      - recipes.loyalist.lib.unb.ca:/solr-conf
+      - loyalist.lib.unb.ca:/solr-conf
     volumes:
       - solr-data:/opt/solr/server/solr/mycores
-  loyalist.lib.unb.ca:
-    build:
-      context: .
-    restart: unless-stopped
-    container_name: loyalist.lib.unb.ca
-    depends_on:
-      - drupal-mysql-lib-unb-ca
-      - drupal-redis-lib-unb-ca
-      - drupal-solr-lib-unb-ca
-    expose:
-      - "80"
-    ports:
-      - "3113:80"
-    networks:
-      - loyalist.lib.unb.ca
-    env_file:
-      - ./env/drupal.env
-    volumes:
-      - drupal-data:/app/html/sites/default
-      - ./config-yml:/app/configuration
-      - ./custom/modules:/app/html/modules/custom
-      - ./custom/themes:/app/html/themes/custom
-      - ./tests:/app/tests
   mailhog:
     image: mailhog/mailhog
     restart: unless-stopped
@@ -64,7 +62,7 @@ services:
       - "1025"
       - "8025"
     ports:
-      - "4093:8025"
+      - "4094:8025"
     networks:
       - loyalist.lib.unb.ca
 networks:

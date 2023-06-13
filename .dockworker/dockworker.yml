@@ -27,42 +27,56 @@ dockworker:
       holder: University of New Brunswick Libraries
     shell:
       shell: /bin/sh
-    workflows:
-      vcs:
-        type: github
-        owner: unb-libraries
-        name: loyalist.lib.unb.ca
-      jira:
-        project_keys:
-          - LOYALIST
-      ci:
-        actions:
-          - source: dockworker-drupal
-            type: deployment-workflow
-      image:
-        parent: ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
-        repositories:
-          - name: GitHub
-            push_branches:
-              - dev
-              - prod
-            image_name: ghcr.io/unb-libraries/loyalist.lib.unb.ca
-      k8s:
-        deployments:
-          - name: loyalist-lib-unb-ca
-            namespaces:
-              - dev
-              - prod
-        e2e_tests:
-          - id: core
-            frequency: '*/5 * * * *'
-            source_files:
-              - .dockworker/tests/e2e/loyalist.lib.unb.ca.yml
-            namespaces:
-              - prod
-      local:
-        deployments:
-          - name: loyalist.lib.unb.ca
-        additional_hostnames:
-          - loyalist.lib.unb.ca
-          - loyalist.lib.unb.ca.local
+  endpoints:
+    env:
+      - dev
+      - prod
+    deployments:
+      loyalist-lib-unb-ca:
+        default: true
+        managed: true
+        name: loyalist-lib-unb-ca
+      drupal-mysql-lib-unb-ca:
+        managed: false
+        name: mysql
+      drupal-redis-lib-unb-ca:
+        managed: false
+        name: redis
+      drupal-solr-lib-unb-ca:
+        managed: false
+        name: solr
+  workflows:
+    vcs:
+      type: github
+      owner: unb-libraries
+      name: loyalist.lib.unb.ca
+    jira:
+      project_keys:
+        - LOYALIST
+    ci:
+      actions:
+        - source: dockworker-drupal
+          type: deployment-workflow
+    image:
+      parent: ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
+      repositories:
+        - name: GitHub
+          push_branches:
+            - dev
+            - prod
+          image_name: ghcr.io/unb-libraries/loyalist.lib.unb.ca
+    k8s:
+      deployments:
+        - name: loyalist-lib-unb-ca
+          namespaces:
+            - dev
+            - prod
+      e2e_tests:
+        - id: core
+          frequency: '*/5 * * * *'
+          source_files:
+            - .dockworker/tests/e2e/loyalist.lib.unb.ca.yml
+          namespaces:
+            - prod
+    local:
+      additional_hostnames:

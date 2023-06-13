@@ -16,7 +16,7 @@ RUN ${RSYNC_MOVE} /build/scripts/container/ /scripts/ && \
   /scripts/build.sh
 
 # Deploy custom assets, configuration.
-COPY ./config-yml ${DRUPAL_CONFIGURATION_DIR}
+COPY ./configuration ${DRUPAL_CONFIGURATION_DIR}
 COPY ./custom/themes ${DRUPAL_ROOT}/themes/custom
 COPY ./custom/modules ${DRUPAL_ROOT}/modules/custom
 

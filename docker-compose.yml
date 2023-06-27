@@ -7,7 +7,7 @@ services:
     expose:
       - "80"
     ports:
-      - "3094:80"
+      - "3113:80"
     env_file:
       - ./env/drupal.env
     networks:

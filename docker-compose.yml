@@ -62,7 +62,7 @@ services:
       - "1025"
       - "8025"
     ports:
-      - "4094:8025"
+      - "4113:8025"
     networks:
       - loyalist.lib.unb.ca
 networks:

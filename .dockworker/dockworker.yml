@@ -53,18 +53,13 @@ dockworker:
     jira:
       project_keys:
         - LOYALIST
-    ci:
-      actions:
-        - source: dockworker-drupal
-          type: deployment-workflow
     image:
+      name: ghcr.io/unb-libraries/loyalist.lib.unb.ca
       parent: ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
-      repositories:
-        - name: GitHub
-          push_branches:
-            - dev
-            - prod
-          image_name: ghcr.io/unb-libraries/loyalist.lib.unb.ca
+      repository: GitHub
+      push-branches:
+        - dev
+        - prod
     k8s:
       deployments:
         - name: loyalist-lib-unb-ca

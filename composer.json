@@ -24,7 +24,7 @@
   ],
   "require-dev": {
     "drupal/bootstrap5": "^3",
-    "unb-libraries/dockworker-drupal": "6.x-dev"
+    "unb-libraries/dockworker-drupal": "^6"
   },
   "scripts": {
     "post-update-cmd": [

@@ -5,4 +5,4 @@ vendor
 tests/behat/features/bootstrap
 scripts/local
 .idea
-config-yml/.htaccess
+configuration/.htaccess

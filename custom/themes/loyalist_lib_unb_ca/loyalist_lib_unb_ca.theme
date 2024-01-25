@@ -1,9 +1,0 @@
-<?php
-/**
-* Implements theme_preprocess_page().
-*/
-function loyalist_lib_unb_ca_preprocess_page(&$variables) {
-  // Set system | site details | site name as subtheme page variable.
-  $config = \Drupal::config('system.site');
-  $variables['site_name'] = $config->get('name');
-}

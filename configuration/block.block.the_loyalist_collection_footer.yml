@@ -1,0 +1,27 @@
+uuid: 700200bb-5f2f-4fe1-9a96-0fb2c73821f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: rUcEMzIcmptvM4BSb6cZhiqzrcGL1god5tDcuW5_CRU
+id: the_loyalist_collection_footer
+theme: the_loyalist_collection
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

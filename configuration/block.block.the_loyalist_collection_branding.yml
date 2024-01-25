@@ -1,0 +1,25 @@
+uuid: 97ca4912-76c3-4197-890c-dbd0cc11251a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: kvbD5IQ4doc-7s5GltyGcr6lOyzGz5ithgldhLoPfZg
+id: the_loyalist_collection_branding
+theme: the_loyalist_collection
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

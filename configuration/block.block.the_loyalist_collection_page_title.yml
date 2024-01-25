@@ -1,0 +1,20 @@
+uuid: 2dc8a291-fbfe-4d0e-98fb-1d8f6014bd10
+langcode: en
+status: true
+dependencies:
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: oGTkv_73pQVe_8wGfGe2zEBEioBLIZh6MWzwTiWsHGs
+id: the_loyalist_collection_page_title
+theme: the_loyalist_collection
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

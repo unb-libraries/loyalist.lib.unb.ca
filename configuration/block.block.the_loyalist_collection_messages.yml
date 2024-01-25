@@ -1,0 +1,22 @@
+uuid: 08d25380-ce15-4ca3-b3da-bc4838defdf8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: o8AnN7kwcNCkFEGm5oqDncG8MsZm8Cr9zf5YeWBKURA
+id: the_loyalist_collection_messages
+theme: the_loyalist_collection
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

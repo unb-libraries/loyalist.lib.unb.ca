@@ -1,0 +1,16 @@
+.breadcrumb {
+  border-bottom: 1px solid var(--bs-border-color);
+  padding-bottom: 1rem;
+
+  a {
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  content: var(--bs-breadcrumb-divider, "»") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+}

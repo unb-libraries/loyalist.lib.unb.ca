@@ -1,0 +1,53 @@
+.region-nav-branding {
+  flex-shrink: unset;
+}
+
+.navbar-brand {
+  margin-right: 0;
+
+  img {
+    margin-right: 0;
+  }
+
+  .site-logo {
+    margin-right: 0.75rem;
+  }
+  .site-title {
+    color: var(--bs-black);
+    font-size: 2rem;
+    line-height: 1;
+    // Offset BS5 nav.branding boundary space characters re: wrap.
+    margin-left: -0.25rem;
+    padding: 0.25rem;
+
+    &:focus,
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  @media (min-width: 992px) {
+    .site-logo {
+      margin-right: 1.25rem;
+    }
+    .site-title {
+      font-size: 2.25rem;
+    }
+  }
+}
+
+.nav-main-menu {
+  flex: 0 0 auto;
+  max-width: 41.67%;
+
+  a {
+    &:hover {
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+    }
+    &.active {
+      text-decoration: underline;
+      text-decoration-color: rgba(0, 0, 0, 0.3);
+      text-underline-offset: 0.25rem;
+    }
+  }
+}

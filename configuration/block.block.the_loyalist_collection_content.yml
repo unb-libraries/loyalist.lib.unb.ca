@@ -1,0 +1,22 @@
+uuid: 67606136-1016-40a5-8cdb-91a3a1508f5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: 55KIOirEIhZ0CsXV0W48TXk7amI2TiqaV9oThEh4H3E
+id: the_loyalist_collection_content
+theme: the_loyalist_collection
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: 6932f1f7-7514-4efe-9256-db24884b82da
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: F-8joax1PTYGRYoFBedtAqQiaitAMfTzoRptAA5PXNI
+id: the_loyalist_collection_account_menu
+theme: the_loyalist_collection
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

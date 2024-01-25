@@ -1,0 +1,20 @@
+uuid: adbf7040-6492-46aa-8820-9a0378bd2af4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: rSYQkIr995VKtbpxM2dOLaM3_c3YPmoH-3V0Y6-kbHg
+id: the_loyalist_collection_local_actions
+theme: the_loyalist_collection
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

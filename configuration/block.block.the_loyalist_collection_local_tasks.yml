@@ -1,0 +1,22 @@
+uuid: c4f51773-7938-4d44-ac9e-0fabb36144e4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: Jt6RgHx4q7-n36duK_bHUyOZZFKEbLKXfFrkDLSHIPk
+id: the_loyalist_collection_local_tasks
+theme: the_loyalist_collection
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

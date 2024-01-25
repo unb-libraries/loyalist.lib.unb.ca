@@ -1,0 +1,22 @@
+uuid: b67b89ae-866d-4eae-95fd-16a7d6b32f48
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: 9ggPrZytET6Cka0HsFKkBStB3kZ3um8IKHxmrEMSJBc
+id: the_loyalist_collection_powered_by_drupal
+theme: the_loyalist_collection
+region: footer
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

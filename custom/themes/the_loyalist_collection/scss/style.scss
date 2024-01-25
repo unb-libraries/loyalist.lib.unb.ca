@@ -1,0 +1,26 @@
+@import 'imports';
+
+// Elements.
+a {
+  transition: all ease-in-out 0.25s;
+  text-decoration-color: rgba(170, 5, 1, 0.3);
+
+  &:focus {
+    text-decoration-color: transparent;
+  }
+  &:focus-visible {
+    outline-offset: 2px;
+  }
+  &:hover {
+    text-decoration-color: rgba(170, 5, 1, 0.9);
+  }
+}
+
+header {
+  border-bottom: 5px solid var(--bs-dark);
+  margin-bottom: 1.5rem;
+
+  nav {
+    padding: 0.25rem 0;
+  }
+}

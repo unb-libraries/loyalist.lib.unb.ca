@@ -1,0 +1,27 @@
+uuid: 09e8210c-2440-4723-a324-952921d17ccb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: pu9Vgfx7cQpTcPo39YcbhD630NUCMGaFtQe8ogeuJWs
+id: the_loyalist_collection_main_navigation
+theme: the_loyalist_collection
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

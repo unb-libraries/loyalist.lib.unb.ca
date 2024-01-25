@@ -1,0 +1,22 @@
+uuid: a52bb228-7b51-4b18-bcb9-bc3b9148ff95
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - the_loyalist_collection
+_core:
+  default_config_hash: 4daSOT_nzepPOMcF8MhPyje6n1oSpyePzhLYAg724Vw
+id: the_loyalist_collection_breadcrumbs
+theme: the_loyalist_collection
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

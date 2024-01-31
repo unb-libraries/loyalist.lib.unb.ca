@@ -45,10 +45,8 @@
 </head>
 <body{{ attributes.addClass(body_classes) }}>
   {# Keyboard navigation/accessibility link to main content section in page.html.twig. #}
-  <div class="visually-hidden-focusable skip-link p-3 container">
-    <a href="#main-content" class="nav-link px-2 py-1">
-      {{ 'Skip to main content'|t }}
-    </a>
+  <div id="skiptomain">
+    <a href="#main-content" class="nav-link py-1">{{ 'Skip to main content'|t }}</a>
   </div>
   {{ page_top }}
   {{ page }}

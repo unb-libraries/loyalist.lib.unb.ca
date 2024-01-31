@@ -2,17 +2,67 @@
 
 // Elements.
 a {
-  transition: all ease-in-out 0.25s;
-  text-decoration-color: rgba(170, 5, 1, 0.3);
+  transition: all ease-in-out 0.25s!important;
+  text-decoration: rgba(var(--bs-link-color-rgb), 0.15) $text-decoration-style;
+  text-underline-offset: $text-underline-offset;
 
   &:focus {
-    text-decoration-color: transparent;
+    text-decoration: transparent $text-decoration-style;
   }
   &:focus-visible {
-    outline-offset: 2px;
+    @include focus_outline(rgba($link-color, 0.7));
   }
   &:hover {
-    text-decoration-color: rgba(170, 5, 1, 0.9);
+    text-decoration: var(--bs-link-hover-color) $text-decoration-style-hover;
+  }
+}
+
+#skiptomain a {
+  background: $link-color;
+  color: $white;
+  display: block;
+  font-size: 2rem;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-underline-offset: $text-underline-offset;
+  top: -3.5rem;
+  transition: $transition-all;
+  width: 100%;
+  z-index: 999;
+
+  &:focus {
+    box-shadow: 0 0 5px $black;
+    text-decoration: underline;
+    top: 0;
+    transition: top 0.25s ease-out;
+  }
+}
+
+footer.footer-dark {
+  a {
+    text-decoration: transparent $text-decoration-style;
+
+    &:hover {
+      text-decoration: $link-text-light $text-decoration-style!important;
+    }
+    &:focus-visible {
+      @include focus_outline($link-text-light);
+      background: inherit;
+    }
+  }
+  #footer-logo {
+    a {
+      img {
+        border-bottom: 1px solid transparent;
+        transition: $transition-all;
+      }
+      &:hover {
+        img {
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
   }
 }
 
@@ -23,4 +73,31 @@ header {
   nav {
     padding: 0.25rem 0;
   }
+}
+
+main {
+  #main-content {
+    &:focus-visible {
+      outline-color: rgb(33, 37, 41, 0.25);
+    }
+  }
+}
+
+.block-system-main-block {
+  h3 {
+    margin-top: 2rem;
+  }
+  h2 {
+    &:not(:first-of-type) {
+      margin-top: 2.5rem;
+    }
+
+    & + h3 {
+      margin-top: 1rem;
+    }
+  }
+}
+
+li {
+  margin-bottom: $spacer * 0.5;
 }

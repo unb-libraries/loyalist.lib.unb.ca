@@ -1,5 +1,5 @@
 // Theme variables.
-
+$link-color: #aa0501;
 $navbar-brand-image-height: 66px !default;
 $navbar-brand-image-height-lg: 96px !default;
 $navbar-brand-image-width: auto !default;
@@ -21,3 +21,12 @@ $local-tasks-primary-margin: 1rem 0 !default;
 $local-tasks-secondary-margin: 0 0 1rem 0 !default;
 
 $table-striped-bg: #f9f9f9 !default;
+
+$link-text-dark: rgba(33, 33, 33, 0.75);
+$link-text-light: rgba(255, 255, 255, 0.75);
+$link-underline-light: rgba($link-color, 0.3);
+$link-underline-light-hover: rgba($link-color, 0.9);
+$text-decoration-style: underline;
+$text-decoration-style-hover: underline;
+$text-underline-offset: 0.35rem;
+$transition-all: all 0.25s ease-in-out;

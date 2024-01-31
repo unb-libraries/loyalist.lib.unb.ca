@@ -99,14 +99,13 @@ set footer_classes = ' ' ~
       {{ page.breadcrumb }}
     {% endif %}
 
-    <div class="row g-0">
+    <div class="row g-2">
       {% if page.sidebar_first %}
         <div class="order-2 order-lg-1 {{ sidebar_first_classes }}">
           {{ page.sidebar_first }}
         </div>
       {% endif %}
-      <div class="order-1 order-lg-2 {{ content_classes }}">
-        <a id="main-content" tabindex="-1"></a>
+      <div id="main-content" tabindex="-1" class="order-1 order-lg-2 {{ content_classes }}">
         {{ page.content }}
       </div>
       {% if page.sidebar_second %}
@@ -114,7 +113,7 @@ set footer_classes = ' ' ~
           {{ page.sidebar_second }}
         </div>
       {% endif %}
-    </div>
+</div>
   </div>
 </main>
 
@@ -126,12 +125,13 @@ set footer_classes = ' ' ~
   {% endif %}
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
-      <div id="copyright" class="clearfix">
+      <div id="copyright">
         &copy;&nbsp;{{ 'now' | date('Y') }}
         <a href="https://unb.ca/copyright">University of New Brunswick</a>
       </div>
       <div id="footer-logo">
-        <a href="https://lib.unb.ca"><img src="/{{ active_theme_path() }}/images/unb-libraries-red-white.png" alt="UNB Libraries"></a>
+        <a href="https://lib.unb.ca"><img src="/{{ active_theme_path() }}/images/unb-libraries-red-white.png"
+        alt="UNB Libraries"></a>
       </div>
     </div>
   </div>

@@ -8,6 +8,8 @@
 // Include bootstrap.
 @import '../../../../vendor/drupal/bootstrap5/scss/style';
 
+@import 'mixins';
+
 // Overrides.
 @import 'overrides/breadcrumb';
 @import 'overrides/layout';

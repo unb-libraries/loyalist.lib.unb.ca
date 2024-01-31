@@ -1,0 +1,7 @@
+@mixin focus_outline($rgba_value){
+  background: $light;
+  border-radius: 0.15rem;
+  box-shadow: none;
+  outline: 1px solid $rgba_value;
+  outline-offset: 2px;
+}

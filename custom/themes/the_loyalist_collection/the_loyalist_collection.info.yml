@@ -6,9 +6,9 @@ core_version_requirement: '^9.4 || ^10'
 libraries:
   - the_loyalist_collection/global-styling
 ckeditor_stylesheets:
-  - css/style.css
+  - dist/css/style.css
 ckeditor5-stylesheets:
-  - css/ck5style.css
+  - dist/css/ck5style.css
 regions:
   header: Header
   nav_branding: 'Navigation branding region'

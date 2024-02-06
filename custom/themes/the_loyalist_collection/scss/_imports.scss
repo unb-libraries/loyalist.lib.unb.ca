@@ -1,16 +1,16 @@
-// Sub theme styling.
-@import 'variables_drupal';
-
-// Bootstrap overriden variables.
+// Bootstrap variable overrides.
 // @see https://getbootstrap.com/docs/5.2/customize/sass/#variable-defaults.
 @import 'variables_bootstrap';
 
 // Include bootstrap.
 @import '../../../../vendor/drupal/bootstrap5/scss/style';
 
+// Subtheme variables.
+@import 'variables_drupal';
+
 @import 'mixins';
 
-// Overrides.
+// Style overrides.
 @import 'overrides/breadcrumb';
 @import 'overrides/layout';
 @import 'overrides/local_tasks';

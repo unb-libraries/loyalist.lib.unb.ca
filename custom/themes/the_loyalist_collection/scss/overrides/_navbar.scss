@@ -20,6 +20,7 @@
     // Offset BS5 nav.branding boundary space characters re: wrap.
     margin-left: -0.25rem;
     padding: 0.25rem;
+    text-underline-offset: 0.35rem;
   }
   @media (min-width: 992px) {
     .site-logo {

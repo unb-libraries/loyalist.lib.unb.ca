@@ -1,10 +1,58 @@
 @import 'imports';
 
-// Elements.
+// Browser overrides.
+header {
+  border-bottom: 5px solid var(--bs-dark);
+  margin-bottom: 1.5rem;
+
+  nav {
+    padding: 0.25rem 0;
+  }
+}
+
+main {
+  #main-content {
+    &:focus-visible {
+      outline-color: rgb(33, 37, 41, 0.25);
+    }
+  }
+}
+
+footer {
+  &.footer-dark {
+    a {
+      text-decoration: transparent $text-decoration-style;
+
+      &:focus-visible {
+        @include focus_outline($link-text-light);
+        background: inherit;
+      }
+      &:hover {
+        text-decoration: $link-text-light $text-decoration-style !important;
+      }
+    }
+  }
+
+  #footer-logo {
+    a {
+      img {
+        border-bottom: 1px solid transparent;
+        transition: $transition-all;
+      }
+
+      &:hover {
+        img {
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+  }
+}
+
 a {
-  transition: all ease-in-out 0.25s!important;
   text-decoration: rgba(var(--bs-link-color-rgb), 0.15) $text-decoration-style;
   text-underline-offset: $text-underline-offset;
+  transition: all ease-in-out 0.25s!important;
 
   &:focus {
     text-decoration: transparent $text-decoration-style;
@@ -36,50 +84,6 @@ a {
     text-decoration: underline;
     top: 0;
     transition: top 0.25s ease-out;
-  }
-}
-
-footer.footer-dark {
-  a {
-    text-decoration: transparent $text-decoration-style;
-
-    &:hover {
-      text-decoration: $link-text-light $text-decoration-style!important;
-    }
-    &:focus-visible {
-      @include focus_outline($link-text-light);
-      background: inherit;
-    }
-  }
-  #footer-logo {
-    a {
-      img {
-        border-bottom: 1px solid transparent;
-        transition: $transition-all;
-      }
-      &:hover {
-        img {
-          border-bottom: 1px solid #fff;
-        }
-      }
-    }
-  }
-}
-
-header {
-  border-bottom: 5px solid var(--bs-dark);
-  margin-bottom: 1.5rem;
-
-  nav {
-    padding: 0.25rem 0;
-  }
-}
-
-main {
-  #main-content {
-    &:focus-visible {
-      outline-color: rgb(33, 37, 41, 0.25);
-    }
   }
 }
 

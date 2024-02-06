@@ -1,3 +1,7 @@
 .ck-content {
   @import './style.scss';
+
+  &.ck .drupal-media {
+    width: 100%;
+  }
 }

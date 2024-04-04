@@ -7,6 +7,7 @@ dependencies:
   module:
     - filter
     - fontawesome
+    - media
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -18,3 +19,4 @@ permissions:
   - 'access content'
   - 'access fontawesome additional settings'
   - 'use text format wysiwyg'
+  - 'view media'

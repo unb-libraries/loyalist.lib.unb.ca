@@ -1,0 +1,66 @@
+uuid: 8c617956-0724-419f-a159-ddfab6954570
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.wysiwyg
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.basic_page
+  module:
+    - contextual
+    - file
+    - filter
+    - media
+    - node
+    - toolbar
+id: page_editor
+label: 'Page Editor'
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'create audio media'
+  - 'create document media'
+  - 'create image media'
+  - 'create remote_video media'
+  - 'create video media'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any image media'
+  - 'delete any remote_video media'
+  - 'delete any video media'
+  - 'delete basic_page revisions'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own image media'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'edit any audio media'
+  - 'edit any basic_page content'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any remote_video media'
+  - 'edit any video media'
+  - 'edit own audio media'
+  - 'edit own basic_page content'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'revert basic_page revisions'
+  - 'use text format wysiwyg'
+  - 'view any audio media revisions'
+  - 'view any document media revisions'
+  - 'view any image media revisions'
+  - 'view any remote_video media revisions'
+  - 'view any video media revisions'
+  - 'view basic_page revisions'
+  - 'view own unpublished content'

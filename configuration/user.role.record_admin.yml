@@ -1,0 +1,88 @@
+uuid: c3414ac4-1cf1-4e98-b256-892f69a9b912
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.wysiwyg
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.loyalist_record
+    - taxonomy.vocabulary.category
+    - taxonomy.vocabulary.issuing_body
+    - taxonomy.vocabulary.media_type
+    - taxonomy.vocabulary.subject_heading
+  module:
+    - comment
+    - contextual
+    - file
+    - filter
+    - media
+    - node
+    - taxonomy
+    - toolbar
+id: record_admin
+label: 'Record Admin'
+weight: 2
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer comment types'
+  - 'create audio media'
+  - 'create document media'
+  - 'create image media'
+  - 'create loyalist_record content'
+  - 'create remote_video media'
+  - 'create terms in category'
+  - 'create terms in issuing_body'
+  - 'create terms in media_type'
+  - 'create terms in subject_heading'
+  - 'create video media'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any image media'
+  - 'delete any loyalist_record content'
+  - 'delete any remote_video media'
+  - 'delete any video media'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own image media'
+  - 'delete own loyalist_record content'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'delete terms in category'
+  - 'delete terms in issuing_body'
+  - 'delete terms in media_type'
+  - 'delete terms in subject_heading'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any loyalist_record content'
+  - 'edit any remote_video media'
+  - 'edit any video media'
+  - 'edit own audio media'
+  - 'edit own comments'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own loyalist_record content'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'edit terms in category'
+  - 'edit terms in issuing_body'
+  - 'edit terms in media_type'
+  - 'edit terms in subject_heading'
+  - 'revert loyalist_record revisions'
+  - 'use text format wysiwyg'
+  - 'view any audio media revisions'
+  - 'view any document media revisions'
+  - 'view any image media revisions'
+  - 'view any remote_video media revisions'
+  - 'view any video media revisions'
+  - 'view loyalist_record revisions'

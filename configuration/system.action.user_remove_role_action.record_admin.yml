@@ -1,0 +1,14 @@
+uuid: 052020b0-3282-4e4c-8a8f-270bf5226270
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.record_admin
+  module:
+    - user
+id: user_remove_role_action.record_admin
+label: 'Remove the Record Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: record_admin

@@ -1,0 +1,14 @@
+uuid: d0fa01fa-4aa8-4bce-a61e-6a7c96d4112b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.record_admin
+  module:
+    - user
+id: user_add_role_action.record_admin
+label: 'Add the Record Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: record_admin

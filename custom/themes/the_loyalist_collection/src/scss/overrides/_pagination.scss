@@ -1,0 +1,10 @@
+.pagination {
+  .active {
+    a {
+     &:hover {
+       cursor: default;
+       text-decoration: none;
+     }
+    }
+  }
+}

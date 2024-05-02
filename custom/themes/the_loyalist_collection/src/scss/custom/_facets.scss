@@ -1,0 +1,88 @@
+.block-facets {
+  h3 {
+    border-bottom: 1px solid var(--bs-gray-700);
+    color: var(--bs-gray-700);
+    font-size: 1.1rem;
+    margin-bottom: $spacer;
+  }
+}
+
+.facets-widget-checkbox {
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-left: $spacer * 0.35;
+  }
+
+  .facet-item {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: $spacer * 0.15;
+    margin-bottom: $spacer * 0.6;
+
+    input[type="checkbox"],
+    label {
+      line-height: initial;
+
+      .facet-item__count {
+        color: var(--bs-gray-600);;
+        letter-spacing: 1px;
+      }
+    }
+
+    input[type="checkbox"] {
+      margin-right: $spacer * 0.5;
+     transform: scale(1.4);
+
+      &:focus-visible {
+        outline-color: var(--bs-link-hover-color);
+      }
+    }
+  }
+}
+
+ul.js-facets-checkbox-links + a::before {
+  content: "\f067";
+  display: inline-block;
+  font: var(--fa-font-solid);
+  margin-bottom: 2px;
+  margin-right: $spacer * 0.5;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 $spacer * 0.25;
+  vertical-align: baseline;
+}
+ul.js-facets-checkbox-links + a.open::before {
+  content: "\f068";
+}
+.facet-item:hover,
+.facet-item:hover input {
+  cursor: pointer;
+}
+.facet-item__value {
+  color: $link-color;
+  font-size: $font-size-base * 0.95;
+}
+.facet-item input:focus,
+.facet-item input:focus + label .facet-item__value,
+.facet-item input:hover,
+.facet-item:hover .facet-item__value {
+  color: var(--bs-link-hover-color);
+  text-decoration: underline;
+}
+.facet-item:hover {
+  .facets-checkbox {
+    box-shadow: 0 0 5px -2px var(--bs-link-hover-color);
+  }
+}
+
+.facets-soft-limit-link {
+  margin-left: $spacer * 0.15;
+  padding: 0.15rem 0.25rem 0.15rem 0;
+}
+
+.block-facets {
+  margin-bottom: $spacer * 1.5;
+}

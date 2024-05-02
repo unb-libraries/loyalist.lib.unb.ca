@@ -1,0 +1,27 @@
+// Bootstrap variable overrides.
+// @see https://getbootstrap.com/docs/5.2/customize/sass/#variable-defaults.
+@import 'variables_bootstrap';
+
+// Include bootstrap.
+@import '../../../../../../vendor/drupal/bootstrap5/scss/style';
+
+// Subtheme variables.
+@import 'variables_drupal';
+
+@import 'mixins';
+
+// Custom styles.
+@import 'facets';
+@import 'fouc-unhide';
+@import 'table';
+
+// Style overrides.
+@import '../overrides/breadcrumb';
+@import '../overrides/inline-form';
+@import '../overrides/layout';
+@import '../overrides/local_tasks';
+@import '../overrides/navbar';
+@import '../overrides/pagination';
+@import "../overrides/scroll.top.button";
+@import '../overrides/tables';
+@import '../overrides/views';

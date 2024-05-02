@@ -1,0 +1,61 @@
+$btn-min-width: 42px;
+$spacer: 1rem; /* Borrow BS5 variable */
+$visible_cursor: #ff3131;
+
+form[action="/browse"] {
+  input {
+    /* Make input cursor stand out from Selectize data-value items */
+    &[type="text"] {
+      caret-color: $visible_cursor;
+    }
+
+    &.form-submit {
+      margin-bottom: $spacer * 0.5;
+      margin-left: 0;
+      width: $spacer * 8;
+    }
+  }
+
+  label {
+    color: var(--bs-gray-700);
+    font-weight: bold;
+  }
+
+  @media (min-width: 981px) {
+    .form--inline .form-item {
+      min-width: 300px;
+      width: 33%;
+    }
+  }
+}
+
+.selectize-control.multi {
+  .selectize-input [data-value] {
+    background: var(--bs-gray-700);
+    color: #fff;
+  }
+
+  .selectize-input.has-items {
+    padding-left: $spacer * 0.5;
+    padding-right: calc($spacer + $btn-min-width);
+  }
+}
+
+/* Improve UX of Clear button */
+.selectize-control.plugin-clear_button .clear {
+  background: var(--bs-gray-300);
+  border-bottom-right-radius: var(--bs-border-radius-sm);
+  border-top-right-radius: var(--bs-border-radius-sm);
+  font-size: 1.5rem;
+  right: calc($spacer * 0.25 - 4px);
+  width: $btn-min-width;
+
+  &:hover {
+    color: var(--bs-link-hover-color);
+  }
+}
+
+.selectize-dropdown .active:not(.selected) {
+  /* Increase dropdown list highlight visibility */
+  background: var(--bs-primary-bg-subtle);
+}

@@ -1,0 +1,39 @@
+thead {
+  &.table-dark {
+    a {
+      color: var(--bs-white);
+      white-space: nowrap;
+
+      &:hover {
+        text-decoration-color: var(--bs-white);
+      }
+
+      &:focus-within {
+        outline-color: var(--bs-white);
+      }
+    }
+  }
+
+  th {
+    &:not([aria-sort]) {
+      a {
+        &:after {
+          color: var(--bs-white);
+          @include fa_pseudo('\f0dc', 'left', 0.5);
+        }
+      }
+    }
+
+    .tablesort--asc {
+      background-image: url(/core/misc/icons/ffffff/twistie-down.svg);
+      height: $core-icon-size;
+      width: $core-icon-size;
+    }
+
+    .tablesort--desc {
+      background-image: url(/core/misc/icons/ffffff/twistie-up.svg);
+      height: $core-icon-size;
+      width: $core-icon-size;
+    }
+  }
+}

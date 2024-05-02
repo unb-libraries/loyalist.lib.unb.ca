@@ -10,24 +10,24 @@
   }
 
   .site-logo {
-    margin-right: 0.75rem;
+    margin-right: $spacer * 0.75;
   }
 
   a.site-title {
     color: var(--bs-black);
-    font-size: 2rem;
+    font-size: $spacer * 2;
     line-height: 1;
     // Offset BS5 nav.branding boundary space characters re: wrap.
-    margin-left: -0.25rem;
+    margin-left: $spacer * -0.25;
     padding: 0.25rem;
-    text-underline-offset: 0.35rem;
+    text-underline-offset: $spacer * 0.35;
   }
   @media (min-width: 992px) {
     .site-logo {
-      margin-right: 1.25rem;
+      margin-right: $spacer * 1.25;
     }
     .site-title {
-      font-size: 2.25rem;
+      font-size: $font-size-base * 2.25;
     }
   }
 }
@@ -35,7 +35,7 @@
 .navbar {
   a {
     outline-offset: 1px;
-    padding: 0.25rem;
+    padding: $spacer * 0.25;
     text-decoration: transparent $text-decoration-style!important;
 
     &:not(.active):hover {
@@ -43,7 +43,7 @@
     }
 
     &:focus-visible {
-      @include focus_outline($link-text-dark);
+      @include focus_outline($link-color);
     }
   }
 }

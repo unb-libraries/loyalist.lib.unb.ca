@@ -1,0 +1,15 @@
+/* DRUPAL VIEWS */
+.view-empty {
+  .card-header-warning {
+    background: var(--bs-warning-bg-subtle);
+
+    .fa-exclamation-circle {
+      color: var(--bs-warning-text-emphasis);
+      font-size: $font-size-base * 1.15;
+    }
+  }
+}
+
+.view-filters {
+  margin: $spacer * 2 auto;
+}

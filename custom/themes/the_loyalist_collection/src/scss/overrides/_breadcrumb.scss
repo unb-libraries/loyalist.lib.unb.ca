@@ -1,6 +1,6 @@
 .breadcrumb {
   border-bottom: 1px solid var(--bs-border-color);
-  padding-bottom: 1rem;
+  margin-bottom: $spacer * 2;
 
   a {
     text-decoration: none;
@@ -12,5 +12,6 @@
   }
 }
 .breadcrumb-item+.breadcrumb-item::before {
-  content: var(--bs-breadcrumb-divider, "»") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+  /* rtl: var(--bs-breadcrumb-divider, "/") */
+  content: var(--bs-breadcrumb-divider, "»") ;
 }

@@ -1,0 +1,17 @@
+/**
+ * Responsive tables.
+ */
+@media screen and (max-width: 37.5em) { /* 600px */
+  th.priority-low,
+  td.priority-low,
+  th.priority-medium,
+  td.priority-medium {
+    display: none;
+  }
+}
+@media screen and (max-width: 60em) { /* 920px */
+  th.priority-low,
+  td.priority-low {
+    display: none;
+  }
+}

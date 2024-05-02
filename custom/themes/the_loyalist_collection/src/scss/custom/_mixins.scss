@@ -1,0 +1,26 @@
+/* Font Awesome 6: unicode value, padding side property, numeric value */
+@mixin fa_pseudo($content_value, $side_property, $padding_value) {
+  content: $content_value;
+  display: inline-block;
+  font: var(--fa-font-solid);
+  font-size: smaller;
+  @if $side_property == top {
+    padding-top: $spacer * $padding_value;
+  } @else if $side_property == right {
+    padding-right: $spacer * $padding_value;
+  } @else if $side_property == bottom {
+    padding-bottom: $spacer * $padding_value;
+  } @else if $side_property == left {
+    padding-left: $spacer * $padding_value;
+  }
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Link focus outline re: keyboard accessibility */
+@mixin focus_outline($rgba_value) {
+  border-radius: $spacer * 0.15;
+  box-shadow: none;
+  outline: 1px solid $rgba_value;
+  outline-offset: 2px;
+}

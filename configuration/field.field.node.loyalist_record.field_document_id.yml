@@ -1,0 +1,23 @@
+uuid: f3cb010e-9ed9-417c-8425-1cceb3d25d48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_id
+    - node.type.loyalist_record
+id: node.loyalist_record.field_document_id
+field_name: field_document_id
+entity_type: node
+bundle: loyalist_record
+label: 'Database ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

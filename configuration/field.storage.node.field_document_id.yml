@@ -1,0 +1,20 @@
+uuid: a304438f-34b4-4e09-9f52-bfe3b52d767e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_document_id
+field_name: field_document_id
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

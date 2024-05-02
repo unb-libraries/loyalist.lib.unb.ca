@@ -1,6 +1,26 @@
 global-styling:
+  version: VERSION
   css:
     base:
       '//fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,700&display=swap': { external: true }
     theme:
       dist/css/style.css: { minified: true }
+  js:
+    dist/js/global.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+unblib-selectize:
+  version: 0.15.2
+  css:
+    base:
+      css/selectize.bootstrap5.min.css: { minified: true }
+    theme:
+      dist/css/unblib-selectize-bs5.css: { minified: true }
+  js:
+    dist/js/selectize.js: { }
+    dist/js/unblib-selectize.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal

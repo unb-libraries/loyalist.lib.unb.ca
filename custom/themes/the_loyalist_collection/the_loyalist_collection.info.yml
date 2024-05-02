@@ -5,6 +5,7 @@ core_version_requirement: '^9.4 || ^10'
 'base theme': bootstrap5
 libraries:
   - the_loyalist_collection/global-styling
+  - the_loyalist_collection/unblib-selectize
 ckeditor_stylesheets:
   - dist/css/style.css
 ckeditor5-stylesheets:

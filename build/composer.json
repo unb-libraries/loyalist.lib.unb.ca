@@ -93,6 +93,18 @@
         }
       },
       "type": "package"
+    },
+    {
+      "package": {
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/OwlCarousel2/OwlCarousel2/archive/2.3.4.zip"
+        },
+        "name": "owlcarousel2/owlcarousel2",
+        "type": "drupal-library",
+        "version": "2.3.4"
+      },
+      "type": "package"
     }
   ],
   "require": {

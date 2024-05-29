@@ -1,0 +1,25 @@
+uuid: 7f9862ec-678f-4ed6-8c89-a6ce033809b8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GKW1Kt12akfnoHMLc0QC5L9N6Jc2osd271lhpo6Vo7o
+name: owlcarousel2
+label: 'Carousel (1300x480)'
+effects:
+  5a491d04-e64b-4754-8dd2-f01254d59999:
+    uuid: 5a491d04-e64b-4754-8dd2-f01254d59999
+    id: image_scale
+    weight: -10
+    data:
+      width: 1300
+      height: null
+      upscale: true
+  1c771da3-bbed-4d3c-880d-92c40baba3e2:
+    uuid: 1c771da3-bbed-4d3c-880d-92c40baba3e2
+    id: image_crop
+    weight: -9
+    data:
+      width: 1300
+      height: 480
+      anchor: center-center

@@ -120,6 +120,7 @@
     "drupal/search_api": "^1",
     "drupal/search_api_solr": "^4",
     "drupal/twig_tweak": "^3",
+    "drupal/views_rows_wrapper": "^2",
     "fontawesome/fontawesome": "^6",
     "owlcarousel2/owlcarousel2": "^2",
     "unb-libraries/composer-drupal-scaffold": "^10"

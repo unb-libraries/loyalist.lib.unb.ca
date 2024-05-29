@@ -16,7 +16,6 @@ owlcarousel2:
   css:
     theme:
       /libraries/owlcarousel2/dist/assets/owl.carousel.min.css: { minified: true }
-      /libraries/owlcarousel2/dist/assets/owl.theme.default.min.css: { minified: true }
       dist/css/unblib-owlcarousel2.css: { minified: true }
   js:
     /libraries/owlcarousel2/dist/owl.carousel.min.js: { minified: true }

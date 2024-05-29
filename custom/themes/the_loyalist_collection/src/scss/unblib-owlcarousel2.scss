@@ -1,0 +1,27 @@
+.owl-carousel {
+  background: var(--bs-black);
+
+  &:hover {
+    cursor: wait;
+  }
+
+  &.owl-theme .owl-nav {
+    position: absolute;
+    bottom: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    button.owl-next,
+    button.owl-prev {
+      color: var(--bs-white);
+      padding: .75rem .5rem!important;
+      transition: background-color 0.25s ease-in-out;
+
+      &:focus,
+      &:hover {
+        background: #880401;
+      }
+    }
+  }
+}

@@ -27,6 +27,14 @@ process:
       bundle_key: vid
       bundle: subject_heading
       value_key: name
+  field_other_numbers/value: field_other_numbers_value
+  field_other_numbers/format:
+    plugin: default_value
+    default_value: 'wysiwyg'
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: 'wysiwyg'
 
 destination:
   plugin: 'entity:node'

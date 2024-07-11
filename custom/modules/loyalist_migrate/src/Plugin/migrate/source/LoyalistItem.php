@@ -60,6 +60,7 @@ class LoyalistItem extends SqlBase
           'subject_heading_name' => 'subject_heading_name',
           'field_other_numbers_value' => 'field_other_numbers_value',
           'field_other_numbers_format' => 'field_other_numbers_format',
+          'body' => 'body',
         ];
         return $fields;
     }

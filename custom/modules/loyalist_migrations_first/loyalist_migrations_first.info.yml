@@ -1,7 +1,0 @@
-type: module
-name: Loyalist First Migration
-description: Based off 31 days of Drupal migrations.
-package: Loyalist Migrations
-dependencies:
-  - drupal:migrate
-core_version_requirement: ^9 || ^10

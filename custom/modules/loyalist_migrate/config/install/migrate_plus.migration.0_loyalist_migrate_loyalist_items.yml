@@ -47,12 +47,15 @@ process:
   body:
     -
       plugin: sub_process
-      source: body
+      source: body_value
       process:
         value: value
         format:
           plugin: default_value
           default_value: wysiwyg
+        summary:
+          plugin: default_value
+          default_value: ''
 
 destination:
   plugin: 'entity:node'

@@ -19,6 +19,14 @@ process:
       bundle_key: vid
       bundle: issuing_body
       value_key: name
+  field_subject_heading:
+    -
+      plugin: entity_generate
+      source: subject_heading_name
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: subject_heading
+      value_key: name
 
 destination:
   plugin: 'entity:node'

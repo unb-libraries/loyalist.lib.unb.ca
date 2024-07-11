@@ -23,14 +23,20 @@ class LoyalistItem extends SqlBase
     {
         $query = $this->select('node', 'n');
         $query->condition('n.type', 'loyalist_record');
-        $query->join('field_data_field_accompanying_record', 'fac', 'n.nid = fac.entity_id AND fac.deleted = 0');
-        $query->join('field_data_field_issuing_body', 'fib', 'n.nid = fib.entity_id AND fib.deleted = 0');
-        $query->join('taxonomy_term_data', 'ttd', 'fib.field_issuing_body_tid = ttd.tid');
-
         $query->addField('n', 'nid', 'nid');
         $query->addField('n', 'title', 'title');
+
+        $query->join('field_data_field_accompanying_record', 'fac', 'n.nid = fac.entity_id AND fac.deleted = 0');
         $query->addField('fac', 'field_accompanying_record_value', 'field_accompanying_record_value');
-        $query->addField('ttd', 'name', 'issuing_body_name');
+
+        $query->join('field_data_field_issuing_body', 'fib', 'n.nid = fib.entity_id AND fib.deleted = 0');
+        $query->join('taxonomy_term_data', 'ttdfib', 'fib.field_issuing_body_tid = ttdfib.tid');
+        $query->addField('ttdfib', 'name', 'issuing_body_name');
+
+        $query->join('field_data_field_subject_heading', 'fsh', 'n.nid = fsh.entity_id AND fsh.deleted = 0');
+        $query->join('taxonomy_term_data', 'ttdfsh', 'fsh.field_subject_heading_tid = ttdfsh.tid');
+        $query->addField('ttdfsh', 'name', 'subject_heading_name');
+
         return $query;
     }
 
@@ -44,6 +50,7 @@ class LoyalistItem extends SqlBase
           'title'   => 'title',
           'field_accompanying_record_value' => 'field_accompanying_record_value',
           'issuing_body_name' => 'issuing_body_name',
+          'subject_heading_name' => 'subject_heading_name',
         ];
         return $fields;
     }

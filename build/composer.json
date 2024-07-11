@@ -110,18 +110,6 @@
       "package": {
         "dist": {
           "type": "zip",
-          "url": "https://github.com/ganlanyuan/tiny-slider/archive/refs/tags/v2.9.3.zip"
-        },
-        "name": "ganlanyuan/tiny-slider",
-        "type": "drupal-library",
-        "version": "2.9.3"
-      },
-      "type": "package"
-    },
-    {
-      "package": {
-        "dist": {
-          "type": "zip",
           "url": "https://github.com/markgoodyear/scrollup/archive/refs/heads/master.zip"
         },
         "extra": {
@@ -164,12 +152,10 @@
     "drupal/scheduler": "^2",
     "drupal/search_api": "<1.35",
     "drupal/search_api_solr": "^4",
-    "drupal/tiny_slider": "^1.1@RC",
     "drupal/twig_tweak": "^3",
     "drupal/twig_field_value": "^2",
     "drupal/views_rows_wrapper": "^2",
     "fontawesome/fontawesome": "^6",
-    "ganlanyuan/tiny-slider": "^2.9",
     "markgoodyear/scrollup": "dev-master",
     "owlcarousel2/owlcarousel2": "^2",
     "unb-libraries/composer-drupal-scaffold": "^10"

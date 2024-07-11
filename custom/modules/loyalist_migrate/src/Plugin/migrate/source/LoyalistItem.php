@@ -44,6 +44,9 @@ class LoyalistItem extends SqlBase
         $query->leftJoin('taxonomy_term_data', 'ttdfsh', 'fsh.field_subject_heading_tid = ttdfsh.tid');
         $query->addField('ttdfsh', 'name', 'subject_heading_name');
 
+        $query->leftJoin('field_data_field_call_number', 'fcn', 'n.nid = fcn.entity_id AND fcn.deleted = 0');
+        $query->addField('fcn', 'field_call_number_value', 'field_call_number_value');
+
         return $query;
     }
 

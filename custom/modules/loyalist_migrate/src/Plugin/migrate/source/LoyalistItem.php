@@ -34,7 +34,6 @@ class LoyalistItem extends SqlBase
 
         $query->leftJoin('field_data_field_other_numbers', 'fon', 'n.nid = fon.entity_id AND fon.deleted = 0');
         $query->addField('fon', 'field_other_numbers_value', 'field_other_numbers_value');
-        $query->addField('fon', 'field_other_numbers_format', 'field_other_numbers_format');
 
         $query->leftJoin('field_data_field_issuing_body', 'fib', 'n.nid = fib.entity_id AND fib.deleted = 0');
         $query->leftJoin('taxonomy_term_data', 'ttdfib', 'fib.field_issuing_body_tid = ttdfib.tid');
@@ -57,13 +56,12 @@ class LoyalistItem extends SqlBase
     {
         // This maps the field from their name above to a destination field name that is specified in the process section. I generally keep them the same.
         $fields = [
-          'title'   => 'title',
           'nid' => 'nid',
+          'title' => 'title',
           'field_accompanying_record_value' => 'field_accompanying_record_value',
           'issuing_body_name' => 'issuing_body_name',
           'subject_heading_name' => 'subject_heading_name',
           'field_other_numbers_value' => 'field_other_numbers_value',
-          'field_other_numbers_format' => 'field_other_numbers_format',
           'body' => 'body',
         ];
         return $fields;

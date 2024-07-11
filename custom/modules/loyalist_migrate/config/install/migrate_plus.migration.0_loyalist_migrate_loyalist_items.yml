@@ -9,9 +9,15 @@ source:
   plugin: loyalist_item
   key: migrate
 process:
-  title: title
+  title:
+    plugin: callback
+    callable: trim
+    source: title
+  field_call_number:
+    plugin: callback
+    callable: trim
+    source: field_call_number_value
   field_accompanying_record: field_accompanying_record_value
-  field_call_number: field_call_number_value
   field_issuing_body:
     -
       plugin: entity_generate

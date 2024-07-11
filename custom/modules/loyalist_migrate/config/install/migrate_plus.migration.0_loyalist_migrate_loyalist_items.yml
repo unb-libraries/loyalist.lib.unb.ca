@@ -9,6 +9,7 @@ source:
   plugin: loyalist_item
   key: migrate
 process:
+  nid: nid
   title:
     plugin: callback
     callable: trim

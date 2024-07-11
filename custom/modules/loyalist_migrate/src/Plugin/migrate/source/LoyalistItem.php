@@ -58,6 +58,7 @@ class LoyalistItem extends SqlBase
         // This maps the field from their name above to a destination field name that is specified in the process section. I generally keep them the same.
         $fields = [
           'title'   => 'title',
+          'nid' => 'nid',
           'field_accompanying_record_value' => 'field_accompanying_record_value',
           'issuing_body_name' => 'issuing_body_name',
           'subject_heading_name' => 'subject_heading_name',

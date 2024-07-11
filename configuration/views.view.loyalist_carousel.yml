@@ -310,12 +310,13 @@ display:
         - 'config:field.storage.media.field_media_image'
   block_1:
     id: block_1
-    display_title: Block
+    display_title: 'Owl Block'
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
-      block_description: 'Loyalist Carousel Block'
+      block_description: 'Loyalist Owl Carousel Block'
       allow:
         items_per_page: false
     cache_metadata:

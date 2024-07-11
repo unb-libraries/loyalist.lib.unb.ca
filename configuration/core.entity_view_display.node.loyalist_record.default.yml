@@ -7,11 +7,11 @@ dependencies:
     - field.field.node.loyalist_record.field_accompanying_record
     - field.field.node.loyalist_record.field_background_information
     - field.field.node.loyalist_record.field_call_number
-    - field.field.node.loyalist_record.field_creator
-    - field.field.node.loyalist_record.field_database_id
+    - field.field.node.loyalist_record.field_document_id
     - field.field.node.loyalist_record.field_finding_aid_record
     - field.field.node.loyalist_record.field_finding_aids
     - field.field.node.loyalist_record.field_gauge
+    - field.field.node.loyalist_record.field_issuing_body
     - field.field.node.loyalist_record.field_media_type
     - field.field.node.loyalist_record.field_notes
     - field.field.node.loyalist_record.field_number_of_sources
@@ -37,22 +37,14 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 110
-    region: content
-  field_accompanying_record:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 114
+    weight: 9
     region: content
   field_background_information:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 111
+    weight: 8
     region: content
   field_call_number:
     type: string
@@ -60,24 +52,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 103
-    region: content
-  field_creator:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 104
-    region: content
-  field_database_id:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 101
+    weight: 0
     region: content
   field_finding_aid_record:
     type: file_default
@@ -85,74 +60,82 @@ content:
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 119
+    weight: 13
     region: content
   field_finding_aids:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 113
+    weight: 12
     region: content
   field_gauge:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 109
+    weight: 7
     region: content
-  field_media_type:
+  field_issuing_body:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 106
+    weight: 2
+    region: content
+  field_media_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_notes:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 115
+    weight: 14
     region: content
   field_number_of_sources:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 105
+    weight: 3
     region: content
   field_originals:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 112
+    weight: 10
     region: content
   field_other_numbers:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 118
+    weight: 11
     region: content
   field_other_with:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 116
+    weight: 16
     region: content
   field_record_info:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 107
+    weight: 5
     region: content
   field_subject_heading:
     type: entity_reference_label
@@ -160,26 +143,30 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 102
+    weight: 1
     region: content
   field_this_is_part_of:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 117
+    weight: 15
     region: content
   field_volume_info:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 108
+    weight: 6
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 17
     region: content
-hidden: {  }
+hidden:
+  field_accompanying_record: true
+  field_document_id: true
+  langcode: true
+  search_api_excerpt: true

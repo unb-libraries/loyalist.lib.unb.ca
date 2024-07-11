@@ -1,12 +1,12 @@
 $btn-min-width: 42px;
 $spacer: 1rem; /* Borrow BS5 variable */
-$visible_cursor: #ff3131;
+$visible_cursor: #f00;
 
 form[action="/browse"] {
   input {
     /* Make input cursor stand out from Selectize data-value items */
     &[type="text"] {
-      caret-color: $visible_cursor;
+       caret-color: $visible_cursor;
     }
 
     &.form-submit {

@@ -2,7 +2,7 @@ global-styling:
   version: VERSION
   css:
     base:
-      '//fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,700&display=swap': { external: true }
+      '//fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,700&display=swap': { external: true, minified: true }
     theme:
       dist/css/style.css: { minified: true }
   js:
@@ -31,8 +31,7 @@ unblib-selectize:
     theme:
       dist/css/unblib-selectize-bs5.css: { minified: true }
   js:
-    dist/js/selectize.js: { }
+    dist/js/selectize.min.js: { minified: true }
     dist/js/unblib-selectize.js: { }
   dependencies:
     - core/jquery
-    - core/drupal

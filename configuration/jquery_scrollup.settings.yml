@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: rVy2O64McXYEiFW4EF6opEWdSzWKMIPIXavzldAMUyY
+buttonText: 'Back to top'
+preventOnMobile: 0
+preventOnAdminPages: 1
+preventOnFrontPage: 0
+scrollDistance: '100'
+scrollSpeed: '300'
+scrollTarget: '#main-content'
+buttonType: icon
+buttonPlace: 1
+buttonTitle: ''
+buttonColor: ''
+buttonColorHover: ''
+buttonBgColor: ''
+buttonBgColorHover: '#880401'
+scrollFrom: top

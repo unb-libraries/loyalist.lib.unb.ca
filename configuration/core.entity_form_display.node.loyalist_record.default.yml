@@ -7,11 +7,11 @@ dependencies:
     - field.field.node.loyalist_record.field_accompanying_record
     - field.field.node.loyalist_record.field_background_information
     - field.field.node.loyalist_record.field_call_number
-    - field.field.node.loyalist_record.field_creator
-    - field.field.node.loyalist_record.field_database_id
+    - field.field.node.loyalist_record.field_document_id
     - field.field.node.loyalist_record.field_finding_aid_record
     - field.field.node.loyalist_record.field_finding_aids
     - field.field.node.loyalist_record.field_gauge
+    - field.field.node.loyalist_record.field_issuing_body
     - field.field.node.loyalist_record.field_media_type
     - field.field.node.loyalist_record.field_notes
     - field.field.node.loyalist_record.field_number_of_sources
@@ -24,8 +24,47 @@ dependencies:
     - field.field.node.loyalist_record.field_volume_info
     - node.type.loyalist_record
   module:
+    - field_group
     - file
+    - path
     - text
+third_party_settings:
+  field_group:
+    group_archived_fields:
+      children:
+        - field_document_id
+        - field_accompanying_record
+      label: 'Archived fields'
+      region: content
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        required_fields: true
+        effect: none
+    group_description:
+      children:
+        - field_number_of_sources
+        - field_media_type
+        - field_record_info
+        - field_volume_info
+        - field_gauge
+      label: Description
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 id: node.loyalist_record.default
 targetEntityType: node
 bundle: loyalist_record
@@ -43,13 +82,13 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 20
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   field_accompanying_record:
     type: string_textfield
-    weight: 14
+    weight: 20
     region: content
     settings:
       size: 60
@@ -65,25 +104,15 @@ content:
     third_party_settings: {  }
   field_call_number:
     type: string_textfield
-    weight: 2
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_creator:
-    type: entity_reference_autocomplete_tags
-    weight: 4
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_database_id:
+  field_document_id:
     type: number
-    weight: 0
+    weight: 19
     region: content
     settings:
       placeholder: ''
@@ -100,7 +129,7 @@ content:
     weight: 13
     region: content
     settings:
-      rows: 5
+      rows: 4
       placeholder: ''
     third_party_settings: {  }
   field_gauge:
@@ -111,8 +140,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_issuing_body:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_media_type:
-    type: entity_reference_autocomplete_tags
+    type: entity_reference_autocomplete
     weight: 6
     region: content
     settings:
@@ -123,10 +158,10 @@ content:
     third_party_settings: {  }
   field_notes:
     type: text_textarea
-    weight: 15
+    weight: 14
     region: content
     settings:
-      rows: 5
+      rows: 3
       placeholder: ''
     third_party_settings: {  }
   field_number_of_sources:
@@ -142,23 +177,23 @@ content:
     weight: 12
     region: content
     settings:
-      rows: 5
+      rows: 1
       placeholder: ''
     third_party_settings: {  }
   field_other_numbers:
     type: text_textarea
-    weight: 24
+    weight: 17
     region: content
     settings:
-      rows: 5
+      rows: 1
       placeholder: ''
     third_party_settings: {  }
   field_other_with:
     type: text_textarea
-    weight: 16
+    weight: 15
     region: content
     settings:
-      rows: 5
+      rows: 1
       placeholder: ''
     third_party_settings: {  }
   field_record_info:
@@ -171,16 +206,16 @@ content:
     third_party_settings: {  }
   field_subject_heading:
     type: options_select
-    weight: 1
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_this_is_part_of:
     type: text_textarea
-    weight: 17
+    weight: 16
     region: content
     settings:
-      rows: 5
+      rows: 1
       placeholder: ''
     third_party_settings: {  }
   field_volume_info:
@@ -191,36 +226,43 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 19
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
-    type: boolean_checkbox
-    weight: 21
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  status:
     type: boolean_checkbox
     weight: 23
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 25
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 22
+    weight: 24
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 3
+    weight: 2
     region: content
     settings:
       size: 60
@@ -228,7 +270,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 19
+    weight: 21
     region: content
     settings:
       match_operator: CONTAINS
@@ -236,4 +278,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

@@ -4,3 +4,31 @@
  * @file
  * The Loyalist Collection theme file.
  */
+
+function the_loyalist_collection_preprocess_input(&$variables) {
+  $input_type = $variables['attributes']['type'] ?? '';
+
+  switch ($input_type) {
+    case 'text':
+      // Change fulltext input type from text to search.
+      $input_name = $variables['attributes']['name'] ?? '';
+      if (str_contains($input_name, 'fulltext')) {
+        $variables['attributes']['type'] = "search";
+      }
+      break;
+
+    case 'submit':
+      // Change reset input style to BS5 light.
+      $input_id = $variables['attributes']['id'] ?? '';
+      if (str_contains($input_id, 'reset')) {
+        $input_base_classes = $variables['attributes']['class'] ?? [];
+        $input_custom_classes = [
+          'border',
+          'btn',
+          'btn-light',
+        ];
+        $variables['attributes']['class'] = array_merge($input_base_classes, $input_custom_classes);
+      }
+      break;
+  }
+}

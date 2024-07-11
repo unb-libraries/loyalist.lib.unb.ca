@@ -1,0 +1,11 @@
+uuid: c62b91e6-c126-40d6-87dc-e4b7b7575784
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.loyalist_record
+id: node.loyalist_record
+target_entity_type_id: node
+target_bundle: loyalist_record
+default_langcode: site_default
+language_alterable: false

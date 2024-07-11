@@ -33,8 +33,9 @@
     }
 
     input[type="checkbox"] {
+      margin-left: 1px;
       margin-right: $spacer * 0.5;
-     transform: scale(1.4);
+      transform: scale(1.4);
 
       &:focus-visible {
         outline-color: var(--bs-link-hover-color);

@@ -10,8 +10,8 @@ id: node.loyalist_record.field_subject_heading
 field_name: field_subject_heading
 entity_type: node
 bundle: loyalist_record
-label: 'Subject Heading'
-description: ''
+label: Category
+description: 'Subject Heading'
 required: true
 translatable: false
 default_value: {  }

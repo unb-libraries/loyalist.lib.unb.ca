@@ -1,72 +1,6 @@
 @import 'custom/imports';
 
-// Browser overrides.
-header {
-  border-bottom: 5px solid var(--bs-dark);
-  margin-bottom: $spacer * 1.5;
-
-  nav {
-    padding: $spacer * 0.25 0;
-  }
-}
-
-main {
-  #main-content {
-    &:focus-visible {
-      outline-color: var(--bs-primary-bg-subtle);
-    }
-  }
-}
-
-footer {
-  &.footer-dark {
-    a {
-      text-decoration: transparent $text-decoration-style;
-
-      &:focus-visible {
-        @include focus_outline($link-text-light);
-        background: inherit;
-      }
-      &:hover {
-        text-decoration: $link-text-light $text-decoration-style !important;
-      }
-    }
-  }
-
-  #footer-logo {
-    a {
-      img {
-        border-bottom: 1px solid transparent;
-        transition: $transition-all;
-      }
-
-      &:hover {
-        img {
-          border-bottom: 1px solid #fff;
-        }
-      }
-    }
-  }
-}
-
-a,
-button.link {
-  display: inline-block;
-  text-decoration: rgba(var(--bs-link-color-rgb), 0.15) $text-decoration-style;
-  text-underline-offset: $text-underline-offset;
-  transition: all ease-in-out 0.25s!important;
-
-  &:focus {
-    text-decoration: transparent $text-decoration-style;
-  }
-  &:focus-visible {
-    @include focus_outline(rgba(var(--bs-link-color-rgb), 0.7));
-  }
-  &:hover {
-    text-decoration: var(--bs-link-hover-color) $text-decoration-style-hover;
-  }
-}
-
+// Body.
 #skiptomain a {
   background: $link-color;
   color: $white;
@@ -86,9 +20,79 @@ button.link {
     /*text-decoration: underline;*/
     border: 3px ridge var(--bs-primary-bg-subtle);
     top: 0;
-    transition: top 0.25s ease-out;
+    transition: top $transition-speed-default $transition-timing-default;
   }
 }
+
+// Browser overrides.
+header {
+  border-bottom: 5px solid var(--bs-dark);
+  margin-bottom: $spacer * 1.5;
+
+  nav {
+    padding: $spacer * 0.25 0;
+  }
+}
+
+main {
+  a,
+  button.link {
+    display: inline-block;
+    text-decoration: $text-decoration-line-default $text-decoration-color-default;
+    text-underline-offset: $text-underline-offset;
+    transition: $transition-all;
+
+    &:focus {
+      text-decoration: $text-decoration-color-default;
+    }
+
+    &:focus-visible {
+      @include focus_outline(rgba(var(--bs-link-color-rgb), 0.7));
+    }
+
+    &:hover {
+      text-decoration: var(--bs-link-hover-color) $text-decoration-style-hover;
+    }
+  }
+
+  #main-content {
+    &:focus-visible {
+      outline-color: var(--bs-primary-bg-subtle);
+    }
+  }
+}
+
+footer {
+  &.footer-dark {
+    a {
+      text-decoration: $text-decoration-line-default $text-decoration-color-default;
+
+      &:focus-visible {
+        @include focus_outline($link-text-light);
+        background: inherit;
+      }
+      &:hover {
+        text-decoration: var(--bs-light) $text-decoration-style !important;
+      }
+    }
+  }
+
+  #footer-logo {
+    a {
+      img {
+        border-bottom: 1px solid transparent;
+        transition: $transition-all;
+      }
+
+      &:hover {
+        img {
+          border-bottom: 1px solid $white;
+        }
+      }
+    }
+  }
+}
+
 
 .block-system-main-block {
   h3 {

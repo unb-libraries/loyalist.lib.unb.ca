@@ -1,4 +1,14 @@
 .pagination {
+  .page-link {
+    text-decoration: $text-decoration-line-default;
+    text-decoration-color: rgba(0,0,0,0);
+    transition: text-decoration-color $transition-speed-default $transition-timing-default;
+
+    &:hover {
+      text-decoration-color: rgba(var(--bs-link-hover-color-rgb), 1);
+    }
+  }
+
   .active {
     a {
      &:hover {
@@ -6,5 +16,8 @@
        text-decoration: none;
      }
     }
+  }
+  .disabled {
+    display: none;
   }
 }

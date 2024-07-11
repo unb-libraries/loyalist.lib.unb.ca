@@ -31,12 +31,12 @@
   db_offline ? 'db-offline',
   (b5_body_schema == 'light' ? ' text-dark' : (b5_body_schema == 'dark' ? ' text-light' :  ' ')),
   (b5_body_bg_schema != 'none' ? " bg-#{b5_body_bg_schema}" : ' '),
-  'd-flex flex-column h-100'
+  'bg-body text-body d-flex flex-column h-100'
 ]
 %}
 
 <!DOCTYPE html>
-<html{{ html_attributes.addClass('h-100') }}>
+<html{{ html_attributes.addClass('h-100') }} data-bs-theme="auto">
 <head>
   <head-placeholder token="{{ placeholder_token }}">
   <title>{{ head_title|safe_join(' | ') }}</title>

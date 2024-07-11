@@ -8,11 +8,11 @@ dependencies:
     - field.field.node.loyalist_record.field_accompanying_record
     - field.field.node.loyalist_record.field_background_information
     - field.field.node.loyalist_record.field_call_number
-    - field.field.node.loyalist_record.field_creator
-    - field.field.node.loyalist_record.field_database_id
+    - field.field.node.loyalist_record.field_document_id
     - field.field.node.loyalist_record.field_finding_aid_record
     - field.field.node.loyalist_record.field_finding_aids
     - field.field.node.loyalist_record.field_gauge
+    - field.field.node.loyalist_record.field_issuing_body
     - field.field.node.loyalist_record.field_media_type
     - field.field.node.loyalist_record.field_notes
     - field.field.node.loyalist_record.field_number_of_sources
@@ -31,21 +31,24 @@ targetEntityType: node
 bundle: loyalist_record
 mode: teaser
 content:
-  links:
-    settings: {  }
+  field_subject_heading:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
 hidden:
   body: true
   field_accompanying_record: true
   field_background_information: true
   field_call_number: true
-  field_creator: true
-  field_database_id: true
+  field_document_id: true
   field_finding_aid_record: true
   field_finding_aids: true
   field_gauge: true
+  field_issuing_body: true
   field_media_type: true
   field_notes: true
   field_number_of_sources: true
@@ -53,6 +56,8 @@ hidden:
   field_other_numbers: true
   field_other_with: true
   field_record_info: true
-  field_subject_heading: true
   field_this_is_part_of: true
   field_volume_info: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

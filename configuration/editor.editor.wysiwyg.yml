@@ -14,16 +14,18 @@ settings:
       - heading
       - bold
       - italic
+      - blockQuote
       - alignment
       - '|'
       - link
-      - blockQuote
-      - specialCharacters
+      - drupalMedia
       - '|'
       - bulletedList
       - numberedList
       - insertTable
       - horizontalLine
+      - specialCharacters
+      - '|'
       - sourceEditing
   plugins:
     ckeditor5_alignment:
@@ -40,24 +42,55 @@ settings:
         - heading5
         - heading6
     ckeditor5_list:
-      reversed: false
-      startIndex: true
+      properties:
+        reversed: false
+        startIndex: true
+      multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags:
+        - '<a id target title aria-controls aria-expanded aria-selected hreflang data-entity-substitution data-entity-type data-entity-uuid data-toggle role class>'
+        - '<address class>'
+        - '<blockquote cite class>'
+        - '<q lang class>'
+        - '<button aria-controls aria-expanded aria-haspopup aria-label data-dismiss data-reference data-target data-toggle type id class>'
+        - '<caption class>'
         - '<cite>'
-        - '<dl>'
-        - '<dt>'
-        - '<dd>'
-        - '<a hreflang>'
-        - '<blockquote cite>'
-        - '<ul type>'
-        - '<ol type>'
-        - '<img src alt data-entity-type data-entity-uuid data-align data-caption>'
-        - '<h2 id>'
-        - '<h3 id>'
-        - '<h4 id>'
-        - '<h5 id>'
-        - '<h6 id>'
-        - '<p id>'
-        - '<span class aria-hidden>'
-image_upload: {  }
+        - '<div aria-labelledby aria-modal data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date data-parent lang role tabindex id class>'
+        - '<dd id class>'
+        - '<dl id class>'
+        - '<dt id class>'
+        - '<em class>'
+        - '<h2 id class>'
+        - '<h3 id class>'
+        - '<h4 id class>'
+        - '<h5 id class>'
+        - '<h6 id class>'
+        - '<hr class>'
+        - '<iframe allow allowfullscreen class frameborder height src title width>'
+        - '<img src alt width height data-entity-type data-entity-uuid data-align data-caption class>'
+        - '<li id class>'
+        - '<ol id type class>'
+        - '<p id class>'
+        - '<span aria-hidden data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date data-color lang class>'
+        - '<small class>'
+        - '<strong class>'
+        - '<table id class>'
+        - '<tbody class>'
+        - '<td data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date id class>'
+        - '<th id scope class>'
+        - '<thead class>'
+        - '<tr data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date id class>'
+        - '<ul class id role type>'
+        - '<drupal-media class title>'
+        - '<drupal-entity alt class data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode title>'
+    ckeditor_media_resize_mediaResize:
+      apply_image_styles: true
+      image_styles:
+        - cke_media_resize_small
+        - cke_media_resize_medium
+        - cke_media_resize_large
+        - cke_media_resize_xl
+    media_media:
+      allow_view_mode_override: false
+image_upload:
+  status: false

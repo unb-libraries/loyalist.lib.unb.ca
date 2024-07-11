@@ -1,0 +1,29 @@
+uuid: f10092b2-e4f7-40dc-88f9-01f41a924645
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.subject_heading
+  module:
+    - facets
+    - system
+  theme:
+    - the_loyalist_collection
+id: the_loyalist_collection_subjectheading
+theme: the_loyalist_collection
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:subject_heading'
+settings:
+  id: 'facet_block:subject_heading'
+  label: 'Subject Heading'
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: the_loyalist_collection_subjectheading
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

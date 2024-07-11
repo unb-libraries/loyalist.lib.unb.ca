@@ -1,14 +1,16 @@
 // Bootstrap variable overrides.
-// @see https://getbootstrap.com/docs/5.2/customize/sass/#variable-defaults.
+// @see https://getbootstrap.com/docs/5.3/customize/sass/#variable-defaults.
 @import 'variables_bootstrap';
 
 // Include bootstrap.
-@import '../../../../../../vendor/drupal/bootstrap5/scss/style';
+//@import '../../../../../../vendor/drupal/bootstrap5/scss/style';
+@import 'bootstrap5';
+
+// Subtheme mixins.
+@import 'mixins';
 
 // Subtheme variables.
 @import 'variables_drupal';
-
-@import 'mixins';
 
 // Custom styles.
 @import 'facets';
@@ -16,12 +18,17 @@
 @import 'table';
 
 // Style overrides.
+@import '../overrides/bootstrap5';
 @import '../overrides/breadcrumb';
+@import '../overrides/color_modes';
+@import '../overrides/form';
 @import '../overrides/inline-form';
 @import '../overrides/layout';
 @import '../overrides/local_tasks';
 @import '../overrides/navbar';
+@import '../unblib-owlcarousel2';
 @import '../overrides/pagination';
 @import "../overrides/scroll.top.button";
 @import '../overrides/tables';
+@import '../overrides/utilities';
 @import '../overrides/views';

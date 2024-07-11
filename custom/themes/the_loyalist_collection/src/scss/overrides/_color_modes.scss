@@ -1,0 +1,65 @@
+// Bootstrap 5.3.x Color Mode/Theme Style Overrides.
+
+// Dark Mode - begin.
+$color-mode-type: data;
+@include color-mode(dark) {
+  //Footer.
+  header {
+    &.bg-light {
+      background-color: var(--bs-black)!important;
+
+      .nav-main-menu {
+        a:not(.is-active) {
+          color: var(--bs-white);
+        }
+      }
+    }
+  }
+
+  main {
+    // Breadcrumbs.
+    .breadcrumb-item {
+      color: var(--bs-gray);
+    }
+
+    // Tables.
+    .table-striped > tbody > tr:nth-of-type(odd) > * {
+      color: var(--bs-black);
+
+      a {
+        color: var(--bs-black);
+        text-decoration: rgba(var(--bs-black-rgb), 0.25) underline;
+
+        &:hover {
+          text-decoration: rgba(var(--bs-black-rgb), 0.99) underline;
+        }
+      }
+    }
+
+    thead.table-dark {
+      th {
+        background-color: var(--bs-gray-800);
+      }
+    }
+
+    // Links.
+    a {
+      &:not(.page-link) {
+        color: var(--bs-white);
+        text-decoration: rgba(var(--bs-white-rgb), 0.25) underline;
+      }
+
+      &:hover {
+        background-color: initial;
+        text-decoration: rgba(var(--bs-link-color-rgb), 0.99) underline;
+      }
+    }
+  }
+
+  footer {
+    &.bg-dark {
+      background-color: var(--bs-black)!important;
+    }
+  }
+}
+// Dark Mode - end.

@@ -11,6 +11,7 @@ dependencies:
   module:
     - comment
     - path
+    - scheduler
     - text
 _core:
   default_config_hash: 0ThS2gDcb78ZIPFZv1gRW44jZqezcVMyiXzx1-VwViY
@@ -51,6 +52,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 8
@@ -63,6 +71,17 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 52
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -98,3 +117,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_blog_tags: true
+  unpublish_on: true

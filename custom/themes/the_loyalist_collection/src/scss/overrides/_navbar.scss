@@ -2,26 +2,41 @@
   flex-shrink: unset;
 }
 
-.navbar-brand {
+.navbar .navbar-brand {
   margin-right: 0;
+  gap: $spacer * .75;
 
   img {
     margin-right: 0;
   }
 
-  .site-logo {
-    margin-right: $spacer * 0.75;
+  @media (max-width: 576px) {
+    .site-logo {
+      /*margin-right: $spacer * 0.75;*/
+      height: auto;
+      max-height: 72px;
+    }
   }
 
   a.site-title {
-    color: var(--bs-black);
+    color: var(--bs-nav-link-color);
     font-size: $spacer * 2;
     line-height: 1;
     // Offset BS5 nav.branding boundary space characters re: wrap.
     margin-left: $spacer * -0.25;
     padding: 0.25rem;
+    text-decoration: transparent underline;
     text-underline-offset: $spacer * 0.35;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
+
+  &:hover {
+    color: var(--bs-nav-link-color);
+  }
+
   @media (min-width: 992px) {
     .site-logo {
       margin-right: $spacer * 1.25;
@@ -34,16 +49,17 @@
 
 .navbar {
   a {
+    color: var(--bs-nav-link-color);
     outline-offset: 1px;
     padding: $spacer * 0.25;
-    text-decoration: transparent $text-decoration-style!important;
+    text-decoration: transparent $text-decoration-style;
 
     &:not(.active):hover {
-      text-decoration: $link-text-dark $text-decoration-style!important;
+      text-decoration: var(--bs-nav-link-color) $text-decoration-style;
     }
 
     &:focus-visible {
-      @include focus_outline($link-color);
+      @include focus_outline(var(--bs-navbar-brand-color));
     }
   }
 }
@@ -52,7 +68,7 @@
   max-width: 41.67%;
 
   a {
-    &.active:hover {
+    &.is-active:hover {
       cursor: default;
       text-decoration: transparent $text-decoration-style;
     }

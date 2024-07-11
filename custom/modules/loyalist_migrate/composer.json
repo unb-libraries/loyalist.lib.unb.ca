@@ -1,0 +1,19 @@
+{
+  "name": "drupal/bnald_core",
+  "type": "drupal-module",
+  "description": "Migrate Loyalist content to Drupal 10",
+  "keywords": [
+    "Drupal"
+  ],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/loyalist_migrate",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/loyalist_migrate",
+    "source": "http://cgit.drupalcode.org/loyalist_migrate"
+  },
+  "require": {
+    "drupal/migrate_tools": "^6",
+    "drupal/migrate_plus": "^6"
+  }
+}

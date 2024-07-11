@@ -1,0 +1,25 @@
+id: 0_loyalist_migrate_loyalist_items
+label: 'Loyalist Item'
+
+migration_tags:
+  - Loyalist
+  - SQL
+
+source:
+  plugin: loyalist_item
+  key: migrate
+process:
+  title: title
+  field_accompanying_record: field_accompanying_record_value
+  field_issuing_body:
+    -
+      plugin: entity_generate
+      source: issuing_body_name
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: issuing_body
+      value_key: name
+
+destination:
+  plugin: 'entity:node'
+  default_bundle: loyalist_record

@@ -66,6 +66,17 @@ services:
       - "4113:8025"
     networks:
       - loyalist.lib.unb.ca
+  mysqlimport:
+    image: mysql:5.7
+    expose:
+      - "3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: import
+      MYSQL_DATABASE: loyalist
+    networks:
+      - loyalist.lib.unb.ca
+    volumes:
+      - ./loyalist.sql:/docker-entrypoint-initdb.d/loyalist.sql
 networks:
   loyalist.lib.unb.ca:
     name: loyalist.lib.unb.ca

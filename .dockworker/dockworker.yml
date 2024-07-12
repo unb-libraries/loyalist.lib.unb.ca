@@ -4,15 +4,18 @@ dockworker:
     name: The Loyalist Collection
     uri: https://loyalist.lib.unb.ca
     description: >
-      This is a special collection of British and Colonial North American sources published in microformat and digitally.
+      The Loyalist Collection is a special collection of British and Colonial North American sources, including the
+      British West Indies, predominantly from 1750-1850, published mainly in microformat and limited digital format.
     topics:
       - loyalist
+      - british
+      - colonial
       - history
-      - records
+      - research
     identifiers:
       id: loyalist.lib.unb.ca
       slug: loyalist-lib-unb-ca
-      short_slug: loyalist
+      short_slug: hit
       uuid: 3113
     framework:
       name: Drupal
@@ -26,7 +29,7 @@ dockworker:
       license: MIT
       holder: University of New Brunswick Libraries
     shell:
-      shell: /bin/sh
+      path: /bin/sh
   endpoints:
     env:
       - dev
@@ -60,18 +63,10 @@ dockworker:
       push-branches:
         - dev
         - prod
-    k8s:
-      deployments:
-        - name: loyalist-lib-unb-ca
-          namespaces:
-            - dev
-            - prod
-      e2e_tests:
+    e2e_tests:
         - id: core
           frequency: '*/5 * * * *'
           source_files:
             - .dockworker/tests/e2e/loyalist.lib.unb.ca.yml
           namespaces:
             - prod
-    local:
-      additional_hostnames:

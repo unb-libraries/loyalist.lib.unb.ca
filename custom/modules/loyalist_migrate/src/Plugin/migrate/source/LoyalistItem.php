@@ -26,7 +26,7 @@ class LoyalistItem extends SqlBase
         $query->addField('n', 'nid', 'nid');
         $query->addField('n', 'title', 'title');
 
-        $query->leftJoin('field_data_body', 'fbody', 'n.nid = fbody.entity_id AND fbody.deleted = 0');
+        $query->leftJoin('field_data_body', 'fbody', 'n.vid = fbody.entity_id AND fbody.deleted = 0');
         $query->addField('fbody', 'body_value', 'body_value');
 
         $query->leftJoin('field_data_field_accompanying_record', 'fac', 'n.nid = fac.entity_id AND fac.deleted = 0');

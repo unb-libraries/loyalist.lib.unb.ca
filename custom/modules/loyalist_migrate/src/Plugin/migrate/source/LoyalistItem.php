@@ -26,8 +26,8 @@ class LoyalistItem extends SqlBase
         $query->addField('n', 'nid', 'nid');
         $query->addField('n', 'title', 'title');
 
-        $query->leftJoin('field_data_body', 'fbody', 'n.vid = fbody.entity_id AND fbody.deleted = 0');
-        $query->addField('fbody', 'body_value', 'body_value');
+        $query->leftJoin('field_data_field_contents', 'fcon', 'n.nid = fcon.entity_id AND fcon.deleted = 0');
+        $query->addField('fcon', 'field_contents_value', 'field_contents_value');
 
         $query->leftJoin('field_data_field_accompanying_record', 'fac', 'n.nid = fac.entity_id AND fac.deleted = 0');
         $query->addField('fac', 'field_accompanying_record_value', 'field_accompanying_record_value');
@@ -62,7 +62,7 @@ class LoyalistItem extends SqlBase
           'issuing_body_name' => 'issuing_body_name',
           'subject_heading_name' => 'subject_heading_name',
           'field_other_numbers_value' => 'field_other_numbers_value',
-          'body_value' => 'body_value',
+          'field_contents_value' => 'field_contents_value',
         ];
         return $fields;
     }

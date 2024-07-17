@@ -26,6 +26,11 @@ process:
     callable: trim
     source: field_accompanying_record_value
 
+  field_background_information/value: field_background_information_value
+  field_background_information/format:
+    plugin: default_value
+    default_value: wysiwyg
+
   field_call_number:
     plugin: callback
     callable: trim
@@ -36,6 +41,16 @@ process:
     callable: trim
     source: field_document_id_value
 
+  field_finding_aids/value: field_finding_aids_value
+  field_finding_aids/format:
+    plugin: default_value
+    default_value: wysiwyg
+
+  field_gauge:
+    plugin: callback
+    callable: trim
+    source: field_gauge_value
+
   field_issuing_body:
     -
       plugin: entity_generate
@@ -45,15 +60,25 @@ process:
       bundle: issuing_body
       value_key: name
 
-  field_gauge:
-    plugin: callback
-    callable: trim
-    source: field_gauge_value
+  field_notes/value: field_notes_value
+  field_notes/format:
+    plugin: default_value
+    default_value: wysiwyg
 
   field_number_of_sources:
     plugin: callback
     callable: trim
     source: field_number_of_sources_value
+
+  field_originals/value: field_originals_value
+  field_originals/format:
+    plugin: default_value
+    default_value: wysiwyg
+
+  field_other_with/value: field_other_with_value
+  field_other_with/format:
+    plugin: default_value
+    default_value: wysiwyg
 
   field_other_numbers/value: field_other_numbers_value
   field_other_numbers/format:
@@ -73,6 +98,11 @@ process:
       bundle_key: vid
       bundle: subject_heading
       value_key: name
+
+  field_this_is_part_of/value: field_this_is_part_of_value
+  field_this_is_part_of/format:
+    plugin: default_value
+    default_value: wysiwyg
 
   field_volume_info:
     plugin: callback

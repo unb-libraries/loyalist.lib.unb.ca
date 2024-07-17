@@ -80,6 +80,7 @@ settings:
         - '<th id scope class>'
         - '<thead class>'
         - '<tr data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date id class>'
+        - '<u class>'
         - '<ul class id role type>'
         - '<drupal-media class title>'
         - '<drupal-entity alt class data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode title>'

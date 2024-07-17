@@ -8,17 +8,34 @@ migration_tags:
 source:
   plugin: loyalist_item
   key: migrate
+
 process:
   nid: nid
   title:
     plugin: callback
     callable: trim
     source: title
+
+  body/value: field_contents_value
+  body/format:
+    plugin: default_value
+    default_value: wysiwyg
+
+  field_accompanying_record:
+    plugin: callback
+    callable: trim
+    source: field_accompanying_record_value
+
   field_call_number:
     plugin: callback
     callable: trim
     source: field_call_number_value
-  field_accompanying_record: field_accompanying_record_value
+
+  field_document_id:
+    plugin: callback
+    callable: trim
+    source: field_document_id_value
+
   field_issuing_body:
     -
       plugin: entity_generate
@@ -27,6 +44,27 @@ process:
       bundle_key: vid
       bundle: issuing_body
       value_key: name
+
+  field_gauge:
+    plugin: callback
+    callable: trim
+    source: field_gauge_value
+
+  field_number_of_sources:
+    plugin: callback
+    callable: trim
+    source: field_number_of_sources_value
+
+  field_other_numbers/value: field_other_numbers_value
+  field_other_numbers/format:
+    plugin: default_value
+    default_value: wysiwyg
+
+  field_record_info:
+    plugin: callback
+    callable: trim
+    source: field_record_info_value
+
   field_subject_heading:
     -
       plugin: entity_generate
@@ -35,14 +73,11 @@ process:
       bundle_key: vid
       bundle: subject_heading
       value_key: name
-  field_other_numbers/value: field_other_numbers_value
-  field_other_numbers/format:
-    plugin: default_value
-    default_value: wysiwyg
-  body/value: field_contents_value
-  body/format:
-    plugin: default_value
-    default_value: wysiwyg
+
+  field_volume_info:
+    plugin: callback
+    callable: trim
+    source: field_volume_info_value
 
 destination:
   plugin: 'entity:node'

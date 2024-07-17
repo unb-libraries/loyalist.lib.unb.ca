@@ -26,25 +26,37 @@ class LoyalistItem extends SqlBase
         $query->addField('n', 'nid', 'nid');
         $query->addField('n', 'title', 'title');
 
-        $query->leftJoin('field_data_field_contents', 'fcon', 'n.nid = fcon.entity_id AND fcon.deleted = 0');
-        $query->addField('fcon', 'field_contents_value', 'field_contents_value');
-
         $query->leftJoin('field_data_field_accompanying_record', 'fac', 'n.nid = fac.entity_id AND fac.deleted = 0');
         $query->addField('fac', 'field_accompanying_record_value', 'field_accompanying_record_value');
 
-        $query->leftJoin('field_data_field_other_numbers', 'fon', 'n.nid = fon.entity_id AND fon.deleted = 0');
-        $query->addField('fon', 'field_other_numbers_value', 'field_other_numbers_value');
+        $query->leftJoin('field_data_field_call_number', 'fcn', 'n.nid = fcn.entity_id AND fcn.deleted = 0');
+        $query->addField('fcn', 'field_call_number_value', 'field_call_number_value');
+
+        $query->leftJoin('field_data_field_contents', 'fcon', 'n.nid = fcon.entity_id AND fcon.deleted = 0');
+        $query->addField('fcon', 'field_contents_value', 'field_contents_value');
+
+        $query->leftJoin('field_data_field_document_id', 'fdid', 'n.nid = fdid.entity_id AND fdid.deleted = 0');
+        $query->addField('fdid', 'field_document_id_value', 'field_document_id_value');
+
+        $query->leftJoin('field_data_field_gauge', 'fg', 'n.nid = fg.entity_id AND fg.deleted = 0');
+        $query->addField('fg', 'field_gauge_value', 'field_gauge_value');
 
         $query->leftJoin('field_data_field_issuing_body', 'fib', 'n.nid = fib.entity_id AND fib.deleted = 0');
         $query->leftJoin('taxonomy_term_data', 'ttdfib', 'fib.field_issuing_body_tid = ttdfib.tid');
         $query->addField('ttdfib', 'name', 'issuing_body_name');
 
+        $query->leftJoin('field_data_field_number_of_sources', 'fns', 'n.nid = fns.entity_id AND fns.deleted = 0');
+        $query->addField('fns', 'field_number_of_sources_value', 'field_number_of_sources_value');
+
+        $query->leftJoin('field_data_field_record_info', 'fri', 'n.nid = fri.entity_id AND fri.deleted = 0');
+        $query->addField('fri', 'field_record_info_value', 'field_record_info_value');
+
         $query->leftJoin('field_data_field_subject_heading', 'fsh', 'n.nid = fsh.entity_id AND fsh.deleted = 0');
         $query->leftJoin('taxonomy_term_data', 'ttdfsh', 'fsh.field_subject_heading_tid = ttdfsh.tid');
         $query->addField('ttdfsh', 'name', 'subject_heading_name');
 
-        $query->leftJoin('field_data_field_call_number', 'fcn', 'n.nid = fcn.entity_id AND fcn.deleted = 0');
-        $query->addField('fcn', 'field_call_number_value', 'field_call_number_value');
+        $query->leftJoin('field_data_field_volume_info', 'fvi', 'n.nid = fvi.entity_id AND fvi.deleted = 0');
+        $query->addField('fvi', 'field_volume_info_value', 'field_volume_info_value');
 
         return $query;
     }

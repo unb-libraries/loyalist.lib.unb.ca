@@ -11,7 +11,7 @@ id: node.loyalist_record.field_finding_aid_record
 field_name: field_finding_aid_record
 entity_type: node
 bundle: loyalist_record
-label: 'Electronic Finding Aid Record'
+label: 'PDF Finding Aid'
 description: ''
 required: false
 translatable: false
@@ -21,7 +21,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: ''
-  file_extensions: 'txt pdf'
+  file_extensions: pdf
   max_filesize: '50 MB'
   description_field: false
 field_type: file

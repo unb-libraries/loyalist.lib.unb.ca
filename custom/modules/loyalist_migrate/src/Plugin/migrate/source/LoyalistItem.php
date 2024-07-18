@@ -96,6 +96,7 @@ class LoyalistItem extends SqlBase
           'nid' => 'nid',
           'title' => 'title',
           'field_accompanying_record_value' => 'field_accompanying_record_value',
+          'field_background_information_value' => 'field_background_information_value',
           'field_call_number_value' => 'field_call_number_value',
           'field_contents_value' => 'field_contents_value',
           'field_document_id_value' => 'field_document_id_value',

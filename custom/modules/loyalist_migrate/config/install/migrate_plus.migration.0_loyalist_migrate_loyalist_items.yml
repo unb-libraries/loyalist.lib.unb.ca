@@ -60,6 +60,15 @@ process:
       bundle: issuing_body
       value_key: name
 
+  field_media_type:
+    -
+      plugin: entity_generate
+      source: media_type_name
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: media_type
+      value_key: name
+
   field_notes/value: field_notes_value
   field_notes/format:
     plugin: default_value

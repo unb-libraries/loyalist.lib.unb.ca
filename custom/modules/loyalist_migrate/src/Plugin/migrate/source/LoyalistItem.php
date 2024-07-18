@@ -51,6 +51,10 @@ class LoyalistItem extends SqlBase
         $query->leftJoin('taxonomy_term_data', 'ttdfib', 'fib.field_issuing_body_tid = ttdfib.tid');
         $query->addField('ttdfib', 'name', 'issuing_body_name');
 
+        $query->leftJoin('field_data_field_media_type', 'fmt', 'n.nid = fmt.entity_id AND fmt.deleted = 0');
+        $query->leftJoin('taxonomy_term_data', 'ttdfmt', 'fmt.field_media_type_tid = ttdfmt.tid');
+        $query->addField('ttdfmt', 'name', 'media_type_name');
+
         $query->leftJoin('field_data_field_notes', 'fn', 'n.nid = fn.entity_id AND fn.deleted = 0');
         $query->addField('fn', 'field_notes_value', 'field_notes_value');
 
@@ -92,10 +96,22 @@ class LoyalistItem extends SqlBase
           'nid' => 'nid',
           'title' => 'title',
           'field_accompanying_record_value' => 'field_accompanying_record_value',
-          'issuing_body_name' => 'issuing_body_name',
-          'subject_heading_name' => 'subject_heading_name',
-          'field_other_numbers_value' => 'field_other_numbers_value',
+          'field_call_number_value' => 'field_call_number_value',
           'field_contents_value' => 'field_contents_value',
+          'field_document_id_value' => 'field_document_id_value',
+          'field_finding_aids_value' => 'field_finding_aids_value',
+          'field_gauge_value' => 'field_gauge_value',
+          'field_notes_value' => 'field_notes_value',
+          'field_number_of_sources' => 'field_number_of_sources',
+          'field_other_numbers_value' => 'field_other_numbers_value',
+          'field_other_with_value' => 'field_other_with_value',
+          'field_record_info' => 'field_record_info',
+          'field_subject_heading' => 'field_subject_heading',
+          'field_this_is_part_of_value' => 'field_this_is_part_of_value',
+          'field_volume_info_value' => 'field_volume_info_value',
+          'issuing_body_name' => 'issuing_body_name',
+          'media_type_name' => 'media_type_name',
+          'subject_heading_name' => 'subject_heading_name',
         ];
         return $fields;
     }

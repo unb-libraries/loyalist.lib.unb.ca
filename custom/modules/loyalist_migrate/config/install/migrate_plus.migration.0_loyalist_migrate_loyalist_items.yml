@@ -16,7 +16,13 @@ process:
     callable: trim
     source: title
 
-  body/value: field_contents_value
+  body/value:
+    -
+      plugin: str_replace
+      source: field_contents_value
+      search: ['<b>', '</b>']
+      replace: ['<strong>', '</strong>']
+
   body/format:
     plugin: default_value
     default_value: wysiwyg
@@ -26,7 +32,13 @@ process:
     callable: trim
     source: field_accompanying_record_value
 
-  field_background_information/value: field_background_information_value
+  field_background_information/value:
+    -
+      plugin: str_replace
+      source: field_background_information_value
+      search: [ '<b>', '</b>' ]
+      replace: [ '<strong>', '</strong>' ]
+
   field_background_information/format:
     plugin: default_value
     default_value: wysiwyg
@@ -41,7 +53,13 @@ process:
     callable: trim
     source: field_document_id_value
 
-  field_finding_aids/value: field_finding_aids_value
+  field_finding_aids/value:
+    -
+      plugin: str_replace
+      source: field_finding_aids_value
+      search: [ '<b>', '</b>' ]
+      replace: [ '<strong>', '</strong>' ]
+
   field_finding_aids/format:
     plugin: default_value
     default_value: wysiwyg
@@ -69,7 +87,13 @@ process:
       bundle: media_type
       value_key: name
 
-  field_notes/value: field_notes_value
+  field_notes/value:
+    -
+      plugin: str_replace
+      source: field_notes_value
+      search: [ '<b>', '</b>' ]
+      replace: [ '<strong>', '</strong>' ]
+
   field_notes/format:
     plugin: default_value
     default_value: wysiwyg
@@ -79,17 +103,35 @@ process:
     callable: trim
     source: field_number_of_sources_value
 
-  field_originals/value: field_originals_value
+  field_originals/value:
+    -
+      plugin: str_replace
+      source: field_originals_value
+      search: [ '<b>', '</b>' ]
+      replace: [ '<strong>', '</strong>' ]
+
   field_originals/format:
     plugin: default_value
     default_value: wysiwyg
 
-  field_other_with/value: field_other_with_value
+  field_other_with/value:
+    -
+      plugin: str_replace
+      source: field_other_with_value
+      search: [ '<b>', '</b>' ]
+      replace: [ '<strong>', '</strong>' ]
+
   field_other_with/format:
     plugin: default_value
     default_value: wysiwyg
 
-  field_other_numbers/value: field_other_numbers_value
+  field_other_numbers/value:
+    -
+      plugin: str_replace
+      source: field_other_numbers_value
+      search: [ '<b>', '</b>' ]
+      replace: [ '<strong>', '</strong>' ]
+
   field_other_numbers/format:
     plugin: default_value
     default_value: wysiwyg
@@ -108,7 +150,13 @@ process:
       bundle: subject_heading
       value_key: name
 
-  field_this_is_part_of/value: field_this_is_part_of_value
+  field_this_is_part_of/value:
+    -
+      plugin: str_replace
+      source: field_this_is_part_of_value
+      search: [ '<b>', '</b>' ]
+      replace: [ '<strong>', '</strong>' ]
+
   field_this_is_part_of/format:
     plugin: default_value
     default_value: wysiwyg

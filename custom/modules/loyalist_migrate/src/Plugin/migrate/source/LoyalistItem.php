@@ -25,6 +25,8 @@ class LoyalistItem extends SqlBase
         $query->condition('n.type', 'loyalist_record');
         $query->addField('n', 'nid', 'nid');
         $query->addField('n', 'title', 'title');
+        $query->addField('n', 'created', 'created');
+        $query->addField('n', 'changed', 'changed');
 
         $query->leftJoin('field_data_field_accompanying_record', 'fac', 'n.nid = fac.entity_id AND fac.deleted = 0');
         $query->addField('fac', 'field_accompanying_record_value', 'field_accompanying_record_value');
@@ -94,6 +96,8 @@ class LoyalistItem extends SqlBase
         // This maps the field from their name above to a destination field name that is specified in the process section. I generally keep them the same.
         $fields = [
           'nid' => 'nid',
+          'created' => 'created',
+          'changed' => 'changed',
           'title' => 'title',
           'field_accompanying_record_value' => 'field_accompanying_record_value',
           'field_background_information_value' => 'field_background_information_value',

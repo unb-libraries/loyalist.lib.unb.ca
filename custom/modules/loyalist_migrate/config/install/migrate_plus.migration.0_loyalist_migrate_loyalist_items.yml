@@ -11,6 +11,9 @@ source:
 
 process:
   nid: nid
+  created: created
+  changed: changed
+
   title:
     plugin: callback
     callable: trim

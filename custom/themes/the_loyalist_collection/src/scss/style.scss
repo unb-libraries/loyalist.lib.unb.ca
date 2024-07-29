@@ -124,3 +124,38 @@ figure {
 li:not(.nav-item):not(.menu-item):not(.facet-item) {
   margin-bottom: $spacer * 0.5;
 }
+
+/* Loyalist Record Display */
+dl.loyalist-record {
+  dd {
+    margin-bottom: $spacer * 1;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    dt {
+      padding: $spacer * 0.75 $spacer * 0.5;
+
+      &.visually-hidden {
+        position: relative!important;
+      }
+    }
+
+    dd {
+      padding: $spacer * 0.75 $spacer * 0.5;
+      padding-left: $spacer * 1.5;
+      margin-bottom: 0;
+
+      p:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    dt:nth-of-type(2n),
+    dd:nth-of-type(2n) {
+      background: $striping-color;
+    }
+  }
+}

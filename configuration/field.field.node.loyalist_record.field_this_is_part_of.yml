@@ -12,8 +12,8 @@ id: node.loyalist_record.field_this_is_part_of
 field_name: field_this_is_part_of
 entity_type: node
 bundle: loyalist_record
-label: 'This is Part of'
-description: ''
+label: 'Related Records'
+description: '<b>Note:</b> Previously "This is Part of"</b>'
 required: false
 translatable: false
 default_value: {  }

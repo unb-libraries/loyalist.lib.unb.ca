@@ -12,8 +12,8 @@ id: node.loyalist_record.field_background_information
 field_name: field_background_information
 entity_type: node
 bundle: loyalist_record
-label: 'Background Information'
-description: ''
+label: Background
+description: 'Background Information'
 required: false
 translatable: false
 default_value: {  }

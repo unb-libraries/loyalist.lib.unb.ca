@@ -3,8 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_accompanying_record
+    - field.storage.node.field_call_number
+    - field.storage.node.field_document_id
+    - field.storage.node.field_gauge
+    - field.storage.node.field_number_of_sources
+    - field.storage.node.field_record_info
+    - field.storage.node.field_volume_info
     - field.storage.node.field_issuing_body
     - field.storage.node.field_subject_heading
+    - field.storage.node.field_media_type
+    - field.storage.node.field_this_is_part_of
+    - field.storage.node.field_background_information
+    - field.storage.node.field_originals
+    - field.storage.node.field_other_numbers
+    - field.storage.node.body
     - search_api.server.drupal_solr_lib_unb_ca
   module:
     - search_api_solr
@@ -63,21 +76,156 @@ name: loyalist.lib.unb.ca
 description: ''
 read_only: false
 field_settings:
+  field_accompanying_record:
+    label: 'Accompanying Record'
+    datasource_id: 'entity:node'
+    property_path: field_accompanying_record
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_accompanying_record
+  field_call_number:
+    label: 'Call Number'
+    datasource_id: 'entity:node'
+    property_path: field_call_number
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_call_number
+  field_document_id:
+    label: 'Database ID'
+    datasource_id: 'entity:node'
+    property_path: field_document_id
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_document_id
+  field_gauge:
+    label: Gauge
+    datasource_id: 'entity:node'
+    property_path: field_gauge
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_gauge
+  field_number_of_sources:
+    label: 'Number of Sources'
+    datasource_id: 'entity:node'
+    property_path: field_number_of_sources
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_number_of_sources
+  field_record_info:
+    label: 'Record Info'
+    datasource_id: 'entity:node'
+    property_path: field_record_info
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_record_info
+  field_volume_info:
+    label: 'Volume Info'
+    datasource_id: 'entity:node'
+    property_path: field_volume_info
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_volume_info
   issuing_body_name:
     label: 'Creator » Taxonomy term » Issuing Body Name'
     datasource_id: 'entity:node'
     property_path: 'field_issuing_body:entity:name'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.node.field_issuing_body
       module:
         - taxonomy
+  name:
+    label: 'Category » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_subject_heading:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_subject_heading
+      module:
+        - taxonomy
+  name_1:
+    label: 'Media Type » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_media_type:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_media_type
+      module:
+        - taxonomy
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  processed:
+    label: 'Related Records » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_this_is_part_of:processed'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_this_is_part_of
+  processed_1:
+    label: 'Background » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_background_information:processed'
+    type: text
+    boost: 0.8
+    dependencies:
+      config:
+        - field.storage.node.field_background_information
+  processed_2:
+    label: 'Originals » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_originals:processed'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_originals
+  processed_3:
+    label: 'Archival Ref. No. » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_other_numbers:processed'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_other_numbers
+  processed_4:
+    label: 'Contents » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'body:processed'
+    type: text
+    boost: 2.0
+    dependencies:
+      config:
+        - field.storage.node.body
   status:
     label: Published
     datasource_id: 'entity:node'
     property_path: status
     type: boolean
+    indexed_locked: true
+    type_locked: true
     dependencies:
       module:
         - node
@@ -85,7 +233,7 @@ field_settings:
     label: 'Subject Heading » Taxonomy term » Subject Heading Name'
     datasource_id: 'entity:node'
     property_path: 'field_subject_heading:entity:name'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.node.field_subject_heading
@@ -96,7 +244,17 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: title
     type: text
-    boost: 8.0
+    boost: 2.0
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Entity reference'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
     dependencies:
       module:
         - node
@@ -113,11 +271,27 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   auto_aggregated_fulltext_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
   custom_value: {  }
   entity_type: {  }
+  highlight:
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
+    excerpt: true
+    excerpt_always: false
+    excerpt_length: 99
+    exclude_fields: {  }
+    highlight: server
+    highlight_partial: true
   language_with_fallback: {  }
   rendered_item: {  }
-  solr_date_range: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
 tracker_settings:
   default:
     indexing_order: fifo

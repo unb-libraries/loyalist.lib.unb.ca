@@ -82,7 +82,7 @@
 {% set col1_attribute = create_attribute() %}
 {% set th_attribute = create_attribute() %}
 {% set tr_hidden_label_attribute = create_attribute() %}
-{% set th_hidden_label_text = 'Description' %}
+{% set th_hidden_label_text = 'Material Description' %}
 
 <article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
@@ -93,10 +93,7 @@
 
   {% if view_mode == 'full' %}
     {# Custom Display layout for Default, i.e. Full display mode #}
-    <table {{ table_attribute.addClass('table table-responsive') }}>
-      <colgroup>
-        <col {{ col1_attribute.setAttribute('class', 'w-25') }}><col>
-      </colgroup>
+    <dl class="loyalist-record">
       {# Place group of fields whose label is -Visually Hidden- in same table data cell #}
       {% set hidden_label_group = false %}
       {% for delta, field_name in content|keys %}
@@ -105,13 +102,18 @@
             {% if hidden_label_group %}
               {# End table row of hidden label field group #}
               {% set hidden_label_group = false %}
-              </td></tr>
+              </dd>
+              <dt class="field-label">{{ content[field_name]|field_label }}:</dt>
+              <dd class="{{ field_name|clean_class }}">{{ content[field_name]|field_value }}</dd>
+            {# Database ID field displayed in footer, not in table #}
             {% elseif field_name != 'field_document_id' %}
-              {# Database ID field displayed in footer, not in table #}
-              <tr>
-                <th {{ th_attribute.setAttribute('scope', 'row') }}>{{ content[field_name]|field_label }}</th>
-                <td>{{ content[field_name]|field_value }}</td>
-              </tr>
+              {% if (content[field_name]['#label_display'] == 'visually_hidden') %}
+                {% set dt_class = 'visually-hidden' %}
+              {% else %}
+                {% set dt_class = 'field-label' %}
+              {% endif %}
+              <dt class="{{ dt_class }}">{{ content[field_name]|field_label }}:</dt>
+              <dd class="{{ field_name|clean_class }}">{{ content[field_name]|field_value }}</dd>
             {% endif %}
           {% else %}
             {% if hidden_label_group %}
@@ -127,15 +129,14 @@
             {% else %}
               {# Begin table row for hidden label field group #}
               {% set hidden_label_group = true %}
-              <tr {{ tr_hidden_label_attribute.addClass('hidden-label-field-group') }}>
-                {# Hidden label field group custom header cell text #}
-                <th {{ th_attribute.setAttribute('scope', 'row') }}>{{ th_hidden_label_text|t }}</th>
-                <td><span class="{{ field_name|clean_class }}">{{ content[field_name]|field_value }}</span>
+              {# Hidden label field group custom header cell text #}
+              <dt class="custom-field-label">{{ th_hidden_label_text|t }}:</dt>
+              <dd class="custom-field-group"><span class="{{ field_name|clean_class }}">{{ content[field_name]|field_value }}</span>
             {% endif %}
           {% endif %}
         {% endif %}
       {% endfor %}
-    </table>
+    </dt>
   {% else %}
     {# Core display layout #}
     <div{{ content_attributes.addClass('node__content') }}>

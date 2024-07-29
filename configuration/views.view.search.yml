@@ -103,7 +103,7 @@ display:
           admin_label: ''
           plugin_id: search_api_field
           label: Creator
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -173,7 +173,7 @@ display:
           admin_label: ''
           plugin_id: search_api_field
           label: 'Subject Heading'
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -234,12 +234,65 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
+        search_api_excerpt:
+          id: search_api_excerpt
+          table: search_api_index_loyalist_lib_unb_ca
+          field: search_api_excerpt
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          label: 'Search excerpt'
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<div class="text-muted">{{ search_api_excerpt }}</div>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: '<span aria-hidden="true" class="text-muted">-</span><span class="visually-hidden">unavailable</span>'
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          use_highlighting: false
+          multi_type: separator
+          multi_separator: ', '
       pager:
         type: full
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 25
+          items_per_page: 50
           total_pages: null
           id: 0
           tags:
@@ -257,23 +310,36 @@ display:
             offset_label: Offset
           quantity: 9
       exposed_form:
-        type: basic
+        type: input_required
         options:
-          submit_button: Display
-          reset_button: true
+          submit_button: Search
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: wysiwyg
       access:
         type: perm
         options:
           perm: 'access content'
       cache:
-        type: search_api_tag
+        type: search_api_none
         options: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your search.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Notes for entering search terms:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Correct term spelling is important</li>\r\n      <li>Partial word search is supported, eg.<code>loyal</code> also returns records that match <em>loyalty, loyalism</em> and <em>loyalist</em></li>\r\n      <li>Entering multiple terms only returns records that contain <strong>all</strong> terms</li>\r\n      <li>Not entering any terms returns <strong>all</strong> records</li>\r\n    </ul>\r\n    <p class=\"mt-4\">For a more in-depth guide see our article, <em><a href=\"/search-tips\">Tips for searching the Loyalist Database</a></em>.\r\n  </div>\r\n</div>"
+          tokenize: false
       sorts: {  }
       arguments: {  }
       filters:
@@ -329,13 +395,13 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Enter 1 or more search terms'
-            description: ''
+            label: 'Search the collection'
+            description: 'Enter 1 or more terms to find'
             use_operator: false
             operator: search_api_fulltext_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: search_api_fulltext
+            identifier: fulltext
             required: false
             remember: false
             multiple: false
@@ -371,10 +437,10 @@ display:
           default_row_class: true
           columns:
             title: title
-            name: name
+            issuing_body_name: issuing_body_name
             subject_heading_name: subject_heading_name
-            test_scale_name: test_scale_name
-          default: '-1'
+            search_api_relevance: search_api_relevance
+          default: search_api_relevance
           info:
             title:
               sortable: false
@@ -383,7 +449,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            name:
+            issuing_body_name:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -397,7 +463,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            test_scale_name:
+            search_api_relevance:
               sortable: true
               default_sort_order: desc
               align: ''
@@ -420,6 +486,7 @@ display:
           preserve_facet_query_args: false
           query_tags: {  }
       relationships: {  }
+      use_ajax: false
       header:
         result:
           id: result
@@ -430,7 +497,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: false
-          content: 'Displaying @start - @end of @total'
+          content: '<h2 class="fs-5">Found <span class="text-primary">@total</span> titles from your search: showing page <span class="text-primary">@current_page</span> of <span class="text-primary">@page_count</span>.</h2>'
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -447,10 +514,11 @@ display:
         - 'search_api_list:loyalist_lib_unb_ca'
   page_1:
     id: page_1
-    display_title: Page
+    display_title: 'Page 1'
     display_plugin: page
-    position: 1
+    position: 2
     display_options:
+      display_description: ''
       display_extenders: {  }
       path: search
       menu:
@@ -472,7 +540,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:facets.facet.creator'
-        - 'config:facets.facet.subject_heading'
         - 'config:search_api.index.loyalist_lib_unb_ca'
         - 'search_api_list:loyalist_lib_unb_ca'

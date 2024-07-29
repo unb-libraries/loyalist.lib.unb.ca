@@ -16,6 +16,16 @@ $color-mode-type: data;
     }
   }
 
+  dl.loyalist-record {
+    @media (min-width: 768px) {
+      dt:nth-of-type(2n),
+      dd:nth-of-type(2n) {
+        background: $striping-color-dark;
+        color: $white;
+      }
+    }
+  }
+
   main {
     // Breadcrumbs.
     .breadcrumb-item {

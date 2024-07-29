@@ -314,7 +314,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Display
+          submit_button: Filter
           reset_button: true
           reset_button_label: 'Show all'
           exposed_sorts_label: 'Sort by'
@@ -338,7 +338,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your filter selections</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Tips for selecting <strong>Creator</strong> and <strong>Collection Category</strong> search term filters:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Selecting a term from either grouping should return at least one record</li>\r\n      <li>Selecting terms from both groupings returns records that match at least one term from <strong>each</strong> grouping.</li>\r\n     <li>Selecting fewer terms normally returns fewer records</li>\r\n     <li>Not selecting any terms returns <strong>all</strong> records</li>\r\n    </ul>\r\n  </div>\r\n</div>"
+          content: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your selected filters.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Tips for selecting <strong>Creator</strong> and <strong>Collection Category</strong> search term filters:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Selecting a term from either grouping should return at least one record</li>\r\n      <li>Selecting terms from both groupings returns records that match at least one term from <strong>each</strong> grouping.</li>\r\n     <li>Selecting fewer terms normally returns fewer records</li>\r\n     <li>Not selecting any terms returns <strong>all</strong> records</li>\r\n    </ul>\r\n  </div>\r\n</div>"
           tokenize: false
       sorts: {  }
       arguments: {  }
@@ -553,7 +553,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: false
-          content: '<h2 class="h6 mb-3">Displaying @start - @end of @total</h2>'
+          content: '<h2 class="h6 mb-3">Found <span class="text-primary">@total</span> titles from your selected filters: showing page <span class="text-primary">@current_page</span> of <span class="text-primary">@page_count</apan>.</h2>'
       footer: {  }
       display_extenders: {  }
     cache_metadata:

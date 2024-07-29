@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.loyalist_record.body
     - field.field.node.loyalist_record.field_accompanying_record
+    - field.field.node.loyalist_record.field_availability_of_other_form
     - field.field.node.loyalist_record.field_background_information
     - field.field.node.loyalist_record.field_call_number
     - field.field.node.loyalist_record.field_document_id
@@ -39,6 +40,13 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
+  field_availability_of_other_form:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
   field_background_information:
     type: text_default
     label: above
@@ -56,7 +64,7 @@ content:
     region: content
   field_finding_aid_record:
     type: file_default
-    label: above
+    label: visually_hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
@@ -98,7 +106,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 14
+    weight: 15
     region: content
   field_number_of_sources:
     type: string
@@ -124,10 +132,10 @@ content:
     region: content
   field_other_with:
     type: text_default
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 16
+    weight: 17
     region: content
   field_record_info:
     type: string
@@ -150,7 +158,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   field_volume_info:
     type: string
@@ -163,7 +171,7 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 17
+    weight: 18
     region: content
 hidden:
   field_accompanying_record: true

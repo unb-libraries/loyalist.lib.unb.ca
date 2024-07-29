@@ -1,0 +1,19 @@
+uuid: 5e922cb3-fb79-494c-9fc5-c7b729e29af3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_availability_of_other_form
+field_name: field_availability_of_other_form
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

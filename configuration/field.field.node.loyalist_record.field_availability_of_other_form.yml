@@ -1,0 +1,24 @@
+uuid: 5b183b03-2c1d-45ed-ad8a-745911f6ae0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_availability_of_other_form
+    - filter.format.wysiwyg
+    - node.type.loyalist_record
+  module:
+    - text
+id: node.loyalist_record.field_availability_of_other_form
+field_name: field_availability_of_other_form
+entity_type: node
+bundle: loyalist_record
+label: 'Availability of Other Formats'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

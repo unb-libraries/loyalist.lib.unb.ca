@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.loyalist_record.body
     - field.field.node.loyalist_record.field_accompanying_record
+    - field.field.node.loyalist_record.field_availability_of_other_form
     - field.field.node.loyalist_record.field_background_information
     - field.field.node.loyalist_record.field_call_number
     - field.field.node.loyalist_record.field_document_id
@@ -37,7 +38,7 @@ third_party_settings:
       label: 'Archived fields'
       region: content
       parent_name: ''
-      weight: 15
+      weight: 16
       format_type: details
       format_settings:
         classes: ''
@@ -82,7 +83,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 17
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -92,6 +93,14 @@ content:
     region: content
     settings:
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_availability_of_other_form:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 3
       placeholder: ''
     third_party_settings: {  }
   field_background_information:
@@ -158,7 +167,7 @@ content:
     third_party_settings: {  }
   field_notes:
     type: text_textarea
-    weight: 10
+    weight: 11
     region: content
     settings:
       rows: 3
@@ -182,7 +191,7 @@ content:
     third_party_settings: {  }
   field_other_numbers:
     type: text_textarea
-    weight: 13
+    weight: 14
     region: content
     settings:
       rows: 1
@@ -190,7 +199,7 @@ content:
     third_party_settings: {  }
   field_other_with:
     type: text_textarea
-    weight: 11
+    weight: 13
     region: content
     settings:
       rows: 1
@@ -228,34 +237,34 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 14
+    weight: 15
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 21
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 18
+    weight: 19
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 20
+    weight: 21
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 19
+    weight: 20
     region: content
     settings:
       display_label: true
@@ -270,7 +279,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 16
+    weight: 17
     region: content
     settings:
       match_operator: CONTAINS

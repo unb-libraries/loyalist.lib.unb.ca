@@ -4,20 +4,19 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_accompanying_record
-    - field.storage.node.field_call_number
-    - field.storage.node.field_document_id
-    - field.storage.node.field_gauge
-    - field.storage.node.field_number_of_sources
-    - field.storage.node.field_record_info
-    - field.storage.node.field_volume_info
-    - field.storage.node.field_issuing_body
-    - field.storage.node.field_subject_heading
-    - field.storage.node.field_media_type
-    - field.storage.node.field_this_is_part_of
-    - field.storage.node.field_background_information
-    - field.storage.node.field_originals
     - field.storage.node.field_other_numbers
+    - field.storage.node.field_background_information
+    - field.storage.node.field_call_number
+    - field.storage.node.field_subject_heading
     - field.storage.node.body
+    - field.storage.node.field_issuing_body
+    - field.storage.node.field_gauge
+    - field.storage.node.field_media_type
+    - field.storage.node.field_number_of_sources
+    - field.storage.node.field_originals
+    - field.storage.node.field_record_info
+    - field.storage.node.field_this_is_part_of
+    - field.storage.node.field_volume_info
     - search_api.server.drupal_solr_lib_unb_ca
   module:
     - search_api_solr
@@ -92,14 +91,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_call_number
-  field_document_id:
-    label: 'Database ID'
-    datasource_id: 'entity:node'
-    property_path: field_document_id
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_document_id
   field_gauge:
     label: Gauge
     datasource_id: 'entity:node'

@@ -32,69 +32,72 @@
 #}
 {%
   set classes = [
-    'table',
-    'table-striped',
-    'views-table',
-    'views-view-table',
-    'cols-' ~ header|length,
-    responsive ? 'responsive-enabled',
-    sticky ? 'sticky-enabled',
-  ]
+  'table',
+  'table-striped',
+  'views-table',
+  'views-view-table',
+  'cols-' ~ header|length,
+  responsive ? 'responsive-enabled',
+  sticky ? 'sticky-enabled',
+]
 %}
+
 <div class="lh-base-less table-responsive" style="visibility: hidden">
   <table{{ attributes.addClass(classes) }}>
     {% if caption_needed %}
       <caption>
-      {% if caption %}
-        {{ caption }}
-      {% else %}
-        {{ title }}
-      {% endif %}
-      {% if (summary is not empty) or (description is not empty) %}
-        <details>
-          {% if summary is not empty %}
-            <summary>{{ summary }}</summary>
-          {% endif %}
-          {% if description is not empty %}
-            {{ description }}
-          {% endif %}
-        </details>
-      {% endif %}
+        {% if caption %}
+          {{ caption }}
+        {% else %}
+          {{ title }}
+        {% endif %}
+        {% if (summary is not empty) or (description is not empty) %}
+          <details>
+            {% if summary is not empty %}
+              <summary>{{ summary }}</summary>
+            {% endif %}
+            {% if description is not empty %}
+              {{ description }}
+            {% endif %}
+          </details>
+        {% endif %}
       </caption>
     {% endif %}
+
     {% if header %}
       <thead class="table-dark">
-        <tr>
-          {% for key, column in header %}
-            {% if column.default_classes %}
-              {%
-                set column_classes = [
-                  'views-field',
-                  'views-field-' ~ fields[key],
-                ]
-              %}
-            {% endif %}
-            <th{{ column.attributes.addClass(column_classes).setAttribute('scope', 'col') }}>
-              {%- if column.wrapper_element -%}
-                <{{ column.wrapper_element }}>
-                  {%- if column.url -%}
-                    <a href="{{ column.url }}" title="{{ column.title }}" rel="nofollow">{{ column.content }}{{ column.sort_indicator }}</a>
-                  {%- else -%}
-                    {{ column.content }}{{ column.sort_indicator }}
-                  {%- endif -%}
-                </{{ column.wrapper_element }}>
-              {%- else -%}
-                {%- if column.url -%}
-                  <a href="{{ column.url }}" title="{{ column.title }}" rel="nofollow">{{ column.content }}{{ column.sort_indicator }}</a>
-                {%- else -%}
-                  {{- column.content }}{{ column.sort_indicator }}
-                {%- endif -%}
-              {%- endif -%}
-            </th>
-          {% endfor %}
-        </tr>
+      <tr>
+        {% for key, column in header %}
+          {% if column.default_classes %}
+            {%
+              set column_classes = [
+              'views-field',
+              'views-field-' ~ fields[key],
+            ]
+            %}
+          {% endif %}
+        <th{{ column.attributes.addClass(column_classes).setAttribute('scope', 'col') }}>
+          {%- if column.wrapper_element -%}
+            <{{ column.wrapper_element }}>
+            {%- if column.url -%}
+              <a href="{{ column.url }}" title="{{ column.title }}" rel="nofollow">{{ column.content }}{{ column.sort_indicator }}</a>
+            {%- else -%}
+              {{ column.content }}{{ column.sort_indicator }}
+            {%- endif -%}
+            </{{ column.wrapper_element }}>
+          {%- else -%}
+            {%- if column.url -%}
+              <a href="{{ column.url }}" title="{{ column.title }}" rel="nofollow">{{ column.content }}{{ column.sort_indicator }}</a>
+            {%- else -%}
+              {{- column.content }}{{ column.sort_indicator }}
+            {%- endif -%}
+          {%- endif -%}
+          </th>
+        {% endfor %}
+      </tr>
       </thead>
     {% endif %}
+
     <tbody>
       {% for row in rows %}
         <tr{{ row.attributes }}>

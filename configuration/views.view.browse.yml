@@ -132,14 +132,14 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: text-muted
           element_label_type: ''
           element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
+          empty: '<span aria-hidden="true" class="text-muted">&hellip;</span><span class="visually-hidden">unavailable</span>'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -204,7 +204,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
+          empty: '<span aria-hidden="true" class="text-muted">&hellip;</span><span class="visually-hidden">unavailable</span>'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -532,7 +532,7 @@ display:
           group_type: group
           admin_label: 'Subject Heading: Taxonomy term'
           plugin_id: standard
-          required: true
+          required: false
         field_issuing_body:
           id: field_issuing_body
           table: node__field_issuing_body
@@ -541,7 +541,7 @@ display:
           group_type: group
           admin_label: 'Issuing Body: Taxonomy term'
           plugin_id: standard
-          required: true
+          required: false
       use_ajax: false
       header:
         result:
@@ -553,7 +553,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: false
-          content: '<h2 class="h6 mb-3">Found <span class="text-primary">@total</span> titles from your selected filters: showing page <span class="text-primary">@current_page</span> of <span class="text-primary">@page_count</apan>.</h2>'
+          content: '<h2 class="fs-6 mb-3">Found <span class="text-token">@total</span> titles from your selected filters: showing page <span class="text-token">@current_page</span> of <span class="text-token">@page_count</apan>.</h2>'
       footer: {  }
       display_extenders: {  }
     cache_metadata:

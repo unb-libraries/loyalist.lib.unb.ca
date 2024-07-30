@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Contains hook implementations for the Loyalist Core module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter.
+ */
+function loyalist_core_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Change Views|Exposed Filter criteria|Fulltext search|Filter identifier=fulltext to 'search' type (UI: 'x').
+  if (isset($form['fulltext'])) {
+    $form['fulltext']['#type'] = 'search';
+  }
+}

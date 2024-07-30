@@ -180,3 +180,13 @@ input[type="search"]::-webkit-search-cancel-button:hover {
   cursor: pointer;
   fill: $unb-logo-red;
 }
+
+.title-field-number {
+  color: var(--bs-secondary-text-emphasis);
+  font-size: $font-size-base * 0.85;
+  opacity: .9;
+  margin-top: $spacer * 0.5;
+}
+.text-token {
+  color: var(--bs-danger-text-emphasis);
+}

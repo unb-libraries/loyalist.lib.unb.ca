@@ -32,3 +32,26 @@ function the_loyalist_collection_preprocess_input(&$variables) {
       break;
   }
 }
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function the_loyalist_collection_preprocess_views_view(&$vars) {
+  $view_header_result_markup = $vars['header']['result']['#markup'] ?? null;
+
+  if (!empty($view_header_result_markup)) {
+    // Override View|Header|Result summary|@total 'titles' re: single row result, if found.
+    $viewexecutable_total_rows_property = $vars['view']->total_rows ?? null;
+    if ($viewexecutable_total_rows_property == '1') {
+      $vars['header']['result']['#markup'] = str_replace('titles', 'title', $view_header_result_markup);
+      // Update markup variable re: further processing.
+      $view_header_result_markup = $vars['header']['result']['#markup'];
+    }
+    // Override/truncate View|Header|Result summary 'showing page etc.' text (if found) and getPagerTotal = 1.
+    $viewexecutable_getpagertotal = (int)$vars['view']->getPager()->getPagerTotal() ?? null;
+    if ($viewexecutable_getpagertotal == '1') {
+      $vars['header']['result']['#markup'] = preg_replace('/:\s*showing[^.]+/', '', $view_header_result_markup);
+    }
+  }
+
+}

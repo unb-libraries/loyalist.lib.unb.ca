@@ -464,7 +464,7 @@ display:
               align: ''
               separator: ''
               empty_column: false
-              responsive: ''
+              responsive: priority-medium
             search_api_excerpt:
               align: ''
               separator: ''

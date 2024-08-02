@@ -1,9 +1,15 @@
 // Bootstrap 5.3.x Color Mode/Theme Style Overrides.
 
-// Dark Mode - begin.
 $color-mode-type: data;
 @include color-mode(dark) {
-  //Footer.
+  // Header.
+  .navbar .navbar-brand {
+    a.site-title:hover {
+      color: var(--bs-white);
+    }
+  }
+
+  // Footer.
   header {
     &.bg-light {
       background-color: var(--bs-black)!important;
@@ -71,5 +77,18 @@ $color-mode-type: data;
       background-color: var(--bs-black)!important;
     }
   }
+
+  .search-excerpt {
+    &:focus-within,
+    &:hover {
+      background-color: var(--bs-dark-bg-subtle);
+      border-color: var(--bs-light-border-subtle);
+    }
+
+    .views-field-search-api-excerpt {
+      aside {
+        box-shadow: $spacer * -0.2 0 0 var(--bs-light-bg-subtle);
+      }
+    }
+  }
 }
-// Dark Mode - end.

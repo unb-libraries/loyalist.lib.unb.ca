@@ -55,6 +55,10 @@ main {
     }
   }
 
+  h1 {
+    font-size: calc(var(--bs-body-font-size) * 1.55);
+  }
+
   #main-content {
     &:focus-visible {
       outline-color: var(--bs-primary-bg-subtle);

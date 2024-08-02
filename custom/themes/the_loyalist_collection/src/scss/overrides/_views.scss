@@ -13,3 +13,49 @@
 .view-filters {
   margin: $spacer * 2 auto;
 }
+
+.search-excerpt {
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  margin-bottom: $spacer * 2;
+  margin-top: $spacer * 2;
+  padding: calc($spacer * 0.5) calc($spacer * 0.75);
+  transition: background-color $transition-speed-default $transition-timing-default,
+    border-color $transition-speed-default $transition-timing-default;
+
+  &:focus-within,
+  &:hover {
+    background-color: var(--bs-light);
+    border-color: var(--bs-light-border-subtle);
+  }
+
+  .excerpt-title {
+    font-size: $font-size-base * 1.04;
+    margin-bottom: $spacer;
+    margin-top: 0;
+  }
+
+  .views-label {
+    color: var(--bs-secondary-color);
+    font-weight: bold;
+  }
+  .views-field-field-call-number {
+    color: var(--bs-secondary-color);
+    font-size: calc(var(--bs-body-font-size) * 0.96);
+    margin-top: $spacer * 0.2;
+  }
+  .views-field-search-api-excerpt {
+    // color: var(--bs-secondary-color);
+    font-size: calc(var(--bs-body-font-size) * 0.96);
+    margin-top: $spacer * 0.66;
+
+    aside {
+      box-shadow: $spacer * -0.2 0 0 var(--bs-dark-bg-subtle);
+      line-height: calc(var(--bs-body-line-height) * 0.85);
+      margin-left: $spacer * 0.2;
+      padding-left: $spacer * 0.75;
+    }
+  }
+
+}

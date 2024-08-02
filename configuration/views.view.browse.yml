@@ -170,7 +170,7 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
-          label: Collection
+          label: Section
           exclude: false
           alter:
             alter_text: false
@@ -214,7 +214,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -340,7 +340,23 @@ display:
           empty: true
           content: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your selected filters.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Tips for selecting <strong>Creator</strong> and <strong>Collection Category</strong> search term filters:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Selecting a term from either grouping should return at least one record</li>\r\n      <li>Selecting terms from both groupings returns records that match at least one term from <strong>each</strong> grouping.</li>\r\n     <li>Selecting fewer terms normally returns fewer records</li>\r\n     <li>Not selecting any terms returns <strong>all</strong> records</li>\r\n    </ul>\r\n  </div>\r\n</div>"
           tokenize: false
-      sorts: {  }
+      sorts:
+        changed:
+          id: changed
+          table: node_field_data
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: changed
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments: {  }
       filters:
         status:
@@ -475,7 +491,7 @@ display:
             name: name
             name_1: name_1
             field_call_number: field_call_number
-          default: title
+          default: '-1'
           info:
             title:
               sortable: true
@@ -497,14 +513,14 @@ display:
               align: ''
               separator: ''
               empty_column: false
-              responsive: priority-medium
+              responsive: priority-low
             field_call_number:
               sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
-              responsive: priority-low
+              responsive: priority-medium
           override: true
           sticky: true
           summary: ''
@@ -580,6 +596,7 @@ display:
       menu:
         type: normal
         title: Browse
+        weight: -49
         menu_name: main
         parent: ''
     cache_metadata:

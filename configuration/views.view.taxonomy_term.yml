@@ -400,7 +400,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: false
-          content: '<h2 class="fs-6 mb-3">Displaying @start - @end of @total titles.</h2>'
+          content: '<h2 class="fs-6 mb-3">Displaying @total titles.</h2>'
       footer: {  }
       display_extenders: {  }
     cache_metadata:

@@ -4,12 +4,14 @@
  */
 (function ($) {
     $(document).ready(function() {
+        // Creator aka Issuing Body.
         $('#edit-creator').selectize({
             maxItems: null,
             plugins: ['clear_button'],
             selectOnTab: false,
         });
-        $('select#edit-collection').selectize({
+        // Section aka Collection Category aka Subject Heading.
+        $('#edit-section').selectize({
             maxItems: null,
             plugins: ["clear_button"],
             selectOnTab: false,

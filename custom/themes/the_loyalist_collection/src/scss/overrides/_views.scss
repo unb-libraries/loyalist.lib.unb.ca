@@ -30,15 +30,14 @@
     border-color: var(--bs-secondary-border-subtle);
   }
 
-  .excerpt-title {
-    font-size: $font-size-base * 1.04;
-    margin-bottom: $spacer;
-    margin-top: 0;
-  }
-
   .views-label {
     color: var(--bs-secondary-color);
     font-weight: bold;
+  }
+  .views-field-title {
+    font-size: $font-size-base * 1.04;
+    margin-bottom: $spacer;
+    margin-top: 0;
   }
   .views-field-field-call-number {
     color: var(--bs-secondary-color);
@@ -46,16 +45,11 @@
     margin-top: $spacer * 0.2;
   }
   .views-field-search-api-excerpt {
-    // color: var(--bs-secondary-color);
+    box-shadow: $spacer * -0.2 0 0 var(--bs-dark-bg-subtle);
     font-size: calc(var(--bs-body-font-size) * 0.96);
-    margin-top: $spacer * 0.66;
-
-    aside {
-      box-shadow: $spacer * -0.2 0 0 var(--bs-dark-bg-subtle);
-      line-height: calc(var(--bs-body-line-height) * 0.85);
-      margin-left: $spacer * 0.2;
-      padding-left: $spacer * 0.75;
-    }
+    line-height: calc(var(--bs-body-line-height) * 0.85);
+    margin-left: $spacer * 0.2;
+    padding-left: $spacer * 0.75;
   }
 
 }

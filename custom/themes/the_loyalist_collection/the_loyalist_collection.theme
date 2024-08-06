@@ -52,6 +52,16 @@ function the_loyalist_collection_preprocess_views_view(&$vars) {
     if ($viewexecutable_getpagertotal == '1') {
       $vars['header']['result']['#markup'] = preg_replace('/:\s*showing[^.]+/', '', $view_header_result_markup);
     }
+
+    $viewexecutable_exposed_input = $vars['view']->getExposedInput();
+    // Note: View>Browse>exposed filters>empty vs View>Search>exposed filters>fulltext>empty.
+    if (isset($viewexecutable_exposed_input['fulltext'])) {
+      $viewexecutable_exposed_input = $viewexecutable_exposed_input['fulltext'] ?? null;
+    }
+    // No Views exposed filter inputs => Concise 'show all' header.
+    if ($viewexecutable_exposed_input == null) {
+      $vars['header']['result']['#markup'] = preg_replace('/\s*from[^:]+/', '', $view_header_result_markup);
+    }
   }
 
 }

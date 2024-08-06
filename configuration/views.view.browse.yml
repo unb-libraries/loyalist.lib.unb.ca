@@ -338,7 +338,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your selected filters.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Tips for selecting <strong>Creator</strong> and <strong>Collection Category</strong> search term filters:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Selecting a term from either grouping should return at least one record</li>\r\n      <li>Selecting terms from both groupings returns records that match at least one term from <strong>each</strong> grouping.</li>\r\n     <li>Selecting fewer terms normally returns fewer records</li>\r\n     <li>Not selecting any terms returns <strong>all</strong> records</li>\r\n    </ul>\r\n  </div>\r\n</div>"
+          content: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your filter choice.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Tips for choosing <strong>Creator</strong> and <strong>Collection Category</strong> search term filters:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Choosing a term from either grouping should return at least one record</li>\r\n      <li>Choosing terms from both groupings returns records that match at least one term from <strong>each</strong> grouping.</li>\r\n     <li>Choosing fewer terms normally returns fewer records</li>\r\n     <li>Not choosing any terms returns <strong>all</strong> records</li>\r\n    </ul>\r\n  </div>\r\n</div>"
           tokenize: false
       sorts:
         changed:
@@ -395,7 +395,7 @@ display:
           expose:
             operator_id: field_issuing_body_target_id_op
             label: Creator
-            description: 'Select 1 or more terms to filter results'
+            description: 'Choose 1 or more terms to filter results'
             use_operator: false
             operator: field_issuing_body_target_id_op
             operator_limit_selection: false
@@ -443,12 +443,12 @@ display:
           expose:
             operator_id: field_subject_heading_target_id_op
             label: 'Collection Category'
-            description: 'Select 1 or more terms to filter results'
+            description: 'Choose 1 or more terms to filter results'
             use_operator: false
             operator: field_subject_heading_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: collection
+            identifier: section
             required: false
             remember: false
             multiple: true
@@ -569,7 +569,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: false
-          content: '<h2 class="fs-6 mb-3">Found <span class="text-token">@total</span> titles from your selected filters: showing page <span class="text-token">@current_page</span> of <span class="text-token">@page_count</apan>.</h2>'
+          content: '<h2 class="fs-6 mb-3">Found <span class="text-token">@total</span> titles from your filter choice: showing page <span class="text-token">@current_page</span> of <span class="text-token">@page_count</apan>.</h2>'
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -583,8 +583,8 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_call_number'
-  page_1:
-    id: page_1
+  display_page_browse:
+    id: display_page_browse
     display_title: Page
     display_plugin: page
     position: 1

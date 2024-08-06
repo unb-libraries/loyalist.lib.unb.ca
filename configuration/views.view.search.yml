@@ -824,7 +824,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: search-excerpt
+          row_class: search-result
           default_row_class: false
       row:
         type: fields

@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog_post.body
     - field.field.node.blog_post.field_blog_comments
-    - field.field.node.blog_post.field_blog_tags
     - field.field.node.blog_post.field_post_categories
     - node.type.blog_post
   module:
@@ -29,7 +28,6 @@ content:
     region: content
 hidden:
   field_blog_comments: true
-  field_blog_tags: true
   field_post_categories: true
   langcode: true
   links: true

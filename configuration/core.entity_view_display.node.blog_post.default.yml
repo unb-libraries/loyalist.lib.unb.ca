@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.blog_post.body
     - field.field.node.blog_post.field_blog_comments
-    - field.field.node.blog_post.field_blog_tags
     - field.field.node.blog_post.field_post_categories
     - node.type.blog_post
   module:
@@ -20,32 +19,23 @@ bundle: blog_post
 mode: default
 content:
   body:
-    type: text_summary_or_trimmed
+    type: text_default
     label: hidden
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
   field_blog_comments:
     type: comment_default
-    label: above
+    label: hidden
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 2
-    region: content
-  field_post_categories:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
     weight: 1
     region: content
 hidden:
-  field_blog_tags: true
+  field_post_categories: true
   langcode: true
   links: true
   search_api_excerpt: true

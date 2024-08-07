@@ -340,10 +340,45 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your search.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Notes for entering search terms:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Correct term spelling is important</li>\r\n      <li>Partial word search is supported, eg.<code>loyal</code> also returns records that match <em>loyalty, loyalism</em> and <em>loyalist</em></li>\r\n      <li>Entering multiple terms only returns records that contain <strong>all</strong> terms</li>\r\n      <li>Not entering any terms returns <strong>all</strong> records</li>\r\n    </ul>\r\n    <p class=\"mt-4\">For a more in-depth guide see our article, <em><a href=\"/search-tips\">Tips for searching the Loyalist Database</a></em>.\r\n  </div>\r\n</div>"
+          content: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your search.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Notes for entering search terms:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Correct term spelling is important</li>\r\n      <li>Partial word search is supported, eg.<code>loyal</code> also returns records that match <em>loyalty, loyalism</em> and <em>loyalist</em></li>\r\n      <li>You must enter at least 1 term to search for</li>\r\n    </ul>\r\n    <p class=\"mt-4\">For a more in-depth guide see our article, <em><a href=\"/search-tips\">Tips for searching the Loyalist Database</a></em>.\r\n  </div>\r\n</div>"
           tokenize: false
       sorts: {  }
-      arguments: {  }
+      arguments:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_loyalist_lib_unb_ca
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_fulltext
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: 'Search for <em>{{ arguments.search_api_fulltext }}</em>'
+          default_argument_type: query_parameter
+          default_argument_options:
+            query_param: fulltext
+            fallback: ''
+            multiple: and
+          summary_options: {  }
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: true
+          validate:
+            type: none
+            fail: empty
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          parse_mode: direct
+          conjunction: AND
+          fields: {  }
       filters:
         status:
           id: status
@@ -508,7 +543,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: false
-          content: '<h2 class="fs-6 mb-3 search-header">Found <span class="text-token">@total</span> titles from your search: showing page <span class="text-token">@current_page</span> of <span class="text-token">@page_count</span>.</h2>'
+          content: '<h2 class="fs-6 mb-3 search-header">Found <span class="text-token">@total</span> titles: showing page <span class="text-token">@current_page</span> of <span class="text-token">@page_count</span>.</h2>'
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -786,7 +821,7 @@ display:
           element_wrapper_type: aside
           element_wrapper_class: ''
           element_default_classes: true
-          empty: '<span class="text-muted">excerpt not applicable</span>'
+          empty: '<span class="text-muted">excerpt not available</span>'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -837,7 +872,7 @@ display:
         sorts: false
       display_description: ''
       display_extenders: {  }
-      path: search
+      path: loyalist-search
       menu:
         type: normal
         title: Search

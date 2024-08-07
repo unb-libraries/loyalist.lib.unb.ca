@@ -432,7 +432,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Search The Loyalist Collection Catalogue'
+            label: 'Search The Loyalist Collection Catalogue <strong class="text-danger" aria-label="required">*</strong>'
             description: 'Enter 1 or more terms to find'
             use_operator: false
             operator: search_api_fulltext_op
@@ -836,14 +836,14 @@ display:
       exposed_form:
         type: input_required
         options:
-          submit_button: Search
+          submit_button: 'Display Results'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
-          text_input_required: '<span class="fa-solid fa-circle-info me-1 text-secondary"></span>Enter the expression you want to find and press <strong>Search</strong> to return <em>matching</em> records. Otherwise, press <strong>Search</strong> without any terms to return <em>all</em> records.'
+          text_input_required: '<span class="fa-solid fa-circle-info me-1 text-secondary"></span>Enter the query you want to find and press <strong>Display Results</strong> to return <em>matching</em> records.'
           text_input_required_format: wysiwyg
       sorts:
         search_api_relevance:

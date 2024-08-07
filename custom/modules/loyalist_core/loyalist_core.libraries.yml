@@ -1,0 +1,5 @@
+search_input_required:
+  js:
+    js/search_input_required.js: {}
+  dependencies:
+    - core/jquery

@@ -15,4 +15,10 @@ function loyalist_core_form_views_exposed_form_alter(&$form, FormStateInterface 
   if (isset($form['fulltext'])) {
     $form['fulltext']['#type'] = 'search';
   }
+
+  switch ($form['#id']) {
+    case 'views-exposed-form-search-display-page-search':
+      $form['#attached']['library'][] = 'loyalist_core/search_input_required';
+      break;
+  }
 }

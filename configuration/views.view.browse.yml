@@ -569,7 +569,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: false
-          content: '<h2 class="fs-6 mb-3">Found <span class="text-token">@total</span> titles from your filter: showing page <span class="text-token">@current_page</span> of <span class="text-token">@page_count</apan>.</h2>'
+          content: '<h2 class="fs-6 mb-3">Found <span class="text-token">@total</span> titles: showing page <span class="text-token">@current_page</span> of <span class="text-token">@page_count</apan>.</h2>'
       footer: {  }
       display_extenders: {  }
     cache_metadata:

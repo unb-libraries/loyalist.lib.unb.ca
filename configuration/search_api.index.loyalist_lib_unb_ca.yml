@@ -23,6 +23,7 @@ dependencies:
     - taxonomy
     - node
     - search_api
+    - search_api_attachments
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -210,6 +211,10 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
+  saa_field_finding_aid_record:
+    label: 'Search api attachments: PDF Finding Aid'
+    property_path: saa_field_finding_aid_record
+    type: text
   status:
     label: Published
     datasource_id: 'entity:node'
@@ -267,6 +272,13 @@ processor_settings:
       preprocess_query: -30
   custom_value: {  }
   entity_type: {  }
+  file_attachments:
+    excluded_extensions: 'aif art avi bmp gif ico mov oga ogv png psd ra ram rgb flv'
+    number_indexed: 0
+    number_first_bytes: '1 MB'
+    max_filesize: '0'
+    excluded_private: 1
+    excluded_mimes: 'audio/x-aiff image/x-jg video/x-msvideo image/x-ms-bmp image/gif image/vnd.microsoft.icon video/quicktime audio/ogg video/ogg image/png image/x-photoshop audio/x-realaudio audio/x-pn-realaudio image/x-rgb video/x-flv'
   highlight:
     weights:
       postprocess_query: 0

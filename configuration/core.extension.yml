@@ -15,7 +15,6 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
-  facets: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -42,6 +41,7 @@ module:
   responsive_image: 0
   scheduler: 0
   search_api: 0
+  search_api_attachments: 0
   search_api_solr: 0
   system: 0
   taxonomy: 0

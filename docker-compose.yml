@@ -66,6 +66,8 @@ services:
       - "4113:8025"
     networks:
       - loyalist.lib.unb.ca
+    profiles:
+      - mailhog
   mysqlimport:
     image: mysql:5.7
     expose:

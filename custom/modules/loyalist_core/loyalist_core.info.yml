@@ -1,4 +1,4 @@
 name: 'Loyalist Core'
 type: module
 description: 'Loyalist Core Functions'
-core_version_requirement: '^9 || ^10'
+core_version_requirement: ^9 || ^10

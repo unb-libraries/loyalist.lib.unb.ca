@@ -1,7 +1,7 @@
 name: 'The Loyalist Collection'
 type: theme
 description: 'The Loyalist Collection subtheme based on Bootstrap 5 theme.'
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^9 || ^10
 'base theme': bootstrap5
 libraries:
   - the_loyalist_collection/global-styling

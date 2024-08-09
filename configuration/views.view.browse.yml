@@ -428,24 +428,25 @@ display:
           hierarchy: false
           limit: true
           error_message: false
-        field_subject_heading_target_id:
-          id: field_subject_heading_target_id
-          table: node__field_subject_heading
-          field: field_subject_heading_target_id
+        term_node_tid_depth:
+          id: term_node_tid_depth
+          table: node_field_data
+          field: term_node_tid_depth
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: taxonomy_index_tid
+          entity_type: node
+          plugin_id: taxonomy_index_tid_depth
           operator: or
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: field_subject_heading_target_id_op
+            operator_id: term_node_tid_depth_op
             label: 'Collection Category'
             description: 'Choose 1 or more terms to filter results'
             use_operator: false
-            operator: field_subject_heading_target_id_op
+            operator: term_node_tid_depth_op
             operator_limit_selection: false
             operator_list: {  }
             identifier: section
@@ -475,7 +476,8 @@ display:
           type: select
           hierarchy: true
           limit: true
-          error_message: false
+          error_message: true
+          depth: 1
       filter_groups:
         operator: AND
         groups:

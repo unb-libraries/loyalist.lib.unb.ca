@@ -1,7 +1,7 @@
 /**
  * @file
  * Add required attribute on input elements of type 'search'.
- * Use built-in HTML5 form validation reporting and apply BS4 failure style on failure.
+ * Bind 'invalid' event to add form input 'invalid' attributes.
  */
 (function ($) {
     // Ensure required attribute present input of type 'search'.

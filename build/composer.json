@@ -125,6 +125,7 @@
   "require": {
     "drupal/addtoany": "^2",
     "drupal/admin_toolbar": "^3",
+    "drupal/allowed_formats": "^3",
     "drupal/admin_toolbar_mediteran": "^1",
     "drupal/better_exposed_filters": "^6",
     "drupal/blog": "^3",

@@ -9,7 +9,6 @@
     const required = $(search_input).attr('required');
     if (typeof required === 'undefined' && required !== true) {
         $(search_input).attr('required', true);
-        $(search_input).attr('required', true);
     }
 
     // If form validity check fails then apply BS5 invalid class.

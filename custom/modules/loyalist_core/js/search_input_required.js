@@ -11,11 +11,8 @@
         $(search_input).attr('required', true);
     }
 
-    // If form validity check fails then apply BS5 invalid class.
-    document.getElementById("edit-fulltext").addEventListener("invalid",
-        function () {
-                   $(this).addClass('is-invalid').attr('aria-invalid', 'true');
-        }
-    );
-
+   // If invalid event fires on search input then apply BS5 styling + ARIA.
+   $(search_input).on('invalid', function(event) {
+       $(this).addClass('is-invalid').attr('aria-invalid', 'true');
+   })
 })(jQuery);

@@ -323,7 +323,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      title: Welcome
+      title: Welcome!
       fields:
         title:
           id: title

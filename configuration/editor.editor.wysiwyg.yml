@@ -88,13 +88,6 @@ settings:
         - '<drupal-entity alt class data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode title>'
         - '<col width>'
         - '<colgroup>'
-    ckeditor_media_resize_mediaResize:
-      apply_image_styles: false
-      image_styles:
-        - cke_media_resize_small
-        - cke_media_resize_medium
-        - cke_media_resize_large
-        - cke_media_resize_xl
     media_media:
       allow_view_mode_override: true
 image_upload:

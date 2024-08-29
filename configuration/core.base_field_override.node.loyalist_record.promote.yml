@@ -1,0 +1,22 @@
+uuid: 9aa6a9fb-57c3-4802-88b6-9280e285f405
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.loyalist_record
+id: node.loyalist_record.promote
+field_name: promote
+entity_type: node
+bundle: loyalist_record
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

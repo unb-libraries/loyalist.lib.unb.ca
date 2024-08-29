@@ -53,3 +53,17 @@
   }
 
 }
+
+.front-article {
+  margin: $spacer * 3 0;
+
+  article > h2 {
+    font-size: $font-size-base * 1.2;
+  }
+
+  div {
+    h2 {
+      font-size: $font-size-base * 1!important;
+    }
+  }
+}

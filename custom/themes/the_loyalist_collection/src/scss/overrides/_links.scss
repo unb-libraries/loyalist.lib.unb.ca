@@ -1,0 +1,14 @@
+.more-link {
+  text-align: left;
+
+  a:after {
+    content: '\f101';
+    display: inline-block;
+    font: var(--fa-font-solid);
+    font-size: $font-size-base * 0.5;
+    margin-left: $spacer * 0.1;
+    text-rendering: auto;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+  }
+}

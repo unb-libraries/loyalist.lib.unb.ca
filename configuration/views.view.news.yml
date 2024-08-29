@@ -121,7 +121,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: "<div class=\"alert alert-warning\" role=\"alert\">\r\n<span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>No <em>What's New</em> content could be found. Please check back again later.\r\n</div>"
+          content: "<div class=\"alert alert-warning my-2\" role=\"alert\">\r\n<span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>No <em>News</em> content could be found. Please check back again later.\r\n</div>"
           tokenize: false
       sorts:
         created:

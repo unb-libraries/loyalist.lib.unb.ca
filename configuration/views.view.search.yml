@@ -881,7 +881,7 @@ display:
         type: normal
         title: Search
         description: ''
-        weight: -50
+        weight: -49
         expanded: false
         menu_name: main
         parent: ''

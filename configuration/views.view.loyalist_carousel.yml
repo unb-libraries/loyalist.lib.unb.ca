@@ -8,7 +8,7 @@ dependencies:
     - media.type.image
     - taxonomy.vocabulary.tags
   content:
-    - 'taxonomy_term:tags:87965962-a263-448a-b92b-f64483b77519'
+    - 'taxonomy_term:tags:5ebc5f04-076d-4492-8c86-4a0164d4020a'
   module:
     - image
     - media
@@ -231,7 +231,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            3046: 3046
+            438: 438
           group: 1
           exposed: false
           expose:

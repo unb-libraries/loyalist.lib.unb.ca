@@ -89,13 +89,13 @@ settings:
         - '<col width>'
         - '<colgroup>'
     ckeditor_media_resize_mediaResize:
-      apply_image_styles: true
+      apply_image_styles: false
       image_styles:
         - cke_media_resize_small
         - cke_media_resize_medium
         - cke_media_resize_large
         - cke_media_resize_xl
     media_media:
-      allow_view_mode_override: false
+      allow_view_mode_override: true
 image_upload:
   status: false

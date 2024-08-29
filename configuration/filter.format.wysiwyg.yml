@@ -2,6 +2,11 @@ uuid: b8f83870-5f49-4462-b68a-469f42ff2595
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.cke_media_resize_large
+    - core.entity_view_mode.media.cke_media_resize_medium
+    - core.entity_view_mode.media.cke_media_resize_small
+    - core.entity_view_mode.media.cke_media_resize_xl
   module:
     - ckeditor_media_resize
     - editor
@@ -40,7 +45,7 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<br> <p id class> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <a id target title aria-controls aria-expanded aria-selected hreflang data-entity-substitution data-entity-type data-entity-uuid data-toggle role class href> <address class> <blockquote cite class> <q class> <button aria-controls aria-expanded aria-haspopup aria-label data-dismiss data-reference data-target data-toggle type id class> <caption class> <cite> <div aria-labelledby aria-modal data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date data-parent role tabindex id class> <dd id class> <dl id class> <dt id class> <em class> <hr class> <iframe allow allowfullscreen class frameborder height src title width> <img src alt width height data-entity-type data-entity-uuid data-align data-caption class> <li id class> <ol id type class start> <span aria-hidden data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date data-color class> <small class> <strong class> <table id class> <tbody class> <td data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date id class rowspan colspan> <th id scope class rowspan colspan> <thead class> <tr data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date id class> <u class> <ul class id role type> <drupal-media class title data-entity-type data-entity-uuid alt data-caption data-align data-media-width> <drupal-entity alt class data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode title> <col width> <colgroup> <sup> <tfoot>'
+      allowed_html: '<br> <p id class> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <a id target title aria-controls aria-expanded aria-selected hreflang data-entity-substitution data-entity-type data-entity-uuid data-toggle role class href> <address class> <blockquote cite class> <q class> <button aria-controls aria-expanded aria-haspopup aria-label data-dismiss data-reference data-target data-toggle type id class> <caption class> <cite> <div aria-labelledby aria-modal data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date data-parent role tabindex id class> <dd id class> <dl id class> <dt id class> <em class> <hr class> <iframe allow allowfullscreen class frameborder height src title width> <img src alt width height data-entity-type data-entity-uuid data-align data-caption class> <li id class> <ol id type class start> <span aria-hidden data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date data-color class> <small class> <strong class> <table id class> <tbody class> <td data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date id class rowspan colspan> <th id scope class rowspan colspan> <thead class> <tr data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date id class> <u class> <ul class id role type> <drupal-media class title data-entity-type data-entity-uuid alt data-view-mode data-caption data-align data-media-width> <drupal-entity alt class data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode title> <col width> <colgroup> <sup> <tfoot>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_html_escape:
@@ -89,6 +94,10 @@ filters:
       default_view_mode: default
       allowed_view_modes:
         default: default
+        cke_media_resize_large: cke_media_resize_large
+        cke_media_resize_medium: cke_media_resize_medium
+        cke_media_resize_small: cke_media_resize_small
+        cke_media_resize_xl: cke_media_resize_xl
       allowed_media_types:
         document: document
         image: image

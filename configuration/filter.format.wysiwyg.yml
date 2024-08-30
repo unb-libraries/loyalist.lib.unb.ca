@@ -3,7 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.media_library
+    - core.entity_view_mode.media.bs_lg_large
+    - core.entity_view_mode.media.bs_md_medium
+    - core.entity_view_mode.media.bs_sm_small
+    - core.entity_view_mode.media.bs_xl_extra_large
+    - core.entity_view_mode.media.bs_xs_extra_small
+    - core.entity_view_mode.media.bs_xxl_extra_extra_large
   module:
     - editor
     - media
@@ -84,7 +89,12 @@ filters:
       default_view_mode: default
       allowed_view_modes:
         default: default
-        media_library: media_library
+        bs_lg_large: bs_lg_large
+        bs_md_medium: bs_md_medium
+        bs_sm_small: bs_sm_small
+        bs_xl_extra_large: bs_xl_extra_large
+        bs_xs_extra_small: bs_xs_extra_small
+        bs_xxl_extra_extra_large: bs_xxl_extra_extra_large
       allowed_media_types:
         document: document
         image: image

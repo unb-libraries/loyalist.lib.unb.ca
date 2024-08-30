@@ -1,0 +1,15 @@
+uuid: aba648ed-8cb4-4b97-8716-8a3ad1ff2a75
+langcode: en
+status: true
+dependencies: {  }
+name: bs_sm_small
+label: 'BS SM (Small scale 576px)'
+effects:
+  d3f934d9-62c0-4155-8c5d-7ffc67ed0480:
+    uuid: d3f934d9-62c0-4155-8c5d-7ffc67ed0480
+    id: image_scale
+    weight: 1
+    data:
+      width: 576
+      height: null
+      upscale: false

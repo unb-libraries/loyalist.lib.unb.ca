@@ -1,0 +1,15 @@
+uuid: 67be73de-2faf-4758-b426-d919b5ba2832
+langcode: en
+status: true
+dependencies: {  }
+name: bs_xxl_extra_extra_large
+label: 'BS XXL (Full-width scale 1400px)'
+effects:
+  6d03c8df-fa33-46a8-ba40-83a84781fcc7:
+    uuid: 6d03c8df-fa33-46a8-ba40-83a84781fcc7
+    id: image_scale
+    weight: 1
+    data:
+      width: 1400
+      height: null
+      upscale: false

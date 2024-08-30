@@ -1,0 +1,15 @@
+uuid: f868c441-a260-4690-8552-01ae83c6156c
+langcode: en
+status: true
+dependencies: {  }
+name: bs_md_medium
+label: 'BS MD (Medium scale 767px)'
+effects:
+  64e77af8-a9be-454a-899b-29c0018aeb00:
+    uuid: 64e77af8-a9be-454a-899b-29c0018aeb00
+    id: image_scale
+    weight: 1
+    data:
+      width: 767
+      height: null
+      upscale: false

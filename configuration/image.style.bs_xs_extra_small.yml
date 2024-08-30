@@ -1,0 +1,15 @@
+uuid: f7b4b510-d881-49d3-ab13-aa0ad6f44f4a
+langcode: en
+status: true
+dependencies: {  }
+name: bs_xs_extra_small
+label: 'BS XS (Extra small scale 320px)'
+effects:
+  fd6a546e-9f8a-4486-a93f-3f04d1a610ed:
+    uuid: fd6a546e-9f8a-4486-a93f-3f04d1a610ed
+    id: image_scale
+    weight: 1
+    data:
+      width: 320
+      height: null
+      upscale: false

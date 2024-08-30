@@ -1,0 +1,38 @@
+uuid: ae3b7ef3-1b9d-40ad-8e94-aa0176f7486e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.bs_xs_extra_small
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_mime_type
+    - field.field.media.image.field_tag
+    - image.style.bs_xs_extra_small
+    - media.type.image
+  module:
+    - image
+id: media.image.bs_xs_extra_small
+targetEntityType: media
+bundle: image
+mode: bs_xs_extra_small
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: bs_xs_extra_small
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_mime_type: true
+  field_tag: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

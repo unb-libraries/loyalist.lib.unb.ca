@@ -1,0 +1,11 @@
+uuid: 64d298fb-289e-4bc6-84b3-7f0e4a3f3224
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.bs_md_medium
+label: 'BS MD (scale: 767px width)'
+description: ''
+targetEntityType: media
+cache: true

@@ -166,11 +166,11 @@ dl.loyalist-record {
 
 input[type="search"]::-webkit-search-cancel-button {
   appearance: none;
-  height: $spacer * 3;
-  width: $spacer * 3;
+  height: $spacer * 2.8;
+  width: $spacer * 2.8;
   background: url(../../images/square-xmark-solid.svg) no-repeat 50% 50%;
   background-size: contain;
-  margin-right: $spacer * -1;
+  margin-right: $spacer * -0.9;
   opacity: 0;
   pointer-events: none;
 }

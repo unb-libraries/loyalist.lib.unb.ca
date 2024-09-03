@@ -5,7 +5,7 @@ dependencies:
   module:
     - media
 id: media.bs_xxl_extra_extra_large
-label: 'BS XXL (scale: 1400px full-width)'
+label: 'XXL (scale: 1400px width)'
 description: ''
 targetEntityType: media
 cache: true

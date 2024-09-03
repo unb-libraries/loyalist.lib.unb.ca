@@ -5,7 +5,7 @@ dependencies:
   module:
     - media
 id: media.bs_xs_extra_small
-label: 'BS XS (scale: 320px width)'
+label: 'XS (scale: 320px width)'
 description: ''
 targetEntityType: media
 cache: true

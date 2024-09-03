@@ -18,22 +18,46 @@ thead {
     &:not([aria-sort]) {
       a {
         &:after {
-          color: var(--bs-white);
+          color: var(--bs-gray-400);
           @include fa_pseudo('\f0dc', 'left', 0.5);
         }
       }
     }
+    &[aria-sort] {
+      a {
+        color: var(--bs-warning);
+
+        &:hover {
+          text-decoration-color: var(--bs-warning);
+        }
+      }
+
+    }
 
     .tablesort--asc {
-      background-image: url(/core/misc/icons/ffffff/twistie-down.svg);
+      // background-image: url(/core/misc/icons/ffffff/twistie-down.svg);
+      background: none;
       height: $core-icon-size;
       width: $core-icon-size;
+
+      &:after {
+        @include fa_pseudo('\f881', 'left', 0);
+        color: var(--bs-warning);
+        font-size: 1.1rem;
+      }
     }
 
     .tablesort--desc {
-      background-image: url(/core/misc/icons/ffffff/twistie-up.svg);
+      // background-image: url(/core/misc/icons/ffffff/twistie-up.svg);
+      background: none;
       height: $core-icon-size;
       width: $core-icon-size;
+
+      &:after {
+        @include fa_pseudo('\f15e', 'left', 0);
+        color: var(--bs-warning);
+        font-size: 1.1rem;
+      }
     }
   }
 }

@@ -30,6 +30,13 @@ process:
     search: [ '<b>', '</b>', '<i>', '</i>', '&nbsp;' ]
     replace: [ '<strong>', '</strong>', '<em>', '</em>', ' ' ]
   'body/summary': body_summary
+  field_post_categories:
+    plugin: entity_generate
+    entity_type: taxonomy_term
+    bundle: category
+    bundle_key: vid
+    value_key: name
+    source: category_name
 
 destination:
   plugin: 'entity:node'

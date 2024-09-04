@@ -34,6 +34,9 @@ class BlogPost extends SqlBase
     $query->leftJoin('field_data_body', 'fb', 'n.nid = fb.entity_id AND fb.deleted = 0');
     $query->addField('fb', 'body_value', 'body_value');
     $query->addField('fb', 'body_summary', 'body_summary');
+    $query->leftJoin('field_data_field_post_categories', 'fpc', 'n.nid = fpc.entity_id AND fpc.deleted = 0');
+    $query->leftJoin('taxonomy_term_data', 'ttdfpc', 'fpc.field_post_categories_tid = ttdfpc.tid');
+    $query->addField('ttdfpc', 'name', 'category_name');
 
     return $query;
   }
@@ -55,6 +58,7 @@ class BlogPost extends SqlBase
       'sticky' => 'sticky',
       'body_value' => 'body_value',
       'body_summary' => 'body_summary',
+      'category_name' => 'category_name',
      ];
 
     return $fields;

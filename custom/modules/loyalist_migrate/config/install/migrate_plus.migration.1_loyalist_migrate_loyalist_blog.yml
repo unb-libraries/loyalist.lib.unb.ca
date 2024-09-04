@@ -1,0 +1,32 @@
+id: 1_loyalist_migrate_loyalist_blog
+label: 'Loyalist Blog Posts'
+
+migration_tags:
+  - Loyalist
+  - SQL
+
+source:
+  plugin: loyalist_blog
+  key: migrate
+
+process:
+  nid: nid
+  vid: vid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  title:
+    plugin: callback
+    callable: trim
+    source: title
+  'body/format':
+    plugin: default_value
+    default_value: wysiwyg
+  'body/value': body_value
+  'body/summary': body_summary
+
+destination:
+  plugin: 'entity:node'
+  default_bundle: blog_post

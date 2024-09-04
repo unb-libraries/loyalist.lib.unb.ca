@@ -39,8 +39,8 @@ process:
     -
       plugin: str_replace
       source: field_background_information_value
-      search: [ '<b>', '</b>' ]
-      replace: [ '<strong>', '</strong>' ]
+      search: [ '<b>', '</b>', '<i>', '</i>' ]
+      replace: [ '<strong>', '</strong>', '<em>', '</em>' ]
 
   field_background_information/format:
     plugin: default_value

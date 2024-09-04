@@ -24,7 +24,11 @@ process:
   'body/format':
     plugin: default_value
     default_value: wysiwyg
-  'body/value': body_value
+  'body/value':
+    plugin: str_replace
+    source: body_value
+    search: [ '<b>', '</b>', '<i>', '</i>', '&nbsp;' ]
+    replace: [ '<strong>', '</strong>', '<em>', '</em>', ' ' ]
   'body/summary': body_summary
 
 destination:

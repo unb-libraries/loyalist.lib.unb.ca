@@ -1,0 +1,5 @@
+services:
+  loyalist_migrate.1_loyalist_migrate_loyalist_blog:
+    class: Drupal\loyalist_migrate\Event\BlogPostEvent
+    tags:
+      - { name: event_subscriber }

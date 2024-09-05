@@ -1,4 +1,4 @@
-id: 0_loyalist_migrate_loyalist_items
+id: 1_loyalist_migrate_loyalist_items
 label: 'Loyalist Item'
 
 migration_tags:
@@ -11,6 +11,7 @@ source:
 
 process:
   nid: nid
+  uid: uid
   created: created
   changed: changed
 

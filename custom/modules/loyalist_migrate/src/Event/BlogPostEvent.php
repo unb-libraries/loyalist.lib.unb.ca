@@ -14,7 +14,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 class BlogPostEvent implements EventSubscriberInterface {
 
   const MIGRATION_DATABASE = 'migrate';
-  const MIGRATION_ID = '1_loyalist_migrate_loyalist_blog';
+  const MIGRATION_ID = '2_loyalist_migrate_loyalist_blog';
   const TAXONOMY_CATEGORY_VID = 'category';
 
   /**
@@ -42,6 +42,7 @@ class BlogPostEvent implements EventSubscriberInterface {
       $id = reset($id);
       $node = Node::load($id);
 
+      // Attach taxonomy terms.
       foreach ($this->querySourceDbForTaxonomyTerms($id) as $term_name) {
         $this->cleanUpTermName($term_name);
         $term = $this->getTaxonomyTermByNameCreateIfNotExists($term_name, self::TAXONOMY_CATEGORY_VID);
@@ -49,6 +50,9 @@ class BlogPostEvent implements EventSubscriberInterface {
           'target_id' => $term->id(),
         ];
       }
+
+      // Attach Comments.
+
       $node->save();
     }
   }
@@ -63,6 +67,29 @@ class BlogPostEvent implements EventSubscriberInterface {
    *   An array of category names.
    */
   protected function querySourceDbForTaxonomyTerms($nid) {
+    \Drupal\Core\Database\Database::setActiveConnection(self::MIGRATION_DATABASE);
+    $database = \Drupal\Core\Database\Database::getConnection();
+    $query = <<<EOT
+    SELECT ttd.name
+    FROM field_data_field_post_categories AS fdc
+    LEFT JOIN taxonomy_term_data AS ttd
+    ON fdc.field_post_categories_tid = ttd.tid
+    WHERE fdc.entity_id = $nid;
+EOT;
+    $query = $database->query($query);
+    return $query->fetchAllKeyed(0, 0);
+  }
+
+  /**
+   * Query the source database for category taxonomy terms for a node.
+   *
+   * @param int $nid
+   *   The node ID.
+   *
+   * @return string[]
+   *   An array of category names.
+   */
+  protected function querySourceDbForComments($nid) {
     \Drupal\Core\Database\Database::setActiveConnection(self::MIGRATION_DATABASE);
     $database = \Drupal\Core\Database\Database::getConnection();
     $query = <<<EOT

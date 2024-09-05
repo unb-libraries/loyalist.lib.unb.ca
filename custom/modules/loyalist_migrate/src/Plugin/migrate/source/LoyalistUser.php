@@ -7,34 +7,30 @@ use Drupal\migrate\Plugin\migrate\source\SqlBase;
 use Drupal\migrate\Row;
 
 /**
- * Migrates Loyalist Blog Posts.
+ * Migrates Loyalist Users.
  *
  * @MigrateSource(
- *   id = "loyalist_blog",
+ *   id = "loyalist_user",
  *   source_module = "loyalist_migrate",
  * )
  */
-class BlogPost extends SqlBase
+class LoyalistUser extends SqlBase
 {
   /**
    * {@inheritdoc}
    */
   public function query()
   {
-    $query = $this->select('node', 'n');
-    $query->condition('n.type', 'blog');
-    $query->addField('n', 'nid', 'nid');
-    $query->addField('n', 'uid', 'uid');
-    $query->addField('n', 'vid', 'vid');
-    $query->addField('n', 'title', 'title');
-    $query->addField('n', 'status', 'status');
-    $query->addField('n', 'created', 'created');
-    $query->addField('n', 'changed', 'changed');
-    $query->addField('n', 'promote', 'promote');
-    $query->addField('n', 'sticky', 'sticky');
-    $query->leftJoin('field_data_body', 'fb', 'n.nid = fb.entity_id AND fb.deleted = 0');
-    $query->addField('fb', 'body_value', 'body_value');
-    $query->addField('fb', 'body_summary', 'body_summary');
+    $query = $this->select('users', 'u');
+    $query->condition('u.uid', 0, '>');
+    $query->addField('u', 'uid', 'uid');
+    $query->addField('u', 'name', 'name');
+    $query->addField('u', 'mail', 'mail');
+    $query->addField('u', 'created', 'created');
+    $query->addField('u', 'access', 'access');
+    $query->addField('u', 'status', 'status');
+    $query->addField('u', 'timezone', 'timezone');
+    $query->addField('u', 'changed', 'changed');
 
     return $query;
   }
@@ -46,18 +42,15 @@ class BlogPost extends SqlBase
   {
     // This maps the field from their name above to a destination field name that is specified in the process section. I generally keep them the same.
     $fields = [
-      'nid' => 'nid',
       'uid' => 'uid',
-      'vid' => 'vid',
-      'title' => 'title',
-      'status' => 'status',
+      'name' => 'name',
+      'mail' => 'mail',
       'created' => 'created',
+      'access' => 'access',
+      'status' => 'status',
+      'timezone' => 'timezone',
       'changed' => 'changed',
-      'promote' => 'promote',
-      'sticky' => 'sticky',
-      'body_value' => 'body_value',
-      'body_summary' => 'body_summary',
-     ];
+    ];
 
     return $fields;
   }
@@ -68,9 +61,9 @@ class BlogPost extends SqlBase
   public function getIds()
   {
     return [
-      'nid' => [
+      'uid' => [
         'type' => 'integer',
-        'alias' => 'n',
+        'alias' => 'u',
       ],
     ];
   }

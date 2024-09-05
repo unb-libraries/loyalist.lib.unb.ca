@@ -1,0 +1,23 @@
+id: 0_loyalist_migrate_loyalist_users
+label: 'Loyalist Users'
+
+migration_tags:
+  - Loyalist
+  - SQL
+
+source:
+  plugin: loyalist_user
+  key: migrate
+
+process:
+  uid: uid
+  name: name
+  mail: mail
+  created: created
+  access: access
+  status: status
+  timezone: timezone
+  changed: changed
+
+destination:
+  plugin: entity:user

@@ -24,6 +24,7 @@ class LoyalistItem extends SqlBase
         $query = $this->select('node', 'n');
         $query->condition('n.type', 'loyalist_record');
         $query->addField('n', 'nid', 'nid');
+        $query->addField('n', 'uid', 'uid');
         $query->addField('n', 'title', 'title');
         $query->addField('n', 'created', 'created');
         $query->addField('n', 'changed', 'changed');
@@ -96,6 +97,7 @@ class LoyalistItem extends SqlBase
         // This maps the field from their name above to a destination field name that is specified in the process section. I generally keep them the same.
         $fields = [
           'nid' => 'nid',
+          'uid' => 'uid',
           'created' => 'created',
           'changed' => 'changed',
           'title' => 'title',

@@ -1,5 +1,5 @@
-id: 1_loyalist_migrate_loyalist_blog
-label: 'Loyalist Blog Posts'
+id: 2_loyalist_migrate_loyalist_blog
+label: 'Loyalist Posts'
 
 migration_tags:
   - Loyalist
@@ -11,6 +11,7 @@ source:
 
 process:
   nid: nid
+  uid: uid
   vid: vid
   status: status
   created: created

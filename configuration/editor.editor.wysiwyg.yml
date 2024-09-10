@@ -62,6 +62,8 @@ settings:
         - '<dl id class>'
         - '<dt id class>'
         - '<em class>'
+        - '<figure class>'
+        - '<figcaption class>'
         - '<h2 id class>'
         - '<h3 id class>'
         - '<h4 id class>'

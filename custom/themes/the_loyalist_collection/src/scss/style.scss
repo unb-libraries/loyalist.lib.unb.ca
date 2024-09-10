@@ -111,37 +111,20 @@ footer {
     }
   }
 }
+// END REGIONS STYLES.
 
+// ELEMENT STYLES.
+// Improved blockquotes, particularly for Blog posts.
+blockquote {
+  background: var(--bs-light);
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-left: $spacer * .35 solid var(--bs-danger);
+  border-radius: var(--bs-border-radius);
+  padding: $spacer * .5;
 
-.block-system-main-block {
-  h3 {
-    margin-top: $spacer * 2;
+  p:last-child {
+    margin-bottom: 0;
   }
-  h2 {
-    &:not(:first-of-type) {
-      margin-top: $spacer * 2.5;
-    }
-
-    & + h3 {
-      margin-top: $spacer;
-    }
-  }
-}
-
-.lh-base-less {
-  line-height: calc($line-height-base * 0.95);
-
-  .table>:not(caption)>*>* {
-    padding-bottom: $spacer * 0.75;
-    padding-top: $spacer * 0.75;
-  }
-}
-
-figure {
-  width: 100%;
-}
-li:not(.nav-item):not(.menu-item):not(.facet-item) {
-  margin-bottom: $spacer * 0.5;
 }
 
 /* Loyalist Record Display */
@@ -177,6 +160,16 @@ dl.loyalist-record {
       background: $striping-color;
     }
   }
+}
+
+// Responsive, improved visual for images lacking class.
+img:not([class]) {
+  background-color: var(--bs-body-bg);
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  max-width: 100%;
+  height: auto;
+  padding: $spacer * .25;
 }
 
 input[type="search"]::-webkit-search-cancel-button {

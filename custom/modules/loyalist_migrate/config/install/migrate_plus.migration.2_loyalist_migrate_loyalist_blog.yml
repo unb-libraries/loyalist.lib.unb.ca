@@ -28,8 +28,8 @@ process:
   'body/value':
     plugin: str_replace
     source: body_value
-    search: [ '<b>', '</b>', '<i>', '</i>', '&nbsp;', 'class="Table"' ]
-    replace: [ '<strong>', '</strong>', '<em>', '</em>', ' ', 'class="table table-bordered"' ]
+    search: [ '<b>', '</b>', '<i>', '</i>', '&nbsp;', 'class="Table"',  'style="text-align:center"']
+    replace: [ '<strong>', '</strong>', '<em>', '</em>', ' ', 'class="table table-bordered table-striped"', 'class="text-center"' ]
   'body/summary': body_summary
 
 destination:

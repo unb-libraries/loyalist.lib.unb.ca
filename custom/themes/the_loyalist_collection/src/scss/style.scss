@@ -1,6 +1,7 @@
 @import 'custom/imports';
 
-// Body.
+// REGIONS STYLES.
+// Body region.
 #skiptomain a {
   background: $link-color;
   color: $white;
@@ -9,7 +10,6 @@
   position: absolute;
   text-align: center;
   text-decoration: none;
-  /*text-underline-offset: $text-underline-offset;*/
   top: $font-size-base * -3.5;
   transition: $transition-all;
   width: 100%;
@@ -17,14 +17,13 @@
 
   &:focus {
     box-shadow: 0 0 5px $black;
-    /*text-decoration: underline;*/
     border: 3px ridge var(--bs-primary-bg-subtle);
     top: 0;
     transition: top $transition-speed-default $transition-timing-default;
   }
 }
 
-// Browser overrides.
+// Header region
 header {
   border-bottom: 5px solid var(--bs-dark);
   margin-bottom: $spacer * 1.5;
@@ -34,6 +33,7 @@ header {
   }
 }
 
+// Main region.
 main {
   a,
   button.link {
@@ -65,7 +65,22 @@ main {
     }
   }
 }
+.block-system-main-block {
+  h3 {
+    margin-top: $spacer * 2;
+  }
+  h2 {
+    &:not(:first-of-type) {
+      margin-top: $spacer * 2.5;
+    }
 
+    & + h3 {
+      margin-top: $spacer;
+    }
+  }
+}
+
+// Footer region.
 footer {
   &.footer-dark {
     a {
@@ -185,6 +200,23 @@ input[type="search"]::-webkit-search-cancel-button:hover {
   fill: $unb-logo-red;
 }
 
+li:not(.nav-item):not(.menu-item):not(.facet-item) {
+  margin-bottom: $spacer * 0.5;
+}
+// END ELEMENT STYLES.
+
+// MISC OVERRIDES.
+.lh-base-less {
+  line-height: calc($line-height-base * 0.95);
+
+  .table>:not(caption)>*>* {
+    padding-bottom: $spacer * 0.75;
+    padding-top: $spacer * 0.75;
+  }
+}
+// END MISC OVERRIDES.
+
+// UTILITY CLASSES.
 .title-field-number {
   color: var(--bs-secondary-text-emphasis);
   font-size: $font-size-base * 0.85;
@@ -194,3 +226,4 @@ input[type="search"]::-webkit-search-cancel-button:hover {
 .text-token {
   color: var(--bs-danger-text-emphasis);
 }
+// END UTILITY CLASSES.

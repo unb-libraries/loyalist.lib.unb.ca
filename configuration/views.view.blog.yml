@@ -461,7 +461,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      title: ''
+      title: 'Atlantic Loyalist Connections'
       defaults:
         title: false
       display_description: ''

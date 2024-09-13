@@ -1,0 +1,50 @@
+.comment-blog-comment-form {
+  // Hide About text formats link.
+  #edit-comment-body-0-format {
+    display: none;
+  }
+
+  .comment-author div {
+    display: inline;
+  }
+}
+
+.comment-wrapper {
+  margin-top: $spacer * 3;
+
+  .comment:focus-within {
+    outline: var(--bs-focus-ring-color) auto 3px;
+  }
+
+  h2 {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    margin-bottom: $spacer * 1.5;
+  }
+  ul.inline li:first-child {
+    padding-left: 0;
+  }
+
+  .card-footer {
+    background-color: $gray-100;
+    font-size: $font-size-base * 0.8;
+  }
+  .card-header {
+    font-size: $font-size-base * 0.9;
+  }
+  .indented {
+    margin-left: $spacer * 1.85;
+  }
+
+  // Highlight unapproved comments for moderators.
+  .unpublished {
+    background-color: var(--bs-warning-bg-subtle);
+  }
+  .visually-hidden {
+    .permalink {
+      &:focus {
+        display: inline!important;
+      }
+    }
+  }
+}

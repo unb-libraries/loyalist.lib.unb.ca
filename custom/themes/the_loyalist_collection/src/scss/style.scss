@@ -118,9 +118,11 @@ footer {
 blockquote {
   background: var(--bs-light);
   border: var(--bs-border-width) solid var(--bs-border-color);
-  border-left: $spacer * .35 solid var(--bs-danger);
+  border-left: $spacer * .35 solid var(--bs-danger-text-emphasis);
   border-radius: var(--bs-border-radius);
-  padding: $spacer * .5;
+  margin-left: $spacer * 2;
+  margin-right: $spacer * 2;
+  padding: $spacer * 0.5 $spacer * 0.75;
 
   p:last-child {
     margin-bottom: 0;
@@ -162,6 +164,10 @@ dl.loyalist-record {
   }
 }
 
+h1 {
+  margin-bottom: $spacer * 1.5;
+}
+
 // Responsive, improved visual for images lacking class.
 img:not([class]) {
   background-color: var(--bs-body-bg);
@@ -196,6 +202,12 @@ input[type="search"]::-webkit-search-cancel-button:hover {
 li:not(.nav-item):not(.menu-item):not(.facet-item) {
   margin-bottom: $spacer * 0.5;
 }
+
+u {
+  font-weight: bold;
+  opacity: 0.9;
+  text-decoration: none;
+}
 // END ELEMENT STYLES.
 
 // MISC OVERRIDES.
@@ -205,6 +217,18 @@ li:not(.nav-item):not(.menu-item):not(.facet-item) {
   .table>:not(caption)>*>* {
     padding-bottom: $spacer * 0.75;
     padding-top: $spacer * 0.75;
+  }
+}
+.messages__wrapper {
+  margin-bottom: $spacer;
+}
+
+.node__submitted {
+  color: var(--bs-gray-600);
+  font-size: $font-size-base * 0.86;
+
+  .list-inline {
+    margin-bottom: $spacer * 0.6;
   }
 }
 // END MISC OVERRIDES.

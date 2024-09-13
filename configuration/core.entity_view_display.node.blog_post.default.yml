@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.blog_comment.default
     - field.field.node.blog_post.body
     - field.field.node.blog_post.field_blog_comments
     - field.field.node.blog_post.field_post_categories
@@ -27,7 +28,7 @@ content:
     region: content
   field_blog_comments:
     type: comment_default
-    label: hidden
+    label: above
     settings:
       view_mode: default
       pager_id: 0

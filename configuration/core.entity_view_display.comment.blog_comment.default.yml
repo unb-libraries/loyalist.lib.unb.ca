@@ -22,13 +22,17 @@ content:
     region: content
   field_your_name:
     type: string
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   langcode: true
-  links: true
   search_api_excerpt: true

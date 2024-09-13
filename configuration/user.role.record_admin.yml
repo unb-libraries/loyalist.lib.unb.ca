@@ -35,6 +35,7 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'administer comment types'
+  - 'administer comments'
   - 'create audio media'
   - 'create document media'
   - 'create image media'

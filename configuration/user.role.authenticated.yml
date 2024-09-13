@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.filter_html
     - filter.format.wysiwyg
   module:
+    - comment
     - filter
     - fontawesome
     - media
@@ -16,7 +18,11 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
   - 'access fontawesome additional settings'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use text format filter_html'
   - 'use text format wysiwyg'
   - 'view media'

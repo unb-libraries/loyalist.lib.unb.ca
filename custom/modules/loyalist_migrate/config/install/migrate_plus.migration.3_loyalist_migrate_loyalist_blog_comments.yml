@@ -16,7 +16,7 @@ process:
   comment_body/value: comment_body_value
   comment_body/format:
     plugin: default_value
-    default_value: full_html
+    default_value: filter_html
   aid: nuid
   uid: uid
   entity_id: nid

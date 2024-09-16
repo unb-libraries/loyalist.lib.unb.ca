@@ -1,0 +1,45 @@
+# drush mim 3_loyalist_migrate_loyalist_blog_comments
+id: 3_loyalist_migrate_loyalist_blog_comments
+label: 'Loyalist Comments'
+
+migration_tags:
+  - Loyalist
+  - SQL
+
+source:
+  plugin: loyalist_comment
+  key: migrate
+
+process:
+  cid: cid
+  subject: subject
+  comment_body/value: comment_body_value
+  comment_body/format:
+    plugin: default_value
+    default_value: full_html
+  aid: nuid
+  uid: uid
+  entity_id: nid
+  entity_type:
+    plugin: default_value
+    default_value: node
+  field_name:
+    plugin: default_value
+    default_value: field_blog_comments
+  created: created
+  changed: changed
+  status:
+    plugin: default_value
+    default_value: 1
+  thread: thread
+  name: name
+  mail: mail
+  homepage: homepage
+  language: language
+  comment_type:
+    plugin: default_value
+    default_value: blog_comment
+  parent: pid
+
+destination:
+  plugin: entity:comment

@@ -81,14 +81,13 @@
 {% set commenter = content.field_your_name|field_value is not empty ? content.field_your_name|field_value : author %}
 
 <article{{ attributes.addClass(classes) }}>
-  {#
-    Hide the "new" indicator by default, let a piece of JavaScript ask the
-    server which comments are new for the user. Rendering the final "new"
-    indicator here would break the render cache.
-  #}
-
   <div class="card-header d-flex flex-wrap bg-light">
     <div class="me-3">
+      {#
+      Hide the "new" indicator by default, let a piece of JavaScript ask the
+      server which comments are new for the user. Rendering the final "new"
+      indicator here would break the render cache.
+      #}
       <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
       <div class="visually-hidden">Comment: {{ comment.getSubject }}</div>
       <span aria-hidden="true" class="fa-solid text-secondary {{ comment.owner.anonymous ? 'fa-user' : 'fa-user-shield' }}"></span>

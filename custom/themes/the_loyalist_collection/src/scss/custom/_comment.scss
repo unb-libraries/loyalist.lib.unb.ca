@@ -13,7 +13,7 @@
   margin-top: $spacer * 3;
 
   .comment:focus-within {
-    outline: var(--bs-focus-ring-color) auto 3px;
+    outline: var(--bs-dark) auto var(--bs-focus-ring-width);
   }
 
   h2 {

@@ -18,6 +18,7 @@ services:
       - ./custom/modules:/app/html/modules/custom
       - ./custom/themes:/app/html/themes/custom
       - ./tests:/app/tests
+      - ./files:/files
     depends_on:
       - drupal-mysql-lib-unb-ca
       - drupal-redis-lib-unb-ca

@@ -6,3 +6,5 @@ tests/behat/features/bootstrap
 scripts/local
 .idea
 configuration/.htaccess
+/loyalist.sql
+/files

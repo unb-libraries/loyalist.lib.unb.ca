@@ -1,5 +1,9 @@
 services:
-  loyalist_migrate.1_loyalist_migrate_loyalist_blog:
+  loyalist_migrate.1_loyalist_migrate_loyalist_items:
+    class: Drupal\loyalist_migrate\Event\LoyalistItemEvent
+    tags:
+      - { name: event_subscriber }
+  loyalist_migrate.2_loyalist_migrate_loyalist_blog:
     class: Drupal\loyalist_migrate\Event\BlogPostEvent
     tags:
       - { name: event_subscriber }

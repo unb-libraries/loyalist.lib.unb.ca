@@ -14,13 +14,13 @@
   margin: $spacer * 2 auto;
 }
 
-.search-result {
+.unformatted-list-item {
   border-color: transparent;
   border-width: 1px;
   border-style: solid;
   margin-bottom: $spacer * 2;
   margin-top: $spacer * 2;
-  padding: calc($spacer * 0.5) calc($spacer * 0.75);
+  padding: calc($spacer * 0.75) calc($spacer * 0.75) 0;
   transition: background-color $transition-speed-default $transition-timing-default,
     border-color $transition-speed-default $transition-timing-default;
 
@@ -28,6 +28,10 @@
   &:hover {
     background-color: var(--bs-light);
     border-color: var(--bs-secondary-border-subtle);
+  }
+
+  aside {
+    margin-bottom: $spacer;
   }
 
   .views-label {

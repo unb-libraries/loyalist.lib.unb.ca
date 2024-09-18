@@ -171,6 +171,10 @@ display:
             operator_list: {  }
       style:
         type: default
+        options:
+          row_class: unformatted-list-item
+          default_row_class: false
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
@@ -457,14 +461,29 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: 'Loyalist blog posts'
+    display_title: 'Landing Page'
     display_plugin: page
     position: 1
     display_options:
       title: 'Atlantic Loyalist Connections'
       defaults:
         title: false
+        header: false
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "<figure class=\"text-center\">\r\n  <img src=\"/themes/custom/the_loyalist_collection/images/loyalist-blog-banner.jpg\" alt=\"Atlantic Loyalist Connections\" class=\"img-fluid\">\r\n</figure>"
+            format: wysiwyg
+          tokenize: false
       display_extenders: {  }
       path: atlantic-loyalist-connections
       menu:

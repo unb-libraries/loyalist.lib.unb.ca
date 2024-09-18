@@ -1,0 +1,49 @@
+id: 4_loyalist_migrate_media_files
+label: 'Loyalist Media Files'
+
+migration_tags:
+  - Loyalist
+  - SQL
+
+source:
+  plugin: loyalist_media_file
+  key: migrate
+  constants:
+    FILE_DIRECTORY: '/files'
+process:
+  fid: fid
+  uid: uid
+  pseudo_source_rel_filepath:
+    -
+      plugin: str_replace
+      regex: false
+      source: uri
+      search: 'public://'
+      replace: ''
+  pseudo_source_path:
+    -
+      plugin: concat
+      source:
+        - constants/FILE_DIRECTORY
+        - '@pseudo_source_rel_filepath'
+      delimiter: /
+  uri:
+    -
+      plugin: skip_on_404
+      method: row
+      source: '@pseudo_source_path'
+    -
+      plugin: file_copy
+      source:
+        - '@pseudo_source_path'
+        - uri
+      file_exists: rename
+      move: false
+  filename: filename
+  filemime: filemime
+  filesize: filesize  
+  status: status
+  timestamp: timestamp
+
+destination:
+  plugin: 'entity:file'

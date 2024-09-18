@@ -1,0 +1,48 @@
+id: 5_loyalist_migrate_media_media
+label: 'Loyalist Media Files'
+
+migration_tags:
+  - Loyalist
+  - SQL
+
+source:
+  plugin: loyalist_media_file
+  key: migrate
+  constants:
+    FILE_DIRECTORY: '/files'
+
+process:
+  pseudo_source_rel_filepath:
+    -
+      plugin: str_replace
+      regex: false
+      source: uri
+      search: 'public://'
+      replace: ''
+  pseudo_source_path:
+    -
+      plugin: concat
+      source:
+        - constants/FILE_DIRECTORY
+        - '@pseudo_source_rel_filepath'
+      delimiter: /
+  name:
+    -
+      plugin: skip_on_404
+      method: row
+      source: '@pseudo_source_path'
+    -
+      plugin: concat
+      source:
+        - filename
+  field_media_image/target_id: fid
+  thumbnail/target_id: fid
+  uid: uid
+
+destination:
+  plugin: 'entity:media'
+  default_bundle: image
+
+migration_dependencies:
+  required:
+    - 4_loyalist_migrate_media_files

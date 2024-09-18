@@ -7,3 +7,5 @@ dependencies:
   - migrate:migrate
   - migrate_plus:migrate_plus
   - migrate_tools:migrate_tools
+  - migrate_skip_on_404:migrate_skip_on_404
+  - migrate_conditions:migrate_conditions

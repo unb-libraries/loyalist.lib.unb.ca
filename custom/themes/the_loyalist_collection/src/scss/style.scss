@@ -155,6 +155,10 @@ dl.loyalist-record {
       p:last-child{
         margin-bottom: 0;
       }
+
+      span.file {
+        display: block;
+      }
     }
 
     dt:nth-of-type(2n),

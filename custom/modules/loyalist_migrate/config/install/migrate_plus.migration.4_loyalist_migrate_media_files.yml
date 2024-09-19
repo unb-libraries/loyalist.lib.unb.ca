@@ -7,9 +7,11 @@ migration_tags:
 
 source:
   plugin: loyalist_media_file
-  key: migrate
+  keys:
+    - fid
   constants:
     FILE_DIRECTORY: '/files'
+
 process:
   fid: fid
   uid: uid
@@ -41,7 +43,7 @@ process:
       move: false
   filename: filename
   filemime: filemime
-  filesize: filesize  
+  filesize: filesize
   status: status
   timestamp: timestamp
 

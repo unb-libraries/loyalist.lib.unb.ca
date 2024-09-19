@@ -8,7 +8,8 @@ migration_tags:
 
 source:
   plugin: loyalist_comment
-  key: migrate
+  keys:
+    - cid
 
 process:
   cid: cid

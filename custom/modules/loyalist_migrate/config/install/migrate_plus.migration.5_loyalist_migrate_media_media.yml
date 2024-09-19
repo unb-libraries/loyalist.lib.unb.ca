@@ -7,7 +7,8 @@ migration_tags:
 
 source:
   plugin: loyalist_media_file
-  key: migrate
+  keys:
+    - fid
   constants:
     FILE_DIRECTORY: '/files'
 
@@ -38,10 +39,16 @@ process:
   field_media_image/target_id: fid
   thumbnail/target_id: fid
   uid: uid
+  bundle:
+    -
+      plugin: str_replace
+      source: type
+      search: 'undefined'
+      replace: 'document'
 
 destination:
   plugin: 'entity:media'
-  default_bundle: image
+  default_bundle: document
 
 migration_dependencies:
   required:

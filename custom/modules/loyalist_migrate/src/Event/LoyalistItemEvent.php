@@ -50,7 +50,11 @@ class LoyalistItemEvent implements EventSubscriberInterface {
           continue;
         }
         $file_components = pathinfo($file_path);
-        $uri_directory = 'public:/'. $file_components['dirname'];
+        $uri_directory = 'public:/'. str_replace(
+          '/files',
+          '',
+          $file_components['dirname']
+        );
         $full_uri = $uri_directory . '/' . $file_components['basename'];
 
         $file_system = \Drupal::service('file_system');

@@ -64,9 +64,6 @@ class LoyalistItemEvent implements EventSubscriberInterface {
           'uid' => $file->uid,
         ]);
         $file->save();
-        
-        $file_usage = \Drupal::service('file.usage');
-        $file_usage->add($file, 'loyalist_migrate', 'node', $nid);
 
         $node->field_finding_aid_record[] = [
           'target_id' => $file->id(),

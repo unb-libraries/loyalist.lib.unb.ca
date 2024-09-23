@@ -243,6 +243,14 @@ u {
 // END MISC OVERRIDES.
 
 // UTILITY CLASSES.
+@media (min-width: 768px) {
+  .list-col-2 {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
+
 .title-field-number {
   color: var(--bs-secondary-text-emphasis);
   font-size: $font-size-base * 0.85;

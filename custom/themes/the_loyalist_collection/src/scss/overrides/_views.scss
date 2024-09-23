@@ -24,9 +24,13 @@
   transition: background-color $transition-speed-default $transition-timing-default,
     border-color $transition-speed-default $transition-timing-default;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   &:focus-within,
   &:hover {
-    background-color: var(--bs-light);
+    background-color: $bg-focus-within;
     border-color: var(--bs-secondary-border-subtle);
   }
 

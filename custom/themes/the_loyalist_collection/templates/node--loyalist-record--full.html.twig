@@ -85,12 +85,6 @@
 {% set th_hidden_label_text = 'Material Description' %}
 
 <article{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h1{{ title_attributes.addClass('fs-4 mb-4') }}>{{ label }}</h1>
-  {% endif %}
-  {{ title_suffix }}
-
   {% if view_mode == 'full' %}
     {# Custom Display layout for Default, i.e. Full display mode #}
     <dl class="loyalist-record">

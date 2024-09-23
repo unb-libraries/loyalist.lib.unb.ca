@@ -47,8 +47,10 @@ function the_loyalist_collection_preprocess_views_view(&$vars) {
       // Update markup variable re: further processing.
       $view_header_result_markup = $vars['header']['result']['#markup'];
     }
+    // Get pager total if view uses a pager.
+    $viewexecutable_getpagertotal = $vars['view']->usePager() ? (int)$vars['view']->getPager()->getPagerTotal() : null;
+
     // Override/truncate View|Header|Result summary 'showing page etc.' text (if found) and getPagerTotal = 1.
-    $viewexecutable_getpagertotal = (int)$vars['view']->getPager()->getPagerTotal() ?? null;
     if ($viewexecutable_getpagertotal == '1') {
       $vars['header']['result']['#markup'] = preg_replace('/:\s*showing[^.]+/', '', $view_header_result_markup);
       $view_header_result_markup = $vars['header']['result']['#markup'];

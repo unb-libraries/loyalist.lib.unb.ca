@@ -466,7 +466,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No matching blog subjects found.'
+          content: 'No blog categories found.'
           tokenize: true
       sorts:
         name:

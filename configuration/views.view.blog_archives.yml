@@ -430,6 +430,20 @@ display:
         options:
           offset: 0
           items_per_page: 10
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: 'No blog archives found.'
+            format: filter_html
+          tokenize: false
       arguments:
         created_year_month:
           id: created_year_month
@@ -476,6 +490,7 @@ display:
         type: fields
         options: {  }
       defaults:
+        empty: false
         title: false
         pager: false
         use_more: false
@@ -503,7 +518,7 @@ display:
           group_type: group
           admin_label: 'Pager|More link|  route parameter match bug workaround '
           plugin_id: text
-          empty: false
+          empty: true
           content:
             value: '<div class="more-link"><a href="/atlantic-loyalist-connections/archives/all">all entries</a></div>'
             format: wysiwyg
@@ -750,6 +765,20 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: '<div class="alert alert-warning"><span class="fa-solid fa-exclamation-circle me-2" aria-hidden="true"></span>Sorry, we found no blog archive content.</div>'
+            format: filter_html
+          tokenize: false
       arguments:
         created_year_month:
           id: created_year_month
@@ -786,6 +815,7 @@ display:
           validate_options:
             pattern: '/^(2\d{3})(0[1-9]|1[012])$/'
       defaults:
+        empty: false
         title: false
         pager: false
         fields: false

@@ -14,6 +14,9 @@ function loyalist_core_form_views_exposed_form_alter(&$form, FormStateInterface 
   // Change Views|Exposed Filter criteria|Fulltext search|Filter identifier=fulltext to 'search' type (UI: 'x').
   if (isset($form['fulltext'])) {
     $form['fulltext']['#type'] = 'search';
+  } elseif (isset($form['category'])){
+    // Also change input type for Top Subjects combined fields filter.
+    $form['category']['#type'] = 'search';
   }
 
   switch ($form['#id']) {

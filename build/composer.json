@@ -157,6 +157,7 @@
     "drupal/search_api_solr": "^4",
     "drupal/twig_tweak": "^3",
     "drupal/twig_field_value": "^2",
+    "drupal/views_argument_validator_regex": "^2",
     "drupal/views_rows_wrapper": "^2",
     "fontawesome/fontawesome": "^6",
     "markgoodyear/scrollup": "dev-master",

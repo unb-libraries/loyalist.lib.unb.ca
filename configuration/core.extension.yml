@@ -53,6 +53,7 @@ module:
   twig_field_value: 0
   update: 0
   user: 0
+  views_argument_validator_regex: 0
   views_rows_wrapper: 0
   views_ui: 0
   pathauto: 1

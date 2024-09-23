@@ -781,9 +781,10 @@ display:
             format: default_summary
           specify_validation: true
           validate:
-            type: numeric
+            type: regex
             fail: 'not found'
-          validate_options: {  }
+          validate_options:
+            pattern: '/^(2\d{3})(0[1-9]|1[012])$/'
       defaults:
         title: false
         pager: false

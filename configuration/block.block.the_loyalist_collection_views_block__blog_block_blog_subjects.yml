@@ -1,0 +1,29 @@
+uuid: 7d230680-16eb-436d-8b97-cb7d23b9ddf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog
+  module:
+    - system
+    - views
+  theme:
+    - the_loyalist_collection
+id: the_loyalist_collection_views_block__blog_block_blog_subjects
+theme: the_loyalist_collection
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'views_block:blog-block_blog_subjects'
+settings:
+  id: 'views_block:blog-block_blog_subjects'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/atlantic-loyalist-connections*'

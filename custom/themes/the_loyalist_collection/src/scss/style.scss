@@ -64,6 +64,11 @@ main {
       outline-color: var(--bs-primary-bg-subtle);
     }
   }
+  .region-sidebar-second {
+    h2 {
+      font-size: $font-size-base;
+    }
+  }
 }
 .block-system-main-block {
   h3 {

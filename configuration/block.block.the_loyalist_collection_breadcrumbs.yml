@@ -11,7 +11,7 @@ _core:
 id: the_loyalist_collection_breadcrumbs
 theme: the_loyalist_collection
 region: breadcrumb
-weight: -5
+weight: -4
 provider: null
 plugin: system_breadcrumb_block
 settings:

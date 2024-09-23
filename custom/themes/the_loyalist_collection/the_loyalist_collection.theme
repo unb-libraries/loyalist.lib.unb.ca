@@ -34,6 +34,16 @@ function the_loyalist_collection_preprocess_input(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_page_title().
+ */
+function the_loyalist_collection_preprocess_page_title(&$variables) {
+  if (\Drupal::routeMatch()->getRouteName() == 'view.blog.page_landing') {
+    // Visually hide the Loyalist Blog landing page title.
+    $variables['title_attributes']['class'][] = 'visually-hidden';
+  }
+}
+
+/**
  * Implements template_preprocess_views_view().
  */
 function the_loyalist_collection_preprocess_views_view(&$vars) {

@@ -58,6 +58,7 @@
     line-height: calc(var(--bs-body-line-height) * 0.85);
     margin-left: $spacer * 0.2;
     padding-left: $spacer * 0.75;
+    text-wrap: pretty;
   }
 
 }

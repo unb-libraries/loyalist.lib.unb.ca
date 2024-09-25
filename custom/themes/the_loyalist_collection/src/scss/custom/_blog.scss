@@ -1,3 +1,10 @@
 .view-content article:last-child {
   margin-bottom: 0!important;
 }
+
+.region-breadcrumb {
+  // Upscale the blog banner image in the breadcrumb region.
+  .img-fluid {
+    width: 100%;
+  }
+}

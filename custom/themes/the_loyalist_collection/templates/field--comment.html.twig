@@ -39,7 +39,7 @@
     'd-flex',
     'justify-content-between',
     'title',
-    'h3',
+    'h4',
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
@@ -58,10 +58,12 @@
   {{ comments }}
 
   {% if comment_form %}
-    <h2{{ title_attributes.addClass('title h4').setAttribute('id', 'comment-add') }}>
+    <h2{{ title_attributes.addClass(title_classes).setAttribute('id', 'comment-add') }}>
       {{ 'Add new comment'|t }}
       <a href="#comment-top" class="align-self-end fs-6 fw-normal mb-1">
-        <span aria-label="Back to" class="fa-solid fa-circle-up fa-sm me-1"></span>{{ 'Comments'|t }}
+        {% if comments %}
+          <span aria-label="Back to" class="fa-solid fa-circle-up fa-sm me-1"></span>{{ 'Comments'|t }}
+        {% endif %}
       </a>
     </h2>
     {{ comment_form }}

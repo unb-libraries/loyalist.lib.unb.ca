@@ -33,10 +33,17 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
+    weight: 2
+    region: content
+  field_post_categories:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
     weight: 1
     region: content
 hidden:
-  field_post_categories: true
   langcode: true
   links: true
   search_api_excerpt: true

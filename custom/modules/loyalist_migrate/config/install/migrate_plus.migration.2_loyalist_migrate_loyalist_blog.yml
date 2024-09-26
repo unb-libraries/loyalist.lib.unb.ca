@@ -27,10 +27,15 @@ process:
     plugin: default_value
     default_value: wysiwyg
   'body/value':
-    plugin: str_replace
-    source: body_value
-    search: [ '<b>', '</b>', '<i>', '</i>', '&nbsp;', 'class="Table"', 'class="MsoTableGrid"', 'style="text-align:center"']
-    replace: [ '<strong>', '</strong>', '<em>', '</em>', ' ', 'class="table table-bordered table-striped"', 'class="table table-bordered table-sm table-striped"', 'class="text-center"' ]
+    -
+      plugin: str_replace
+      source: body_value
+      search: [ '<b>', '</b>', '<i>', '</i>', '&nbsp;', 'class="Table"', 'class="MsoTableGrid"', 'style="text-align:center"']
+      replace: [ '<strong>', '</strong>', '<em>', '</em>', ' ', 'class="table table-bordered table-striped"', 'class="table table-bordered table-sm table-striped"', 'class="text-center"' ]
+    - plugin: str_replace
+      search: '/SUBJECTS: .*/'
+      replace: ''
+      regex: true
   'body/summary': body_summary
 
 destination:

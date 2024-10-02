@@ -38,6 +38,10 @@ form[action="/browse"] {
   .selectize-input.has-items {
     padding-left: $spacer * 0.5;
     padding-right: calc($spacer + $btn-min-width);
+
+    .active {
+      box-shadow: 0 0 0 $spacer * 0.15 rgba(49, 132, 253, .5);
+    }
   }
 }
 

@@ -843,7 +843,7 @@ display:
           expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
-          text_input_required: '<span class="fa-solid fa-circle-info me-1 text-dark"></span>Enter the query you want to find and press <strong>Display Results</strong> to return <em>matching</em> records.'
+          text_input_required: '<span class="fa-solid fa-circle-info me-1 text-dark"></span>Enter the query you want to find and press <strong>Display results</strong> to return matching records.'
           text_input_required_format: wysiwyg
       sorts:
         search_api_relevance:

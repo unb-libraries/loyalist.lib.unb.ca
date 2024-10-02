@@ -12,7 +12,8 @@ form[action="/browse"] {
     &.form-submit {
       margin-bottom: $spacer * 0.5;
       margin-left: 0;
-      width: $spacer * 8;
+      max-width: $spacer * 8.5;
+      width: 100%;
     }
   }
 
@@ -21,7 +22,17 @@ form[action="/browse"] {
     font-weight: bold;
   }
 
-  @media (min-width: 981px) {
+  @media (max-width: 991px) {
+    .form-wrapper {
+      text-align: center;
+
+      .form-submit {
+        margin-top: $spacer * 0.75;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
     .form--inline .form-item {
       min-width: 300px;
       width: 33%;

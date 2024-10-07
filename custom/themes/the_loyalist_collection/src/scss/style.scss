@@ -55,8 +55,11 @@ main {
     }
   }
 
-  h1 {
-    font-size: calc(var(--bs-body-font-size) * 1.55);
+  // Revert BS5-themed <kbd>, color like <code>.
+  kbd {
+    background: initial;
+    color: var(--bs-code-color);
+    padding: initial;
   }
 
   #main-content {

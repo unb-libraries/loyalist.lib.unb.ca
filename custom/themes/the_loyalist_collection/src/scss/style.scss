@@ -1,4 +1,4 @@
-@import 'custom/imports';
+@import 'imports';
 
 // REGIONS STYLES.
 // Body region.
@@ -53,6 +53,19 @@ main {
     &:hover {
       text-decoration: var(--bs-link-hover-color) $text-decoration-style-hover;
     }
+  }
+
+  h1, .h1 {
+    font-size: $font-size-base * 1.55;
+  }
+  h2, .h2 {
+    font-size: $font-size-base * 1.31;
+  }
+  h3, .h3 {
+    font-size: $font-size-base * 1.12;
+  }
+  h4, .h4 {
+    font-size: $font-size-base * 0.92;
   }
 
   // Revert BS5-themed <kbd>, color like <code>.
@@ -126,7 +139,7 @@ footer {
 blockquote {
   background: var(--bs-light);
   border: var(--bs-border-width) solid var(--bs-border-color);
-  border-left: $spacer * .35 solid var(--bs-danger-text-emphasis);
+  border-left: $spacer * .35 solid $border-light-accent-color;
   border-radius: var(--bs-border-radius);
   margin-left: $spacer * 2;
   margin-right: $spacer * 2;

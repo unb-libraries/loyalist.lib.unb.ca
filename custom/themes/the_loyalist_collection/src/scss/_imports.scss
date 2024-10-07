@@ -1,39 +1,39 @@
 // Bootstrap variable overrides.
 // @see https://getbootstrap.com/docs/5.3/customize/sass/#variable-defaults.
-@import '../overrides/variables_bootstrap';
+@import 'overrides/variables_bootstrap';
 
 // Include bootstrap.
 //@import '../../../../../../vendor/drupal/bootstrap5/scss/style';
-@import 'bootstrap5';
-
-// Subtheme mixins.
-@import 'mixins';
+@import 'custom/bootstrap5';
 
 // Subtheme variables.
-@import 'variables_drupal';
+@import 'custom/variables_drupal';
+
+// Subtheme mixins.
+@import 'custom/mixins';
 
 // Custom styles.
-@import '../fouc-s1';
-@import 'blog';
-@import 'branding';
-@import "comment";
-@import 'facets';
-@import 'fouc-unhide';
-@import 'table';
+@import 'fouc-s1';
+@import 'custom/blog';
+@import 'custom/branding';
+@import "custom/comment";
+@import 'custom/facets';
+@import 'custom/fouc-unhide';
+@import 'custom/table';
 
 // Style overrides.
-@import '../overrides/breadcrumb';
-@import '../overrides/form';
-@import '../overrides/inline-form';
-@import '../overrides/layout';
-@import '../overrides/links';
-@import '../overrides/local_tasks';
-@import '../overrides/navbar';
-@import '../unblib-owlcarousel2';
-@import '../overrides/pagination';
-@import '../overrides/position';
-@import "../overrides/scroll.top.button";
-@import '../overrides/tables';
-@import '../overrides/utilities';
-@import '../overrides/views';
-@import '../overrides/color_modes';
+@import 'overrides/breadcrumb';
+@import 'overrides/form';
+@import 'overrides/inline-form';
+@import 'overrides/layout';
+@import 'overrides/links';
+@import 'overrides/local_tasks';
+@import 'overrides/navbar';
+@import 'unblib-owlcarousel2';
+@import 'overrides/pagination';
+@import 'overrides/position';
+@import "overrides/scroll.top.button";
+@import 'overrides/tables';
+@import 'overrides/utilities';
+@import 'overrides/views';
+@import 'overrides/color_modes';

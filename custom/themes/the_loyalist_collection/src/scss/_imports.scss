@@ -1,6 +1,6 @@
 // Bootstrap variable overrides.
 // @see https://getbootstrap.com/docs/5.3/customize/sass/#variable-defaults.
-@import 'variables_bootstrap';
+@import '../overrides/variables_bootstrap';
 
 // Include bootstrap.
 //@import '../../../../../../vendor/drupal/bootstrap5/scss/style';
@@ -22,7 +22,6 @@
 @import 'table';
 
 // Style overrides.
-@import '../overrides/bootstrap5';
 @import '../overrides/breadcrumb';
 @import '../overrides/form';
 @import '../overrides/inline-form';
@@ -32,6 +31,7 @@
 @import '../overrides/navbar';
 @import '../unblib-owlcarousel2';
 @import '../overrides/pagination';
+@import '../overrides/position';
 @import "../overrides/scroll.top.button";
 @import '../overrides/tables';
 @import '../overrides/utilities';

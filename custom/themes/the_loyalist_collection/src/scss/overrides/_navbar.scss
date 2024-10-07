@@ -82,9 +82,8 @@
   .dropdown-menu {
     padding: $spacer * 0.25;
 
-    .nav-item {
+    .nav-item:not(:last-child) {
       margin-bottom: $spacer * 0.35;
-      margin-right: inherit;
     }
 
     .dropdown-item {

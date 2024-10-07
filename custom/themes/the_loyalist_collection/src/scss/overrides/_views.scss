@@ -30,8 +30,8 @@
 
   &:focus-within,
   &:hover {
-    background-color: $bg-focus-within;
-    border-color: var(--bs-secondary-border-subtle);
+    background-color: $focus-within-bg-color;
+    border-color: $focus-within-border-color;
   }
 
   aside {

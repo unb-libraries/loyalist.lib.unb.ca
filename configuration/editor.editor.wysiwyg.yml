@@ -29,6 +29,7 @@ settings:
       - specialCharacters
       - '|'
       - sourceEditing
+      - Fullscreen
   plugins:
     ckeditor5_alignment:
       enabled_alignments:

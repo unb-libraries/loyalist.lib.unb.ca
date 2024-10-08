@@ -51,7 +51,7 @@ settings:
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags:
-        - '<a id target title aria-controls aria-expanded aria-selected hreflang data-entity-substitution data-entity-type data-entity-uuid data-toggle role class>'
+        - '<a id tabindex target title aria-controls aria-expanded aria-selected hreflang data-entity-substitution data-entity-type data-entity-uuid data-toggle role class>'
         - '<address class>'
         - '<blockquote cite class>'
         - '<q lang class>'

@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.node.rss
     - field.storage.node.body
     - node.type.basic_page
-    - system.menu.main
     - views.view.news
   module:
     - node
@@ -674,7 +673,7 @@ display:
       display_extenders: {  }
       path: home
       menu:
-        type: normal
+        type: none
         title: Home
         description: ''
         weight: -50

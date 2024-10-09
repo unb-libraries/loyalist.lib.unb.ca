@@ -24,8 +24,8 @@
 
   <div>
     {% if site_name %}
-    {# Note: remove duplicate 'frontpage' link from keyboard tab flow, i.e. Home link enabled in main nav #}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-title" tabindex="-1">
+    <a href="{{ path('<front>') }}" rel="home" class="site-title nav-link"
+      {% if '/home' in path('<current>') %}aria-current="page"{% endif %}>
       {{ site_name }}
     </a>
     {% endif %}

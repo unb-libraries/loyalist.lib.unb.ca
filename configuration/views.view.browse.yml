@@ -170,7 +170,7 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
-          label: Collection
+          label: Category
           exclude: false
           alter:
             alter_text: false
@@ -443,7 +443,7 @@ display:
           exposed: true
           expose:
             operator_id: term_node_tid_depth_op
-            label: 'Collection Category'
+            label: Category
             description: 'Choose 1 or more terms to filter results'
             use_operator: false
             operator: term_node_tid_depth_op

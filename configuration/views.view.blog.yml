@@ -1017,7 +1017,20 @@ display:
         title: false
         header: false
       display_description: ''
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: "<p class=\"lead\">Atlantic Loyalist Connections shares research experiences involving The Loyalist Collection and relations within the British colonial Atlantic World.</p>\r\n<hr>"
+            format: wysiwyg
+          tokenize: false
       display_extenders: {  }
       path: atlantic-loyalist-connections
       menu:

@@ -25,9 +25,8 @@ class LoyalistBanner extends BlockBase {
     return [
       '#type' => 'html_tag',
       '#tag' => 'figure',
-      '#value' => '<img src="/themes/custom/the_loyalist_collection/images/loyalist-blog-banner.jpg" alt=""' .
-        ' class="img-fluid"><figcaption class="visually-hidden">Atlantic Loyalist Connections shares research experiences involving
-        The Loyalist Collection and relations within the British colonial Atlantic world</figcaption>',
+      '#value' => '<img src="/themes/custom/the_loyalist_collection/images/loyalist-blog-banner.jpg"
+        alt="" class="img-fluid">',
     ];
   }
 }

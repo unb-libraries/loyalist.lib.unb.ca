@@ -80,6 +80,7 @@ settings:
         - '<li id class>'
         - '<ol id type class>'
         - '<p id class>'
+        - '<section id class>'
         - '<span aria-hidden data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date data-color lang class>'
         - '<small class>'
         - '<sup class>'

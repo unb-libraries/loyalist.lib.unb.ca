@@ -26,7 +26,7 @@
     {% if site_name %}
     <a href="{{ path('<front>') }}" rel="home" class="site-title nav-link"
       {% if '/home' in path('<current>') %}aria-current="page"{% endif %}>
-      {{ site_name }}
+      {{ site_name }} <span class="visually-hidden">homepage</span>
     </a>
     {% endif %}
 

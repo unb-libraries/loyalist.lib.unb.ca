@@ -55,7 +55,7 @@ third_party_settings:
         - field_record_info
         - field_volume_info
         - field_gauge
-      label: Description
+      label: 'Material Description'
       region: content
       parent_name: ''
       weight: 4
@@ -64,6 +64,7 @@ third_party_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        label_as_html: false
         open: false
         description: ''
         required_fields: true

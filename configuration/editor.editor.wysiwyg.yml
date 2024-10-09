@@ -28,8 +28,9 @@ settings:
       - horizontalLine
       - specialCharacters
       - '|'
+      - findAndReplace
       - sourceEditing
-      - Fullscreen
+      - fullScreen
   plugins:
     ckeditor5_alignment:
       enabled_alignments:
@@ -49,6 +50,8 @@ settings:
         reversed: false
         startIndex: true
       multiBlock: true
+    ckeditor5_plugin_pack_find_and_replace__find_and_replace:
+      ui_type: dialog
     ckeditor5_sourceEditing:
       allowed_tags:
         - '<a id tabindex target title aria-controls aria-expanded aria-selected hreflang data-entity-substitution data-entity-type data-entity-uuid data-toggle role class>'

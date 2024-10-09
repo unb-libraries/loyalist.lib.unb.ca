@@ -269,14 +269,14 @@ u {
 }
 
 .doc-download-section {
-  margin-top: $spacer * 2;
+  margin-top: $spacer * 2.5;
 
-  p {
+  dt p {
+    font-weight: normal;
     margin-bottom: 0;
-
-    & + .media--type-document {
-      margin-bottom: $spacer;
-    }
+  }
+  dd {
+    margin-bottom: $spacer;
   }
 }
 

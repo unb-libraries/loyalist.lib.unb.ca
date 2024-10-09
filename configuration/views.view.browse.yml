@@ -170,7 +170,7 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
-          label: Section
+          label: Collection
           exclude: false
           alter:
             alter_text: false
@@ -515,14 +515,14 @@ display:
               align: ''
               separator: ''
               empty_column: false
-              responsive: priority-low
+              responsive: ''
             field_call_number:
               sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
-              responsive: priority-medium
+              responsive: ''
           override: true
           sticky: true
           summary: ''

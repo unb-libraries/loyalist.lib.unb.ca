@@ -9,7 +9,9 @@ module:
   blog: 0
   breakpoint: 0
   ckeditor5: 0
-  ckeditor5_fullscreen: 0
+  ckeditor5_plugin_pack: 0
+  ckeditor5_plugin_pack_find_and_replace: 0
+  ckeditor5_premium_features_fullscreen: 0
   comment: 0
   config: 0
   contextual: 0

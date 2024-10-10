@@ -137,8 +137,8 @@ footer {
 // ELEMENT STYLES.
 // Improved blockquotes, particularly for Blog posts.
 blockquote {
-  background: var(--bs-light);
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  background: $blockquote-bg-color;
+  border: var(--bs-border-width) solid $blockquote-border-color;
   border-left: $spacer * .35 solid $border-light-accent-color;
   border-radius: var(--bs-border-radius);
   margin-left: $spacer * 2;

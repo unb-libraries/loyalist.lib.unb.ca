@@ -1,8 +1,10 @@
 // Theme variables.
+$blockquote-bg-color: #fefdf9;
+$blockquote-border-color: #d8d5c2;
 $border-light-accent-color: #bbb8a5;
 $core-icon-size: 17px;
-$focus-within-bg-color: #fefdf9; /*#fffbf5;*/
-$focus-within-border-color: #d8d5c2;
+$focus-within-bg-color: #fffbf5;
+$focus-within-border-color: $border-light-accent-color;
 $footer-padding: $spacer 0 !default;
 $link-text-dark: rgba($dark, 0.75);
 $link-text-light: rgba($white, 0.75);
@@ -32,4 +34,3 @@ $transition-speed-default: 0.25s;
 $transition-timing-default: ease-in-out;
 $transition-all: all $transition-speed-default $transition-timing-default;
 $unb-logo-red: #cd0000;
-$bg-focus-within: #f9f9fc;

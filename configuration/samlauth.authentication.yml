@@ -19,7 +19,7 @@ sp_new_certificate: ''
 sp_private_key: ''
 metadata_valid_secs: null
 metadata_cache_http: false
-idp_entity_id: 'https://login.lib.unb.ca/'
+idp_entity_id: 'https://login.lib.unb.ca'
 idp_single_sign_on_service: 'https://login.lib.unb.ca/saml2/idp/SSOService.php'
 idp_single_log_out_service: 'https://login.lib.unb.ca/saml2/idp/SingleLogoutService.php'
 idp_change_password_service: ''
@@ -29,8 +29,9 @@ idp_cert_encryption: ''
 unique_id_attribute: eduPersonPrincipalName
 map_users: false
 map_users_name: false
-map_users_mail: false
-map_users_roles: {  }
+map_users_mail: true
+map_users_roles:
+  - anonymous
 create_users: false
 sync_name: false
 sync_mail: true

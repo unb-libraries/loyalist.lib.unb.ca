@@ -7,12 +7,12 @@ dependencies:
 id: basic_page_entries
 label: 'Basic page entries'
 type: 'canonical_entities:node'
-pattern: 'content/[node:title]'
+pattern: '[node:title]'
 selection_criteria:
-  f1660c20-8e1e-4cec-9f91-56017ae4358e:
+  76735a94-80a8-40f2-952a-b7f4e6aa5abb:
     id: 'entity_bundle:node'
     negate: false
-    uuid: f1660c20-8e1e-4cec-9f91-56017ae4358e
+    uuid: 76735a94-80a8-40f2-952a-b7f4e6aa5abb
     context_mapping:
       node: node
     bundles:

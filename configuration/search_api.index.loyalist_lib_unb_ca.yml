@@ -88,7 +88,7 @@ field_settings:
     label: 'Call Number'
     datasource_id: 'entity:node'
     property_path: field_call_number
-    type: 'solr_text_custom:ngramstring'
+    type: solr_text_wstoken
     dependencies:
       config:
         - field.storage.node.field_call_number

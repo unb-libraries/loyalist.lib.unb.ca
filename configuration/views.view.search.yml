@@ -340,7 +340,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your search.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Notes for entering search terms:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Correct term spelling is important</li>\r\n      <li>Partial word search is supported, eg.<code>loyal</code> also returns records that match <em>loyalty, loyalism</em> and <em>loyalist</em></li>\r\n      <li>You must enter at least 1 term to search for</li>\r\n    </ul>\r\n    <p class=\"mt-4\">For a more in-depth guide see our article, <em><a href=\"/search-tips\">Tips for searching the Loyalist Database</a></em>.\r\n  </div>\r\n</div>"
+          content: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your search.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Notes for entering search terms:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>You must enter at least 1 term to search for</li>\r\n      <li>Correct term spelling is important</li>\r\n      <li>Partial word search is supported, eg.<code>loyal</code> also returns records that match <em>loyalty, loyalism</em> and <em>loyalist</em></li>    </ul>\r\n    <p class=\"mt-4\">For a more in-depth guide see our article, <em><a href=\"/search-tips\">Tips for searching the Loyalist Database</a></em>.\r\n  </div>\r\n</div>"
           tokenize: false
       sorts: {  }
       arguments:
@@ -377,7 +377,7 @@ display:
           break_phrase: false
           not: false
           parse_mode: direct
-          conjunction: AND
+          conjunction: OR
           fields: {  }
       filters:
         status:
@@ -426,14 +426,14 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_fulltext
-          operator: and
+          operator: or
           value: ''
           group: 1
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
             label: 'Search The Loyalist Collection Catalogue<strong class="text-danger" aria-label="required">*</strong>'
-            description: 'Enter 1 or more terms to find, eg. <kbd>New York</kbd>'
+            description: 'Enter 1 or more terms to find, eg. <kbd>"New York"</kbd>'
             use_operator: false
             operator: search_api_fulltext_op
             operator_limit_selection: false
@@ -843,7 +843,7 @@ display:
           expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
-          text_input_required: "<div class=\"card border mt-5\">\r\n  <div class=\"card-header bg-light border-bottom h6\"><span class=\"fa-solid fa-circle-info me-1 text-dark\" aria-hidden=\"true\"></span>Tips for choosing search terms</div>\r\n  <div class=\"card-body m-2\">\r\n    <ul class=\"mb-0\">\r\n      <li>Correct term spelling is important</li>\r\n      <li>Partial word search is supported, eg.<kbd>loyal</kbd> also returns records that match <em>loyalty</em>, <em>loyalism</em> and <em>loyalist</em></li>\r\n      <li>You must enter at least 1 term to search for</li>\r\n      <li>Text within PDF finding aids attached to records are now searchable <span class=\"badge text-bg-success\">New</span></li>\r\n    </ul>\r\n    <p class=\"mt-4\">For a more in-depth guide see our article, <em><a href=\"/search-tips\">Tips for searching the Loyalist Database</a></em>.\r\n  </div>\r\n</div>"
+          text_input_required: "<div class=\"card border mt-5\">\r\n  <div class=\"card-header bg-light border-bottom h6\"><span class=\"fa-solid fa-circle-info me-1 text-dark\" aria-hidden=\"true\"></span>Tips for choosing search terms</div>\r\n  <div class=\"card-body m-2\">\r\n    <ul class=\"mb-0\">\r\n      <li>You must enter at least 1 term to search for</li>\r\n      <li>Correct term spelling is important</li>\r\n      <li>Partial word search is supported, eg.<kbd>loyal</kbd> also returns records that match <em>loyalty</em>, <em>loyalism</em> and <em>loyalist</em></li>\r\n      <li>Text within PDF finding aids attached to records are now searchable <span class=\"badge text-bg-success\">New</span></li>\r\n    </ul>\r\n    <p class=\"mt-4\">For a more in-depth guide see our article, <em><a href=\"/search-tips\">Tips for searching the Loyalist Database</a></em>.\r\n  </div>\r\n</div>"
           text_input_required_format: wysiwyg
       sorts:
         search_api_relevance:

@@ -1,0 +1,4 @@
+exclude_stu: 1
+user_form_protect: 0
+enable_user_email_notify: 0
+display_metadata_alert: 0

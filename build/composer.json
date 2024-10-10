@@ -164,7 +164,8 @@
     "fontawesome/fontawesome": "^6",
     "markgoodyear/scrollup": "dev-master",
     "owlcarousel2/owlcarousel2": "^2",
-    "unb-libraries/composer-drupal-scaffold": "^10"
+    "unb-libraries/composer-drupal-scaffold": "^10",
+    "unb-libraries/saml_features": "dev-10.x-1.x"
   },
   "require-dev": {
     "unb-libraries/drupal-development-libraries": "^10"

@@ -8,6 +8,7 @@ dependencies:
     - comment
     - filter
     - media
+    - samlauth
     - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
@@ -21,3 +22,4 @@ permissions:
   - 'post comments'
   - 'use text format filter_html'
   - 'view media'
+  - 'view sp metadata'

@@ -117,7 +117,7 @@
   <div{{ content_attributes.addClass('card-body') }}>
     {% if title %}
       {{ title_prefix }}
-      <h3{{ title_attributes.addClass('h5 mt-1').setAttribute('aria-hidden', 'true') }}>{{ title|striptags }}</h3>
+      <h3{{ title_attributes.addClass('h4 mt-1').setAttribute('aria-hidden', 'true') }}>{{ title|striptags }}</h3>
       {{ title_suffix }}
     {% endif %}
     {{ content|without('field_your_name', 'links',) }}

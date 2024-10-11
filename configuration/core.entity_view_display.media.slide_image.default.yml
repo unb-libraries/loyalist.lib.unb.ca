@@ -1,26 +1,26 @@
-uuid: 9592e3a5-6eb0-4ec4-a1f2-d233c18daa83
+uuid: b273df02-b45c-4e4f-b31b-8cc8ec91f4ae
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.bs_xxl_extra_extra_large
-    - field.field.media.image.field_media_image
-    - field.field.media.image.field_mime_type
-    - image.style.bs_xxl_extra_extra_large
-    - media.type.image
+    - field.field.media.slide_image.field_media_image
+    - field.field.media.slide_image.field_mime_type
+    - field.field.media.slide_image.field_source_website
+    - image.style.large
+    - media.type.slide_image
   module:
     - image
-id: media.image.bs_xxl_extra_extra_large
+id: media.slide_image.default
 targetEntityType: media
-bundle: image
-mode: bs_xxl_extra_extra_large
+bundle: slide_image
+mode: default
 content:
   field_media_image:
     type: image
     label: visually_hidden
     settings:
       image_link: ''
-      image_style: bs_xxl_extra_extra_large
+      image_style: large
       image_loading:
         attribute: lazy
     third_party_settings: {  }
@@ -29,6 +29,7 @@ content:
 hidden:
   created: true
   field_mime_type: true
+  field_source_website: true
   langcode: true
   name: true
   search_api_excerpt: true

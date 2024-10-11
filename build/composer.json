@@ -139,6 +139,7 @@
     "drupal/entity_reference_revisions": "^1",
     "drupal/facets": "^2",
     "drupal/field_group": "^3",
+    "drupal/file_delete": "^2",
     "drupal/fontawesome": "^2",
     "drupal/google_analytics": "^4",
     "drupal/health_check": "^2",

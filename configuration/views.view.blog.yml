@@ -1028,7 +1028,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<p class=\"lead\">Atlantic Loyalist Connections shares research experiences involving The Loyalist Collection and relations within the British colonial Atlantic World.</p>\r\n<hr>"
+            value: "<p class=\"bg-body-tertiary border lead mb-5 p-4 rounded-3\">Atlantic Loyalist Connections shares research experiences involving The Loyalist Collection and relations within the British colonial Atlantic World.</p>\r\n"
             format: wysiwyg
           tokenize: false
       display_extenders: {  }

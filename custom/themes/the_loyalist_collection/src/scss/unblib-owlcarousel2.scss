@@ -5,6 +5,18 @@
     cursor: wait;
   }
 
+  a {
+    color: var(--bs-gray-400);
+    text-decoration-color: var(--bs-gray-800);
+
+    &:focus {
+      outline-color: var(--bs-gray-400);
+    }
+    &:hover {
+      text-decoration-color: var(--bs-gray-400);
+    }
+  }
+
   &.owl-theme .owl-nav {
     position: absolute;
     bottom: 50%;
@@ -14,6 +26,7 @@
 
     button.owl-next,
     button.owl-prev {
+      background: rgba(0, 0, 0, 0.4);
       color: var(--bs-white);
       padding: .75rem .5rem!important;
       transition: background-color 0.25s ease-in-out;
@@ -23,5 +36,37 @@
         background: #880401;
       }
     }
+  }
+
+  .owl-item {
+    .slide-caption {
+      transition: opacity 0.55s ease-in-out;
+    }
+
+    &.active {
+      .slide-caption {
+        opacity: 1;
+
+        a {
+          display: initial;
+        }
+      }
+    }
+    &:not(.active) {
+      .slide-caption {
+        opacity: 0;
+
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.owl-autoplay-wrapper {
+  text-align: center;
+
+  .form-switch {
+    transform: scale(0.75);
   }
 }

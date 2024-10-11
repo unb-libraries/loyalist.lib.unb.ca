@@ -352,9 +352,22 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      css_class: mb-3
+      css_class: ''
       header: {  }
-      footer: {  }
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "<div class=\"owl-autoplay-wrapper\">\r\n<div class=\"form-check form-switch d-inline-block\">\r\n  <input class=\"form-check-input\" type=\"checkbox\" role=\"switch\" id=\"owlAutoplaySwitch\" checked>\r\n  <label class=\"form-check-label\" for=\"owlAutoplaySwitch\">Autoplay</label>\r\n</div>\r\n</div>\r\n\r\n"
+            format: wysiwyg
+          tokenize: false
       display_extenders: {  }
     cache_metadata:
       max-age: 0

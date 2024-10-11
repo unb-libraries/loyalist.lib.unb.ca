@@ -257,6 +257,14 @@ u {
     margin-bottom: $spacer * 0.6;
   }
 }
+.path-frontpage h1 {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
 // END MISC OVERRIDES.
 
 // UTILITY CLASSES.

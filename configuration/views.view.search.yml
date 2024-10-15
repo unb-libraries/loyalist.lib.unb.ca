@@ -863,7 +863,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: unformatted-list-item
+          row_class: 'unformatted-list-item rounded'
           default_row_class: false
       row:
         type: fields
@@ -881,7 +881,7 @@ display:
         type: normal
         title: Search
         description: ''
-        weight: -49
+        weight: -50
         expanded: false
         menu_name: main
         parent: ''

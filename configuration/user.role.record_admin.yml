@@ -21,6 +21,7 @@ dependencies:
     - filter
     - media
     - node
+    - system
     - taxonomy
     - toolbar
 id: record_admin
@@ -87,3 +88,4 @@ permissions:
   - 'view any remote_video media revisions'
   - 'view any video media revisions'
   - 'view loyalist_record revisions'
+  - 'view the administration theme'

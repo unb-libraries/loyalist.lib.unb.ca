@@ -16,6 +16,7 @@ dependencies:
     - filter
     - media
     - node
+    - system
     - toolbar
 id: page_editor
 label: 'Page Editor'
@@ -64,3 +65,4 @@ permissions:
   - 'view any video media revisions'
   - 'view basic_page revisions'
   - 'view own unpublished content'
+  - 'view the administration theme'

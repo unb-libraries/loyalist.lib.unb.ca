@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_form_FORM_ID_alter.
@@ -24,4 +25,15 @@ function loyalist_core_form_views_exposed_form_alter(&$form, FormStateInterface 
       $form['#attached']['library'][] = 'loyalist_core/search_input_required';
       break;
   }
+}
+
+/**
+ * Implements hook_views_pre_render.
+ */
+function loyalist_core_views_pre_render(ViewExecutable $view) {
+  if (strpos($view->getTitle(), 'Owl Carousel') !== false) {
+    // Attach OwlCarousel2 library for Views displays w/ 'Owl Carousel' contained within the title.
+    $view->element['#attached']['library'][] = 'the_loyalist_collection/owlcarousel2';
+  }
+
 }

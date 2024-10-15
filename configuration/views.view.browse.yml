@@ -598,7 +598,7 @@ display:
       menu:
         type: normal
         title: Browse
-        weight: -48
+        weight: -49
         menu_name: main
         parent: ''
     cache_metadata:

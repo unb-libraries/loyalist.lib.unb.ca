@@ -68,5 +68,13 @@
 
   .form-switch {
     transform: scale(0.75);
+
+    .form-check-input:focus,
+    .form-check-input:hover {
+      & + label {
+        color: var(--bs-link-hover-color);
+        cursor: pointer;
+      }
+    }
   }
 }

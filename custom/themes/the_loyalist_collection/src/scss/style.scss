@@ -42,12 +42,9 @@ main {
     text-underline-offset: $text-underline-offset;
     transition: $transition-all;
 
-    &:focus {
-      text-decoration: $text-decoration-color-default;
-    }
-
     &:focus-visible {
       @include focus_outline(rgba(var(--bs-link-color-rgb), 0.7));
+      text-decoration-color: transparent;
     }
 
     &:hover {
@@ -104,29 +101,31 @@ main {
 // Footer region.
 footer {
   &.footer-dark {
-    a {
-      text-decoration: $text-decoration-line-default $text-decoration-color-default;
+    #copyright {
+      a {
+        text-decoration: $text-decoration-line-default rgba(var(--bs-white-rgb), 0.25);
+        text-underline-offset: $text-underline-offset;
+        transition: $transition-all;
 
-      &:focus-visible {
-        @include focus_outline($link-text-light);
-        background: inherit;
-      }
-      &:hover {
-        text-decoration: var(--bs-light) $text-decoration-style !important;
+        &:focus-visible {
+          @include focus_outline($link-text-light);
+          text-decoration-color: transparent;
+        }
+
+        &:hover {
+          text-decoration: $text-decoration-line-default rgba(var(--bs-white-rgb), 1);
+        }
       }
     }
-  }
 
-  #footer-logo {
-    a {
-      img {
-        border-bottom: 1px solid transparent;
+
+    #footer-logo {
+      a {
+        outline-color: transparent;
         transition: $transition-all;
-      }
 
-      &:hover {
-        img {
-          border-bottom: 1px solid $white;
+        &:hover {
+          @include focus_outline(rgba(var(--bs-white-rgb), 1));
         }
       }
     }

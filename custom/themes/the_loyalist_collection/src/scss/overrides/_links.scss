@@ -10,3 +10,16 @@
     -webkit-font-smoothing: antialiased;
   }
 }
+
+a {
+  .img-thumbnail {
+    outline-color: transparent;
+    transition: outline-color $transition-speed-default $transition-timing-default;
+  }
+
+  &:hover {
+    .img-thumbnail {
+      @include focus_outline(var(--bs-link-hover-color));
+    }
+  }
+}

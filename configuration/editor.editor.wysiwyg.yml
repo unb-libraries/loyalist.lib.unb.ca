@@ -11,6 +11,7 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - sourceEditing
       - heading
       - bold
       - italic
@@ -29,7 +30,6 @@ settings:
       - specialCharacters
       - '|'
       - findAndReplace
-      - sourceEditing
       - fullScreen
   plugins:
     ckeditor5_alignment:

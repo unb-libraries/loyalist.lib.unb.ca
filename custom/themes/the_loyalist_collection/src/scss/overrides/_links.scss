@@ -12,13 +12,13 @@
 }
 
 a {
-  .img-thumbnail {
+  img {
     outline-color: transparent;
     transition: outline-color $transition-speed-default $transition-timing-default;
   }
 
   &:hover {
-    .img-thumbnail {
+    img {
       @include focus_outline(var(--bs-link-hover-color));
     }
   }

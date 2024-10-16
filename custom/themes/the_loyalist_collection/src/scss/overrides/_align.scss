@@ -1,0 +1,21 @@
+.align-left {
+  .field--type-image {
+    margin-right: $spacer;
+  }
+}
+
+.align-right {
+  .field--type-image {
+    margin-left: $spacer;
+  }
+}
+
+/* Linked image align-center fix */
+main a {
+  &:has(img) {
+    display: block;
+  }
+}
+.align-center {
+  text-align: center;
+}

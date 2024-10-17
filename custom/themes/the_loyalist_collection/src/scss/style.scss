@@ -287,6 +287,12 @@ u {
   }
 }
 
+.link-external {
+  &:after {
+    @include fa_pseudo('\f08e', 'left', 0.25);
+  }
+}
+
 // Grid of linked images & text, eg. Research Help page.
 .flex-grid {
   column-gap: $spacer;

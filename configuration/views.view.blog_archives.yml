@@ -754,8 +754,8 @@ display:
           tags:
             next: ››
             previous: ‹‹
-            first: '« First'
-            last: 'Last »'
+            first: '‹ newest'
+            last: 'earliest ›'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -821,7 +821,9 @@ display:
         fields: false
         arguments: false
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender:
+          variants: {  }
       path: atlantic-loyalist-connections/archives/%
     cache_metadata:
       max-age: -1

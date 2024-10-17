@@ -592,6 +592,14 @@ display:
     position: 1
     display_options:
       display_extenders:
+        simple_sitemap_display_extender:
+          variants:
+            default:
+              index: true
+              priority: '0.9'
+              changefreq: ''
+              arguments: {  }
+              max_links: 100
         ajax_history:
           enable_history: false
       path: browse

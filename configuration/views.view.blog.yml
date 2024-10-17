@@ -1031,7 +1031,15 @@ display:
             value: "<p class=\"bg-body-tertiary border lead mb-5 p-4 rounded-3\">Atlantic Loyalist Connections shares research experiences involving The Loyalist Collection and relations within the British colonial Atlantic World.</p>\r\n"
             format: wysiwyg
           tokenize: false
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender:
+          variants:
+            default:
+              index: true
+              priority: '0.9'
+              changefreq: ''
+              arguments: {  }
+              max_links: 100
       path: atlantic-loyalist-connections
       menu:
         type: normal

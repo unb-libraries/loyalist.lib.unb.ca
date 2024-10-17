@@ -1,6 +1,7 @@
 _core:
   default_config_hash: uZHsLrDp1ThO0RvupHKcPzLOyVvWexm58JTTHNDo7yc
-display_extenders: {  }
+display_extenders:
+  simple_sitemap_display_extender: simple_sitemap_display_extender
 sql_signature: false
 ui:
   show:

@@ -875,7 +875,15 @@ display:
         fields: false
         sorts: false
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender:
+          variants:
+            default:
+              index: true
+              priority: '0.9'
+              changefreq: ''
+              arguments: {  }
+              max_links: 100
       path: loyalist-search
       menu:
         type: normal

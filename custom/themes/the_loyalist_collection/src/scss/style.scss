@@ -324,6 +324,14 @@ u {
   }
 }
 
+.node--sticky {
+  h2:after {
+    @include fa_pseudo('\f276', 'left', 0, $font-size-base * 0.95, $link-color);
+    float: right;
+    transform: rotate(25deg);
+  }
+}
+
 .title-field-number {
   color: var(--bs-secondary-text-emphasis);
   font-size: $font-size-base * 0.85;

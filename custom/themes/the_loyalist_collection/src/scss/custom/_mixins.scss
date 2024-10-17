@@ -1,5 +1,5 @@
 /* Font Awesome 6: unicode value, padding side property, padding number value, font-size, color */
-@mixin fa_pseudo($content, $side_property, $padding_value, $font-size: $spacer * 0.75, $color: inherit) {
+@mixin fa_pseudo($content, $side_property, $padding_value, $font-size: $font-size-base * 0.75, $color: inherit) {
   color: $color;
   content: $content;
   display: inline-block;

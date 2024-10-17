@@ -23,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: News
+      title: "What's New"
       fields:
         title:
           id: title
@@ -156,8 +156,8 @@ display:
       style:
         type: default
         options:
-          row_class: front-article
-          default_row_class: true
+          row_class: 'unformatted-list-item rounded'
+          default_row_class: false
           uses_fields: false
       row:
         type: 'entity:node'
@@ -369,7 +369,7 @@ display:
           entity_type: node
           entity_field: sticky
           plugin_id: standard
-          order: ASC
+          order: DESC
           expose:
             label: ''
             field_identifier: ''
@@ -461,7 +461,7 @@ display:
               changefreq: ''
               arguments: {  }
               max_links: 100
-      path: news
+      path: whats-new
     cache_metadata:
       max-age: -1
       contexts:

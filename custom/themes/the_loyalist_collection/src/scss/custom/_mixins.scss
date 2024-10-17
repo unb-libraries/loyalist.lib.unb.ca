@@ -1,9 +1,13 @@
-/* Font Awesome 6: unicode value, padding side property, numeric value */
-@mixin fa_pseudo($content_value, $side_property, $padding_value) {
-  content: $content_value;
+/* Font Awesome 6: unicode value, padding side property, padding number value, font-size, color */
+@mixin fa_pseudo($content, $side_property, $padding_value, $font-size: $spacer * 0.75, $color: inherit) {
+  color: $color;
+  content: $content;
   display: inline-block;
   font: var(--fa-font-solid);
-  font-size: smaller;
+  font-size: $font-size;
+  text-rendering: auto;
+  vertical-align: $spacer * 0.1;
+  -webkit-font-smoothing: antialiased;
   @if $side_property == top {
     padding-top: $spacer * $padding_value;
   } @else if $side_property == right {
@@ -13,8 +17,6 @@
   } @else if $side_property == left {
     padding-left: $spacer * $padding_value;
   }
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* Link focus outline re: keyboard accessibility */

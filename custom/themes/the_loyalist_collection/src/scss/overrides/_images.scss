@@ -1,0 +1,16 @@
+/* Support adding BS5 img-thumbnail class to Media image */
+div.img-thumbnail {
+  padding: initial;
+  background-color: initial;
+  border: initial;
+
+  img {
+    /* Clone BS5 img-thumbnail class */
+    padding: $spacer * 0.25;
+    background-color: var(--bs-body-bg);
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    max-width: 100%;
+    height: auto;
+  }
+}

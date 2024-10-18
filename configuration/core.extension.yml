@@ -26,6 +26,7 @@ module:
   file_delete: 0
   filter: 0
   fontawesome: 0
+  google_analytics: 0
   health_check: 0
   image: 0
   jquery_scrollup: 0

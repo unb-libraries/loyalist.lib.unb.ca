@@ -16,6 +16,15 @@
     color: var(--bs-nav-link-color);
   }
 
+  .navbar-brand {
+    margin-right: 0;
+
+    svg {
+      height: 75px;
+      margin-right: $spacer * 0.66;
+    }
+  }
+
   .navbar .navbar-brand {
     margin-right: 0;
     gap: $spacer * .75;
@@ -23,6 +32,8 @@
     img {
       margin-right: 0;
     }
+
+
 
     @media (max-width: 576px) {
       .site-logo {

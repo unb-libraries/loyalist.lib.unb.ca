@@ -327,6 +327,7 @@ display:
         groups:
           1: AND
       defaults:
+        css_class: false
         pager: false
         use_more: false
         use_more_always: false
@@ -336,13 +337,15 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+      css_class: mb-4
       display_description: ''
       use_more: true
       use_more_always: true
       use_more_text: 'More News'
       link_display: page_1
       link_url: whats-new
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender: {  }
       block_description: 'Promoted to Front'
     cache_metadata:
       max-age: -1

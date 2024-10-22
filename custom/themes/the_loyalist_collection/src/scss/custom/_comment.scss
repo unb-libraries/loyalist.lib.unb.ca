@@ -38,7 +38,7 @@
 
   // Highlight unapproved comments for moderators.
   .unpublished {
-    background-color: var(--bs-warning-bg-subtle);
+    background-color: var(--bs-danger-bg-subtle);
   }
   .visually-hidden {
     .permalink {

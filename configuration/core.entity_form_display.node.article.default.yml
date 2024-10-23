@@ -7,6 +7,7 @@ dependencies:
     - node.type.article
   module:
     - path
+    - scheduler
     - text
 id: node.article.default
 targetEntityType: node
@@ -49,6 +50,22 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 52
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 8
@@ -82,5 +99,4 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
-  publish_on: true
   unpublish_on: true

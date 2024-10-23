@@ -18,6 +18,8 @@ dependencies:
     - filter
     - media
     - node
+    - override_node_options
+    - scheduler
     - system
     - toolbar
     - view_unpublished
@@ -67,6 +69,13 @@ permissions:
   - 'edit own image media'
   - 'edit own remote_video media'
   - 'edit own video media'
+  - 'override all published option'
+  - 'override article authored on option'
+  - 'override article promote to front page option'
+  - 'override article sticky option'
+  - 'override blog_post authored on option'
+  - 'override blog_post promote to front page option'
+  - 'override blog_post sticky option'
   - 'revert article revisions'
   - 'revert basic_page revisions'
   - 'revert blog_post revisions'

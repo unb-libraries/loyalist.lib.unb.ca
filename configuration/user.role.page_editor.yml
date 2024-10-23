@@ -79,6 +79,7 @@ permissions:
   - 'revert article revisions'
   - 'revert basic_page revisions'
   - 'revert blog_post revisions'
+  - 'schedule publishing of nodes'
   - 'use text format wysiwyg'
   - 'view any audio media revisions'
   - 'view any document media revisions'
@@ -90,4 +91,5 @@ permissions:
   - 'view basic_page revisions'
   - 'view blog_post revisions'
   - 'view own unpublished content'
+  - 'view scheduled content'
   - 'view the administration theme'

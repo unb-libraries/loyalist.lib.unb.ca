@@ -24,6 +24,7 @@ dependencies:
     - system
     - taxonomy
     - toolbar
+    - view_unpublished
 id: record_admin
 label: 'Record Admin'
 weight: 2
@@ -86,6 +87,8 @@ permissions:
   - 'view any document media revisions'
   - 'view any image media revisions'
   - 'view any remote_video media revisions'
+  - 'view any unpublished loyalist_record content'
   - 'view any video media revisions'
   - 'view loyalist_record revisions'
+  - 'view own unpublished content'
   - 'view the administration theme'

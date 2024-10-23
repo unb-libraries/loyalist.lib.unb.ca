@@ -163,6 +163,7 @@
     "drupal/twig_tweak": "^3",
     "drupal/views_argument_validator_regex": "^2",
     "drupal/views_rows_wrapper": "^2",
+    "drupal/view_unpublished": "^1",
     "fontawesome/fontawesome": "^6",
     "markgoodyear/scrollup": "dev-master",
     "owlcarousel2/owlcarousel2": "^2",

@@ -20,6 +20,7 @@ dependencies:
     - node
     - system
     - toolbar
+    - view_unpublished
 id: page_editor
 label: 'Page Editor'
 weight: 3
@@ -74,6 +75,7 @@ permissions:
   - 'view any document media revisions'
   - 'view any image media revisions'
   - 'view any remote_video media revisions'
+  - 'view any unpublished content'
   - 'view any video media revisions'
   - 'view article revisions'
   - 'view basic_page revisions'

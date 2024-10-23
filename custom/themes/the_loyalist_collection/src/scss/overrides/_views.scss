@@ -38,6 +38,17 @@
     margin-bottom: $spacer;
   }
 
+  h2 {
+    font-size: $font-size-base * 1.06;
+    line-height: $line-height-base * 0.95;
+  }
+
+  .field--name-field-post-categories {
+    color: var(--bs-gray-600);
+    font-size: $font-size-base * 0.86;
+    margin-bottom: $spacer * 0.5;
+  }
+
   .views-label {
     color: var(--bs-secondary-color);
     font-weight: bold;

@@ -173,7 +173,7 @@ display:
       style:
         type: default
         options:
-          row_class: 'unformatted-list-item rounded-3'
+          row_class: 'unformatted-list-item rounded'
           default_row_class: false
           uses_fields: false
       row:

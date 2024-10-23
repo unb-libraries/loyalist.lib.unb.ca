@@ -3993,6 +3993,52 @@
             }
         },
         {
+            "name": "drupal/scn",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/scn.git",
+                "reference": "2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/scn-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "f13d261528b5a61884ece9deb660c8e64c7d9ce7"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.3",
+                    "datestamp": "1689485714",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Andrei Ivnitskii",
+                    "homepage": "https://www.drupal.org/u/ivnish",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Notifies the site administrator by e-mail or telegram about new comments on the site.",
+            "homepage": "https://www.drupal.org/project/scn",
+            "support": {
+                "source": "https://git.drupalcode.org/project/scn",
+                "issues": "https://www.drupal.org/project/issues/scn"
+            }
+        },
+        {
             "name": "drupal/search_api",
             "version": "1.34.0",
             "source": {

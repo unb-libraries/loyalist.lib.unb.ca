@@ -1,0 +1,16 @@
+scn_admin: 0
+scn_node_author: 0
+scn_roles:
+  authenticated: 0
+  record_admin: 0
+  page_editor: 0
+scn_maillist: mic@unb.ca
+scn_telegram: 0
+scn_telegram_bottoken: ''
+scn_telegram_chatids: ''
+scn_telegram_proxy: 0
+scn_telegram_proxy_server: ''
+scn_telegram_proxy_login: ''
+scn_telegram_proxy_password: ''
+scn_add_admin_overview_link: 0
+scn_add_admin_comment_link: 0

@@ -154,6 +154,7 @@
     "drupal/redis": "^1",
     "drupal/samlauth": "^3",
     "drupal/scheduler": "^2",
+    "drupal/scn": "^2",
     "drupal/search_api": "<1.35",
     "drupal/search_api_attachments": "^9",
     "drupal/search_api_solr": "^4",

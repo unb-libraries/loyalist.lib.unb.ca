@@ -9,7 +9,7 @@ _core:
 id: the_loyalist_collection_page_title
 theme: the_loyalist_collection
 region: content
-weight: -5
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

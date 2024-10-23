@@ -9,7 +9,7 @@ _core:
 id: the_loyalist_collection_local_actions
 theme: the_loyalist_collection
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: local_actions_block
 settings:

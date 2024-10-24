@@ -21,6 +21,7 @@ dependencies:
     - override_node_options
     - scheduler
     - system
+    - taxonomy
     - toolbar
     - view_unpublished
 id: page_editor
@@ -32,6 +33,7 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access media overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'create article content'
   - 'create audio media'

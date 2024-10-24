@@ -1,0 +1,5 @@
+loyalist_core.admin_content:
+  title: Taxonomies
+  route_name: entity.taxonomy_vocabulary.collection
+  base_route: system.admin_content
+  weight: -5

@@ -149,6 +149,7 @@
     "drupal/migrate_skip_on_404": "^1",
     "drupal/migrate_source_csv": "^3",
     "drupal/migrate_tools": "^6",
+    "drupal/noreqnewpass": "^1",
     "drupal/override_node_options": "^2",
     "drupal/paragraphs": "^1",
     "drupal/pathauto": "^1",

@@ -16,7 +16,10 @@
             autoplayHoverPause: true,
             dots: false,
             nav: true,
-            navText: ["<i class='fa-solid fa-xl fa-chevron-left'></i>","<i class='fa-solid fa-xl fa-chevron-right'></i>"],
+            navText: [
+                "<i class='fa-solid fa-xl fa-chevron-left' aria-label='Previous Slide'></i>",
+                "<i class='fa-solid fa-xl fa-chevron-right' aria-label='Next Slide'></i>"
+            ],
         });
 
         function toggleOwlAutoplay() {

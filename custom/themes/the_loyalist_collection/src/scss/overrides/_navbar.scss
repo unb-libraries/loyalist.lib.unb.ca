@@ -16,6 +16,12 @@
     color: var(--bs-nav-link-color);
   }
 
+  a.site-logo {
+    &:hover {
+      outline: none;
+    }
+  }
+
   .navbar-brand {
     margin-right: 0;
 

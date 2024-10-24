@@ -18,7 +18,10 @@
 
   {% if site_logo %}
     <div>
-      {% include '@the_loyalist_collection/includes/loyalist-crop-flat-colour.html.twig' %}
+      <a href="{{ path('<front>') }}" rel="home" tabindex="-1" class="site-logo"
+      {% if '/home' in path('<current>') %}aria-current="page"{% endif %}>
+        {% include '@the_loyalist_collection/includes/loyalist-crop-flat-colour.html.twig' %}
+      </a>
     </div>
   {% endif %}
 

@@ -10,7 +10,7 @@ dependencies:
     - node
     - user
 id: news
-label: News
+label: "What's New"
 module: views
 description: ''
 tag: ''
@@ -346,7 +346,7 @@ display:
       link_url: whats-new
       display_extenders:
         simple_sitemap_display_extender: {  }
-      block_description: 'Promoted to Front'
+      block_description: "What's New Block"
     cache_metadata:
       max-age: -1
       contexts:

@@ -659,13 +659,24 @@ display:
       use_more_text: "Check out What's New"
       header: {  }
       footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: "What's New Accessible Header"
+          plugin_id: text_custom
+          empty: false
+          content: '<h2 class="visually-hidden">What''s New</h2>'
+          tokenize: false
         view:
           id: view
           table: views
           field: view
           relationship: none
           group_type: group
-          admin_label: 'Whats New Block Display'
+          admin_label: 'Whats New Block'
           plugin_id: view
           empty: false
           view_to_insert: 'news:block_1'

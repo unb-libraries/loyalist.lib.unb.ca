@@ -300,8 +300,8 @@ display:
           tags:
             next: ››
             previous: ‹‹
-            first: '« First'
-            last: 'Last »'
+            first: '‹ first'
+            last: 'last ›'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'

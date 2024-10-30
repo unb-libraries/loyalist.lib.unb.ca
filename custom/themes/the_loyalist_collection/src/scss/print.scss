@@ -83,7 +83,21 @@
   main {
     margin-top: 1rem;
 
-    .file--application-pdf {
+    dl.loyalist-record {
+      display: grid;
+      grid-template-columns: auto auto;
+
+      dt,
+      dd {
+        padding: 0.25rem 0.5rem;
+
+        &.visually-hidden {
+          position: relative !important;
+        }
+      }
+    }
+
+    .file {
       -webkit-print-color-adjust: exact;
     }
   }

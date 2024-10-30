@@ -21,6 +21,7 @@
     page-break-inside: avoid;
   }
   tr,
+  figure,
   img {
     page-break-inside: avoid;
   }
@@ -33,9 +34,6 @@
   h2,
   h3 {
     page-break-after: avoid;
-  }
-  @page {
-    size: a3;
   }
   body {
     min-width: 992px !important;
@@ -68,6 +66,10 @@
   }
 
   /* Custom Print rules */
+  @page {
+    size: a4;
+  }
+
   .region-nav-branding {
     width: 100%;
   }
@@ -80,6 +82,10 @@
 
   main {
     margin-top: 1rem;
+
+    .file--application-pdf {
+      -webkit-print-color-adjust: exact;
+    }
   }
 
   footer {
@@ -89,6 +95,13 @@
     #copyright,
     #copyright a {
       color: var(--bs-black);
+    }
+    #copyright,
+    #footer-logo {
+      width: 50%;
+    }
+    #footer-logo {
+      text-align: right;
     }
     .unb-lib-logo .fill-unb {
       fill: var(--bs-black);

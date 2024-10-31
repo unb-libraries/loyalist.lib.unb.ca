@@ -41,6 +41,7 @@
   .owl-item {
     .slide-caption {
       transition: opacity 0.55s ease-in-out;
+      line-height: 1.2;
     }
 
     &.active {

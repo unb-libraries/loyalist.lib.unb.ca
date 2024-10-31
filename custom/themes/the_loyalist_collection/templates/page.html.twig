@@ -59,7 +59,7 @@ set footer_classes = ' ' ~
   (b5_footer_bg_schema != 'none' ? " bg-#{b5_footer_bg_schema}" : '')
 %}
 
-<header class="{{ header_classes }}">
+<header id="top" class="{{ header_classes }}">
   {{- page.header -}}
 
   {% if page.nav_branding or page.nav_main or page.nav_additional %}

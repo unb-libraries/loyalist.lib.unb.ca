@@ -150,6 +150,11 @@ blockquote {
 }
 
 /* Loyalist Record Display */
+dt, strong {
+  font-family: "Open Sans", source-sans-pro, sans-serif;
+  font-size: 85%;
+  line-height: 185%;
+}
 dl.loyalist-record {
   dd {
     margin-bottom: $spacer * 1;

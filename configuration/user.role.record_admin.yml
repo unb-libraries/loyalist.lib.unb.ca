@@ -21,6 +21,7 @@ dependencies:
     - filter
     - media
     - node
+    - override_node_options
     - system
     - taxonomy
     - toolbar
@@ -81,6 +82,7 @@ permissions:
   - 'edit terms in issuing_body'
   - 'edit terms in media_type'
   - 'edit terms in subject_heading'
+  - 'enter loyalist_record revision log entry'
   - 'revert loyalist_record revisions'
   - 'use text format wysiwyg'
   - 'view any audio media revisions'

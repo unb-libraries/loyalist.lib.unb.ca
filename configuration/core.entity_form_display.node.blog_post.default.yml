@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.blog_post.field_post_categories
     - node.type.blog_post
   module:
+    - allowed_formats
     - comment
     - path
     - scheduler
@@ -28,16 +29,19 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_blog_comments:
     type: comment_default
-    weight: 3
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -53,50 +57,50 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 5
+    weight: 3
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 8
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 12
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 4
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   simple_sitemap:
-    weight: 10
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 11
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 9
+    weight: 7
     region: content
     settings:
       display_label: true
@@ -111,13 +115,18 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   unpublish_on: true

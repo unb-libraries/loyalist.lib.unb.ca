@@ -71,6 +71,7 @@ permissions:
   - 'edit own image media'
   - 'edit own remote_video media'
   - 'edit own video media'
+  - 'enter all revision log entry'
   - 'override all published option'
   - 'override article authored on option'
   - 'override article promote to front page option'

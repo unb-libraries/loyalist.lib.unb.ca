@@ -10,6 +10,12 @@ global-styling:
     - core/jquery
     - core/drupal
 
+claro-ck5admin-overrides:
+  version: VERSION
+  css:
+    theme:
+      dist/css/ck5style-admin-overrides.css: { minified: true }
+
 owlcarousel2:
   version: 2.3.4
   css:

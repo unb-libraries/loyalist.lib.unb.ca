@@ -28,6 +28,16 @@ function loyalist_core_form_views_exposed_form_alter(&$form, FormStateInterface 
 }
 
 /**
+ * Implements hook_page_attachments().
+ */
+function loyalist_core_page_attachments(array &$attachments) {
+  // Conditionally add library attachment for Claro theme (administration theme overrides).
+   if (\Drupal::service('theme.manager')->getActiveTheme()->getName() === "claro") {
+    $attachments['#attached']['library'][] = 'the_loyalist_collection/claro-ck5admin-overrides';
+  }
+}
+
+/**
  * Implements hook_views_pre_render.
  */
 function loyalist_core_views_pre_render(ViewExecutable $view) {
@@ -35,5 +45,4 @@ function loyalist_core_views_pre_render(ViewExecutable $view) {
     // Attach OwlCarousel2 library for Views displays w/ 'Owl Carousel' contained within the title.
     $view->element['#attached']['library'][] = 'the_loyalist_collection/owlcarousel2';
   }
-
 }

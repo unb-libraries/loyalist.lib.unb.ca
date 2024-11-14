@@ -1,0 +1,20 @@
+uuid: c053d47c-5f7a-48e6-b96d-33a600794bb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_motty_event_location
+field_name: field_motty_event_location
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

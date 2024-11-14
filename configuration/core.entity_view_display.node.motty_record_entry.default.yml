@@ -1,0 +1,102 @@
+uuid: 35d1fe83-d793-4471-b53b-5203aaad3b92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.motty_record_entry.field_motty_details
+    - field.field.node.motty_record_entry.field_motty_event_date
+    - field.field.node.motty_record_entry.field_motty_event_location
+    - field.field.node.motty_record_entry.field_motty_event_type
+    - field.field.node.motty_record_entry.field_motty_first_name
+    - field.field.node.motty_record_entry.field_motty_last_name
+    - field.field.node.motty_record_entry.field_motty_notes
+    - field.field.node.motty_record_entry.field_motty_sex
+    - field.field.node.motty_record_entry.field_motty_sort_name
+    - node.type.motty_record_entry
+  module:
+    - datetime
+    - user
+id: node.motty_record_entry.default
+targetEntityType: node
+bundle: motty_record_entry
+mode: default
+content:
+  field_motty_details:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_motty_event_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_motty_event_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_motty_event_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_motty_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_motty_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_motty_notes:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_motty_sex:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_motty_sort_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: 0be37af5-edb4-4553-904e-429c6f516b5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_motty_event_type
+    - node.type.motty_record_entry
+    - taxonomy.vocabulary.motty_event_types
+id: node.motty_record_entry.field_motty_event_type
+field_name: field_motty_event_type
+entity_type: node
+bundle: motty_record_entry
+label: 'Event Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      motty_event_types: motty_event_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: d1b2162a-fc09-4184-989e-a6460102cc93
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_motty_notes
+field_name: field_motty_notes
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

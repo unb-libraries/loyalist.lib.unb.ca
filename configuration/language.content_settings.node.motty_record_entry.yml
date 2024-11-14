@@ -1,0 +1,11 @@
+uuid: 2c53b529-e46c-4896-b179-8e8cbd72bf40
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.motty_record_entry
+id: node.motty_record_entry
+target_entity_type_id: node
+target_bundle: motty_record_entry
+default_langcode: site_default
+language_alterable: false

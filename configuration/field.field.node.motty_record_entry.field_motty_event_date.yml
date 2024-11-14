@@ -1,0 +1,21 @@
+uuid: e65f4d11-e6d2-4db9-b64d-c6e223dcc6b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_motty_event_date
+    - node.type.motty_record_entry
+  module:
+    - datetime
+id: node.motty_record_entry.field_motty_event_date
+field_name: field_motty_event_date
+entity_type: node
+bundle: motty_record_entry
+label: 'Event Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

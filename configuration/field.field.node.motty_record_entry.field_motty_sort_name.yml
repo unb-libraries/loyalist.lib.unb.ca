@@ -1,0 +1,19 @@
+uuid: 6bf23883-7bf2-49c5-bb9f-fb1a0d31b4d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_motty_sort_name
+    - node.type.motty_record_entry
+id: node.motty_record_entry.field_motty_sort_name
+field_name: field_motty_sort_name
+entity_type: node
+bundle: motty_record_entry
+label: 'Sort Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: e5203ea4-9969-40de-950e-a82c592de7a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.motty_record_entry
+id: node.motty_record_entry.title
+field_name: title
+entity_type: node
+bundle: motty_record_entry
+label: Entry
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

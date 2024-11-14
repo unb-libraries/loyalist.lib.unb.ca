@@ -1,0 +1,29 @@
+uuid: a24cb74d-78ff-4cb9-b90e-2760c6de3e19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_motty_event_location
+    - node.type.motty_record_entry
+    - taxonomy.vocabulary.motty_locations
+id: node.motty_record_entry.field_motty_event_location
+field_name: field_motty_event_location
+entity_type: node
+bundle: motty_record_entry
+label: 'Event Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      motty_locations: motty_locations
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

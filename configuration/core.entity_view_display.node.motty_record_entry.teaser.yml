@@ -1,0 +1,40 @@
+uuid: 86b0a170-dbed-468f-a767-b527930f66b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.motty_record_entry.field_motty_details
+    - field.field.node.motty_record_entry.field_motty_event_date
+    - field.field.node.motty_record_entry.field_motty_event_location
+    - field.field.node.motty_record_entry.field_motty_event_type
+    - field.field.node.motty_record_entry.field_motty_first_name
+    - field.field.node.motty_record_entry.field_motty_last_name
+    - field.field.node.motty_record_entry.field_motty_notes
+    - field.field.node.motty_record_entry.field_motty_sex
+    - field.field.node.motty_record_entry.field_motty_sort_name
+    - node.type.motty_record_entry
+  module:
+    - user
+id: node.motty_record_entry.teaser
+targetEntityType: node
+bundle: motty_record_entry
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_motty_details: true
+  field_motty_event_date: true
+  field_motty_event_location: true
+  field_motty_event_type: true
+  field_motty_first_name: true
+  field_motty_last_name: true
+  field_motty_notes: true
+  field_motty_sex: true
+  field_motty_sort_name: true
+  langcode: true
+  search_api_excerpt: true

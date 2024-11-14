@@ -1,0 +1,11 @@
+uuid: c221dc1b-d4fe-4533-a2b3-6c684c702d13
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.motty_event_types
+id: taxonomy_term.motty_event_types
+target_entity_type_id: taxonomy_term
+target_bundle: motty_event_types
+default_langcode: site_default
+language_alterable: false

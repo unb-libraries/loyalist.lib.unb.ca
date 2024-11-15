@@ -39,7 +39,7 @@ process:
       source: event_location
       entity_type: taxonomy_term
       bundle_key: vid
-      bundle: motty_event_locations
+      bundle: motty_locations
       value_key: name
 
   field_motty_first_name:

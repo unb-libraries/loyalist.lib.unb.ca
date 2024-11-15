@@ -60,6 +60,12 @@ process:
       callable: trim
       source: field_sort_name_value
 
+  field_motty_details:
+    -
+      plugin: callback
+      callable: trim
+      source: field_details_value
+
   field_motty_sex:
     -
       plugin: callback

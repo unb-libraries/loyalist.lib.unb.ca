@@ -54,6 +54,9 @@ class MottyItem extends SqlBase
         $query->leftJoin('field_data_field_notes', 'fn', 'n.nid = fn.entity_id AND fn.deleted = 0');
         $query->addField('fn', 'field_notes_value', 'field_notes_value');
 
+      $query->leftJoin('field_data_field_details', 'fd', 'n.nid = fd.entity_id AND fd.deleted = 0');
+      $query->addField('fd', 'field_details_value', 'field_details_value');
+
         return $query;
     }
 
@@ -76,6 +79,7 @@ class MottyItem extends SqlBase
           'field_sort_name_value' => 'field_sort_name_value',
           'field_sex_value' => 'field_sex_value',
           'field_notes_value' => 'field_notes_value',
+          'field_details_value' => 'field_details_value',
         ];
         return $fields;
     }

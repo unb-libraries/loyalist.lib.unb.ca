@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_motty_details
     - field.storage.node.field_motty_event_date
-    - field.storage.node.field_motty_event_location
-    - field.storage.node.field_motty_event_type
     - field.storage.node.field_motty_first_name
     - field.storage.node.field_motty_last_name
     - field.storage.node.field_motty_notes
@@ -351,14 +349,16 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_motty_event_type:
-          id: field_motty_event_type
-          table: node__field_motty_event_type
-          field: field_motty_event_type
-          relationship: none
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_motty_event_type
           group_type: group
           admin_label: ''
-          plugin_id: field
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: 'Event Type'
           exclude: false
           alter:
@@ -400,11 +400,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
+          click_sort_column: value
+          type: string
           settings:
-            link: false
-          group_column: target_id
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -414,14 +414,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_motty_event_location:
-          id: field_motty_event_location
-          table: node__field_motty_event_location
-          field: field_motty_event_location
-          relationship: none
+          convert_spaces: false
+        name_1:
+          id: name_1
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_motty_event_location
           group_type: group
           admin_label: ''
-          plugin_id: field
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Location
           exclude: false
           alter:
@@ -463,11 +466,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
+          click_sort_column: value
+          type: string
           settings:
-            link: false
-          group_column: target_id
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -477,6 +480,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          convert_spaces: false
         field_motty_details:
           id: field_motty_details
           table: node__field_motty_details
@@ -676,8 +680,8 @@ display:
             field_motty_last_name: field_motty_last_name
             field_motty_first_name: field_motty_first_name
             field_motty_sex: field_motty_sex
-            field_motty_event_type: field_motty_event_type
-            field_motty_event_location: field_motty_event_location
+            name: name
+            name_1: name_1
             field_motty_details: field_motty_details
             field_motty_notes: field_motty_notes
           default: field_motty_event_date
@@ -717,14 +721,14 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_motty_event_type:
+            name:
               sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_motty_event_location:
+            name_1:
               sortable: true
               default_sort_order: asc
               align: ''
@@ -762,15 +766,6 @@ display:
           replica: false
           query_tags: {  }
       relationships:
-        field_motty_event_location:
-          id: field_motty_event_location
-          table: node__field_motty_event_location
-          field: field_motty_event_location
-          relationship: none
-          group_type: group
-          admin_label: 'field_motty_event_location: Taxonomy term'
-          plugin_id: standard
-          required: false
         field_motty_event_type:
           id: field_motty_event_type
           table: node__field_motty_event_type
@@ -778,6 +773,15 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_motty_event_type: Taxonomy term'
+          plugin_id: standard
+          required: false
+        field_motty_event_location:
+          id: field_motty_event_location
+          table: node__field_motty_event_location
+          field: field_motty_event_location
+          relationship: none
+          group_type: group
+          admin_label: 'field_motty_event_location: Taxonomy term'
           plugin_id: standard
           required: false
       header:
@@ -804,8 +808,6 @@ display:
       tags:
         - 'config:field.storage.node.field_motty_details'
         - 'config:field.storage.node.field_motty_event_date'
-        - 'config:field.storage.node.field_motty_event_location'
-        - 'config:field.storage.node.field_motty_event_type'
         - 'config:field.storage.node.field_motty_first_name'
         - 'config:field.storage.node.field_motty_last_name'
         - 'config:field.storage.node.field_motty_notes'
@@ -831,8 +833,6 @@ display:
       tags:
         - 'config:field.storage.node.field_motty_details'
         - 'config:field.storage.node.field_motty_event_date'
-        - 'config:field.storage.node.field_motty_event_location'
-        - 'config:field.storage.node.field_motty_event_type'
         - 'config:field.storage.node.field_motty_first_name'
         - 'config:field.storage.node.field_motty_last_name'
         - 'config:field.storage.node.field_motty_notes'

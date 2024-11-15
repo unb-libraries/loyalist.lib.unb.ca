@@ -15,6 +15,7 @@ dependencies:
   module:
     - datetime
     - node
+    - taxonomy
     - user
 id: motty_database_search
 label: 'Motty Database Search'
@@ -760,7 +761,25 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        field_motty_event_location:
+          id: field_motty_event_location
+          table: node__field_motty_event_location
+          field: field_motty_event_location
+          relationship: none
+          group_type: group
+          admin_label: 'field_motty_event_location: Taxonomy term'
+          plugin_id: standard
+          required: false
+        field_motty_event_type:
+          id: field_motty_event_type
+          table: node__field_motty_event_type
+          field: field_motty_event_type
+          relationship: none
+          group_type: group
+          admin_label: 'field_motty_event_type: Taxonomy term'
+          plugin_id: standard
+          required: false
       header:
         result:
           id: result
@@ -800,7 +819,7 @@ display:
       display_extenders:
         simple_sitemap_display_extender:
           variants: {  }
-      path: motty
+      path: motty/search
     cache_metadata:
       max-age: -1
       contexts:

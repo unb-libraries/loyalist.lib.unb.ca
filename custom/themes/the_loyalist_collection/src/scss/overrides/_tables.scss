@@ -80,6 +80,13 @@ thead {
         font-size: 1.1rem;
       }
     }
+    &.views-field-field-motty-event-date {
+      .tablesort--asc {
+        &:after {
+          content: "\f886";
+        }
+      }
+    }
 
     .tablesort--desc {
       // background-image: url(/core/misc/icons/ffffff/twistie-up.svg);
@@ -91,6 +98,13 @@ thead {
         @include fa_pseudo('\f15e', 'left', 0);
         color: var(--bs-warning);
         font-size: 1.1rem;
+      }
+    }
+    &.views-field-field-motty-event-date {
+      .tablesort--desc {
+        &:after {
+          content: "\f163";
+        }
       }
     }
   }

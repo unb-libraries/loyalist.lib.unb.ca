@@ -1,0 +1,22 @@
+uuid: c14c65cb-2c56-4519-8fc4-568eeda053e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: motty_record
+label: 'Motty Records'
+type: 'canonical_entities:node'
+pattern: '/motty/list/record/[node:title]'
+selection_criteria:
+  780589a3-d10d-4d7e-8e3d-45d8e79a0103:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 780589a3-d10d-4d7e-8e3d-45d8e79a0103
+    context_mapping:
+      node: node
+    bundles:
+      motty_record_entry: motty_record_entry
+selection_logic: and
+weight: -5
+relationships: {  }

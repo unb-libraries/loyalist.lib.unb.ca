@@ -10,6 +10,7 @@ dependencies:
     - field.storage.node.field_motty_notes
     - field.storage.node.field_motty_sex
     - node.type.motty_record_entry
+    - taxonomy.vocabulary.motty_locations
   module:
     - datetime
     - node
@@ -31,71 +32,6 @@ display:
     display_options:
       title: 'Motty Database Search'
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: false
-            ellipsis: false
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_motty_event_date:
           id: field_motty_event_date
           table: node__field_motty_event_date
@@ -149,7 +85,7 @@ display:
           type: datetime_default
           settings:
             timezone_override: UTC
-            format_type: event_date
+            format_type: html_date
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -201,7 +137,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -355,7 +291,7 @@ display:
           field: name
           relationship: field_motty_event_type
           group_type: group
-          admin_label: ''
+          admin_label: 'Event Name'
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
@@ -392,7 +328,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -421,7 +357,7 @@ display:
           field: name
           relationship: field_motty_event_location
           group_type: group
-          admin_label: ''
+          admin_label: 'Location Name'
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
@@ -458,7 +394,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -522,7 +458,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -584,7 +520,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -630,7 +566,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: 'Display results'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -644,7 +580,20 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your search.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Notes for entering search terms:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Correct  spelling is important</li>\r\n      <li>Partial word search is supported, eg. <code>lou</code> also returns records that match <em>Louis</em> and <em>Lounsbury</em></li>\r\n     <li>An <em>Event Date</em> may be searched by year in within the <em>Year</em> field</li>\r\n     <li>The <em>Sex</em> field is NOT searchable</li>\r\n   </ul>\r\n  </div>\r\n</div>"
+            format: wysiwyg
+          tokenize: false
       sorts: {  }
       arguments: {  }
       filters:
@@ -668,6 +617,110 @@ display:
           plugin_id: bundle
           value:
             motty_record_entry: motty_record_entry
+          group: 1
+        combine:
+          id: combine
+          table: views
+          field: combine
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: combine
+          operator: allwords
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: Search
+            description: 'Enter 1 or more filter terms,  eg. <kbd>babbet death 1809</kbd>'
+            use_operator: false
+            operator: combine_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: query
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              record_admin: '0'
+              page_editor: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            field_motty_event_date: field_motty_event_date
+            field_motty_last_name: field_motty_last_name
+            field_motty_first_name: field_motty_first_name
+            field_motty_sex: field_motty_sex
+            name: name
+            name_1: name_1
+            field_motty_details: field_motty_details
+            field_motty_notes: field_motty_notes
+        field_motty_event_location_target_id:
+          id: field_motty_event_location_target_id
+          table: node__field_motty_event_location
+          field: field_motty_event_location_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_motty_event_location_target_id_op
+            label: Location
+            description: 'Choose 1 or more terms to filter results'
+            use_operator: false
+            operator: field_motty_event_location_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: location
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              record_admin: '0'
+              page_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: motty_locations
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: table
         options:
@@ -675,7 +728,6 @@ display:
           row_class: ''
           default_row_class: true
           columns:
-            title: title
             field_motty_event_date: field_motty_event_date
             field_motty_last_name: field_motty_last_name
             field_motty_first_name: field_motty_first_name
@@ -686,13 +738,6 @@ display:
             field_motty_notes: field_motty_notes
           default: field_motty_event_date
           info:
-            title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
             field_motty_event_date:
               sortable: true
               default_sort_order: asc
@@ -715,7 +760,7 @@ display:
               empty_column: false
               responsive: ''
             field_motty_sex:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -784,6 +829,7 @@ display:
           admin_label: 'field_motty_event_location: Taxonomy term'
           plugin_id: standard
           required: false
+      use_ajax: false
       header:
         result:
           id: result
@@ -802,6 +848,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
@@ -827,6 +874,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions

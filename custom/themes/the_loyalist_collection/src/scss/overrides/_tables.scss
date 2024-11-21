@@ -102,6 +102,9 @@ thead {
   }
 }
 
+.table-sm caption {
+  font-size: 94%;
+}
 .table-sm>:not(caption)>*>* {
   padding: $spacer * .25 $spacer * .5 $spacer * .25 $spacer * .25;
 }

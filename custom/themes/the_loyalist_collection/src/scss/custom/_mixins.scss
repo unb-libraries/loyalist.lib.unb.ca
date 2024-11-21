@@ -16,6 +16,9 @@
     padding-bottom: $spacer * $padding_value;
   } @else if $side_property == left {
     padding-left: $spacer * $padding_value;
+  } @else if $side_property == hor {
+    padding-left: $spacer * $padding_value;
+    padding-right: $spacer * $padding_value;
   }
 }
 

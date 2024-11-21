@@ -273,16 +273,9 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 23
+    weight: 21
     region: content
     settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    weight: 20
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   simple_sitemap:
     weight: 16
@@ -291,14 +284,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 22
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    weight: 21
+    weight: 20
     region: content
     settings:
       display_label: true
@@ -322,5 +308,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  promote: true
   publish_on: true
+  sticky: true
   unpublish_on: true
+  url_redirects: true

@@ -24,19 +24,31 @@ process:
       from_format: 'Y-m-d H:i:s'
       to_format: 'Y-m-d\TH:i:s'
 
+  pseudo_event_type_name:
+    -
+      plugin: callback
+      callable: ucwords
+      source: event_type
+
   field_motty_event_type:
     -
       plugin: entity_generate
-      source: event_type
+      source: '@pseudo_event_type_name'
       entity_type: taxonomy_term
       bundle_key: vid
       bundle: motty_event_types
       value_key: name
 
+  pseudo_event_location_name:
+    -
+      plugin: callback
+      callable: ucwords
+      source: event_location
+
   field_motty_event_location:
     -
       plugin: entity_generate
-      source: event_location
+      source: '@pseudo_event_location_name'
       entity_type: taxonomy_term
       bundle_key: vid
       bundle: motty_locations
@@ -65,6 +77,10 @@ process:
       plugin: callback
       callable: trim
       source: field_details_value
+    -
+      plugin: callback
+      callable: ucfirst
+      source: field_details_value
 
   field_motty_sex:
     -
@@ -76,6 +92,10 @@ process:
     -
       plugin: callback
       callable: trim
+      source: field_notes_value
+    -
+      plugin: callback
+      callable: ucfirst
       source: field_notes_value
 
 destination:

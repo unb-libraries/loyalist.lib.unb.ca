@@ -39,6 +39,19 @@ form[action="/browse"] {
   }
 }
 
+form[action="/motty/search"] {
+  .form-item-query,
+  .form-type-select {
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .form-item-query,
+    .form-type-select {
+      max-width: calc(48.5% - 82px);
+    }
+  }
+}
+
 .selectize-control.multi {
   .selectize-input [data-value] {
     background: var(--bs-gray-700);

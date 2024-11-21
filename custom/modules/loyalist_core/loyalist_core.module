@@ -12,9 +12,9 @@ use Drupal\views\ViewExecutable;
  * Implements hook_form_FORM_ID_alter.
  */
 function loyalist_core_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  // Change Views|Exposed Filter criteria|Fulltext search|Filter identifier=fulltext to 'search' type (UI: 'x').
-  if (isset($form['fulltext'])) {
-    $form['fulltext']['#type'] = 'search';
+  // Change Views|Exposed Filter criteria|Fulltext search|Filter identifier=query to 'search' type (UI: 'x').
+  if (isset($form['query'])) {
+    $form['query']['#type'] = 'search';
   } elseif (isset($form['category'])){
     // Also change input type for Top Subjects combined fields filter.
     $form['category']['#type'] = 'search';

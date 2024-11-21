@@ -438,7 +438,7 @@ display:
             operator: search_api_fulltext_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: fulltext
+            identifier: query
             required: false
             remember: false
             multiple: false

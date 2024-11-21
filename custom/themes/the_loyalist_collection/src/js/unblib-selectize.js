@@ -16,5 +16,10 @@
             plugins: ["clear_button"],
             selectOnTab: false,
         });
+        $('#edit-location').selectize({
+            maxItems: null,
+            plugins: ['clear_button'],
+            selectOnTab: false,
+        });
     });
 })(jQuery);

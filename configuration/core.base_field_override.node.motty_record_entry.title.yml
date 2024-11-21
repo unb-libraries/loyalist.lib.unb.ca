@@ -8,7 +8,7 @@ id: node.motty_record_entry.title
 field_name: title
 entity_type: node
 bundle: motty_record_entry
-label: Entry
+label: Title
 description: ''
 required: true
 translatable: true

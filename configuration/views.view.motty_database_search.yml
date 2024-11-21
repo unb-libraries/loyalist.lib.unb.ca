@@ -591,7 +591,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your search.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Notes for entering search terms:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Correct  spelling is important</li>\r\n      <li>Partial word search is supported, eg. <code>lou</code> also returns records that match <em>Louis</em> and <em>Lounsbury</em></li>\r\n     <li>An <em>Event Date</em> may be searched by year in within the <em>Year</em> field</li>\r\n     <li>The <em>Sex</em> field is NOT searchable</li>\r\n   </ul>\r\n  </div>\r\n</div>"
+            value: "<div class=\"card border mt-4\">\r\n  <div class=\"card-header card-header-warning border-bottom h6\"><span class=\"fa-solid fa-exclamation-circle me-2\" aria-hidden=\"true\"></span>Hmm, we found no records that matched your search.</div>\r\n  <div class=\"card-body m-2\">\r\n    <p class=\"card-title\">Notes for entering search terms:</p>\r\n    <ul class=\"mb-0\">\r\n      <li>Correct  spelling is important</li>\r\n      <li>Partial word search is supported, eg. <code>lou</code> also returns records that match <em>Louis</em> and <em>Lounsbury</em></li>\r\n     <li>An <em>Event Date</em> may be searched by year only</li>\r\n   </ul>\r\n  </div>\r\n</div>"
             format: wysiwyg
           tokenize: false
       sorts: {  }

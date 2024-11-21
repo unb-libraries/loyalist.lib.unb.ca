@@ -27,7 +27,7 @@ process:
   pseudo_event_type_name:
     -
       plugin: callback
-      callable: ucwords
+      callable: ucfirst
       source: event_type
 
   field_motty_event_type:

@@ -314,7 +314,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: 'Display results'
           reset_button: true
           reset_button_label: 'Show all titles'
           exposed_sorts_label: 'Sort by'
@@ -395,7 +395,7 @@ display:
           expose:
             operator_id: field_issuing_body_target_id_op
             label: Creator
-            description: 'Choose 1 or more terms to filter results'
+            description: 'Choose 1 or more <kbd>creator</kbd> terms to filter results'
             use_operator: false
             operator: field_issuing_body_target_id_op
             operator_limit_selection: false
@@ -444,7 +444,7 @@ display:
           expose:
             operator_id: term_node_tid_depth_op
             label: Category
-            description: 'Choose 1 or more terms to filter results'
+            description: 'Choose 1 or more <kbd>category</kbd> terms to filter results'
             use_operator: false
             operator: term_node_tid_depth_op
             operator_limit_selection: false

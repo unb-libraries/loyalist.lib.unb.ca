@@ -46,13 +46,6 @@ form {
       }
     }
   }
-
-  @media (min-width: 992px) {
-    .form--inline .form-item {
-      min-width: 300px;
-      width: 33%;
-    }
-  }
 }
 
 form[action="/motty/search"] {
@@ -101,4 +94,9 @@ form[action="/motty/search"] {
 .selectize-dropdown .active:not(.selected) {
   /* Increase dropdown list highlight visibility */
   background: var(--bs-primary-bg-subtle);
+}
+.selectize-input input:focus {
+  &::placeholder {
+    color: #ddd;
+  }
 }

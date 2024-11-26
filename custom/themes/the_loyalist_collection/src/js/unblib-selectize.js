@@ -22,6 +22,7 @@
             maxItems: null,
             plugins: ['clear_button'],
             selectOnTab: false,
+            placeholder: '- All locations -',
         });
     });
 })(jQuery);

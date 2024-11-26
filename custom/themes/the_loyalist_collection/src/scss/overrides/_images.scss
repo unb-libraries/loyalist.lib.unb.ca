@@ -14,3 +14,24 @@ div.img-thumbnail {
     height: auto;
   }
 }
+
+figure {
+  &.align-left {
+    margin-right: $spacer;
+  }
+  &.align-right {
+    margin-left: $spacer;
+  }
+
+  @media (max-width: 576px) {
+    &.align-left,
+    &.align-right {
+      float: none;
+      margin: 0 auto $spacer auto;
+    }
+  }
+
+  figcaption {
+    font-size: smaller;
+  }
+}

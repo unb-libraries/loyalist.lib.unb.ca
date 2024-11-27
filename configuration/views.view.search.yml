@@ -361,7 +361,7 @@ display:
           title: 'Search results for <em class="text-token">{{ arguments.search_api_fulltext }}</em>'
           default_argument_type: query_parameter
           default_argument_options:
-            query_param: fulltext
+            query_param: query
             fallback: ''
             multiple: and
           summary_options: {  }

@@ -96,13 +96,16 @@
     },
     {
       "package": {
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/OwlCarousel2/OwlCarousel2/archive/2.3.4.zip"
-        },
-        "name": "owlcarousel2/owlcarousel2",
+        "name": "jacklmoore/colorbox",
+        "version": "dev-master",
         "type": "drupal-library",
-        "version": "2.3.4"
+        "extra": {
+          "installer-name": "colorbox"
+        },
+        "dist": {
+          "url": "https://github.com/jackmoore/colorbox/archive/master.zip",
+          "type": "zip"
+        }
       },
       "type": "package"
     },
@@ -120,6 +123,18 @@
         "version": "dev-master"
       },
       "type": "package"
+    },
+    {
+      "package": {
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/OwlCarousel2/OwlCarousel2/archive/2.3.4.zip"
+        },
+        "name": "owlcarousel2/owlcarousel2",
+        "type": "drupal-library",
+        "version": "2.3.4"
+      },
+      "type": "package"
     }
   ],
   "require": {
@@ -132,6 +147,7 @@
     "drupal/blog": "^3",
     "drupal/bootstrap5": "^4",
     "drupal/ckeditor5_plugin_pack": "^1",
+    "drupal/colorbox": "^2",
     "drupal/core": "^10",
     "drupal/core-composer-scaffold": "^10",
     "drupal/core-recommended": "^10",
@@ -169,6 +185,7 @@
     "drupal/views_rows_wrapper": "^2",
     "drupal/view_unpublished": "^1",
     "fontawesome/fontawesome": "^6",
+    "jacklmoore/colorbox": "dev-master",
     "markgoodyear/scrollup": "dev-master",
     "owlcarousel2/owlcarousel2": "^2",
     "unb-libraries/composer-drupal-scaffold": "^10",

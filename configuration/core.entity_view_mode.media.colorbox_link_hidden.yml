@@ -1,0 +1,11 @@
+uuid: 1906f03b-29c6-4ee1-9d5e-b5e23c45f800
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.colorbox_link_hidden
+label: 'Colorbox Link (hidden)'
+description: 'A Colorbox formatter with hidden image for use with link text to original image overlay.'
+targetEntityType: media
+cache: true

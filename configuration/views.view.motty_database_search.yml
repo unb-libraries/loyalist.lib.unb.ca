@@ -920,7 +920,13 @@ display:
     display_options:
       display_extenders:
         simple_sitemap_display_extender:
-          variants: {  }
+          variants:
+            default:
+              index: true
+              priority: '0.9'
+              changefreq: ''
+              arguments: {  }
+              max_links: 100
       path: motty/search
     cache_metadata:
       max-age: -1

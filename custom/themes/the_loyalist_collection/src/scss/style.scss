@@ -68,7 +68,7 @@ main {
   // Revert BS5-themed <kbd>, color like <code>.
   kbd {
     background: initial;
-    color: var(--bs-code-color);
+    color: $kbd-color;
     padding: initial;
   }
 

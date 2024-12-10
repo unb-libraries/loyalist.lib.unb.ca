@@ -17,8 +17,8 @@
             dots: false,
             nav: true,
             navText: [
-                "<i class='fa-solid fa-xl fa-chevron-left' aria-label='Previous Slide'></i>",
-                "<i class='fa-solid fa-xl fa-chevron-right' aria-label='Next Slide'></i>"
+                "<i class='fa-solid fa-xl fa-chevron-left' aria-hidden='true'></i><span class='visually-hidden'>Previous Slide</span>",
+                "<i class='fa-solid fa-xl fa-chevron-right' aria-hidden='true'></i><span class='visually-hidden'>Next Slide</span>"
             ],
         });
 

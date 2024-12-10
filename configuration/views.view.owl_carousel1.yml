@@ -174,7 +174,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<span aria-hidden="true">{{ field_media_image_1__alt }}<span class="fa-solid fa-arrow-up-right-from-square ms-1 fa-2xs"></span></span>'
+            text: '<span aria-hidden="true">{{ field_media_image_1__alt }}</span><span class="fa-solid fa-arrow-up-right-from-square ms-1 fa-2xs" aria-hidden="true"></span><span class="visually-hidden">Visit image attribution website</span>'
             make_link: true
             path: '{{ field_source_website }}'
             absolute: false

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.loyalist_record.field_availability_of_other_form
     - field.field.node.loyalist_record.field_background_information
     - field.field.node.loyalist_record.field_call_number
+    - field.field.node.loyalist_record.field_digital_copies
     - field.field.node.loyalist_record.field_document_id
     - field.field.node.loyalist_record.field_finding_aid_record
     - field.field.node.loyalist_record.field_finding_aids
@@ -46,6 +47,7 @@ hidden:
   field_availability_of_other_form: true
   field_background_information: true
   field_call_number: true
+  field_digital_copies: true
   field_document_id: true
   field_finding_aid_record: true
   field_finding_aids: true

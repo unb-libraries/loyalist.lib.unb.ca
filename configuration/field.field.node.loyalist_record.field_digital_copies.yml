@@ -1,0 +1,27 @@
+uuid: 7ddcdc71-ee64-4851-b735-1157ac592178
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_digital_copies
+    - node.type.loyalist_record
+  module:
+    - file
+id: node.loyalist_record.field_digital_copies
+field_name: field_digital_copies
+entity_type: node
+bundle: loyalist_record
+label: 'Digital Copies'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: digital_copies
+  file_extensions: 'pdf xls xlsx'
+  max_filesize: ''
+  description_field: true
+field_type: file

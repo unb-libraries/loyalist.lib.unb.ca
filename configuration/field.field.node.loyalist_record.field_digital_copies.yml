@@ -11,7 +11,7 @@ id: node.loyalist_record.field_digital_copies
 field_name: field_digital_copies
 entity_type: node
 bundle: loyalist_record
-label: 'Digital Copies'
+label: 'Digital Copy Files'
 description: ''
 required: false
 translatable: false

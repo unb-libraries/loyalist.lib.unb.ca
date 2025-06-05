@@ -1,0 +1,24 @@
+uuid: 2177bab8-3347-4fc6-90ea-09442b7f4399
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_digital_copies_text
+    - filter.format.wysiwyg
+    - node.type.loyalist_record
+  module:
+    - text
+id: node.loyalist_record.field_digital_copies_text
+field_name: field_digital_copies_text
+entity_type: node
+bundle: loyalist_record
+label: 'Digital Copies'
+description: 'Additional text related to Digital Copies, to link out to other places that hold digital copies, for example. Note digital copy files will not be labelled if this field is empty.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

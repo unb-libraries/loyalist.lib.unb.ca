@@ -32,7 +32,6 @@ module:
   health_check: 0
   image: 0
   jquery_scrollup: 0
-  jquery_ui: 0
   language: 0
   link: 0
   loyalist_core: 0

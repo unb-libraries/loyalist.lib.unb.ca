@@ -82,13 +82,13 @@
     {
       "package": {
         "name": "fontawesome/fontawesome",
-        "version": "6.5.1",
+        "version": "6.7.2",
         "type": "drupal-library",
         "extra": {
           "installer-name": "fontawesome"
         },
         "dist": {
-          "url": "https://use.fontawesome.com/releases/v6.5.1/fontawesome-free-6.5.1-web.zip",
+          "url": "https://use.fontawesome.com/releases/v6.7.2/fontawesome-free-6.7.2-web.zip",
           "type": "zip"
         }
       },
@@ -143,7 +143,6 @@
     "drupal/allowed_formats": "^3",
     "drupal/admin_toolbar_mediteran": "^1",
     "drupal/antibot": "^2",
-    "drupal/better_exposed_filters": "^6",
     "drupal/blog": "^3",
     "drupal/bootstrap5": "^4",
     "drupal/ckeditor5_plugin_pack": "^1",
@@ -153,7 +152,6 @@
     "drupal/core-recommended": "^10",
     "drupal/easy_breadcrumb": "^2",
     "drupal/entity_reference_revisions": "^1",
-    "drupal/facets": "^2",
     "drupal/field_group": "^3",
     "drupal/file_delete": "^2",
     "drupal/fontawesome": "^2",
@@ -168,7 +166,6 @@
     "drupal/migrate_tools": "^6",
     "drupal/noreqnewpass": "^1",
     "drupal/override_node_options": "^2",
-    "drupal/paragraphs": "^1",
     "drupal/pathauto": "^1",
     "drupal/redirect": "^1",
     "drupal/redis": "^1",
@@ -179,6 +176,7 @@
     "drupal/search_api_attachments": "^9",
     "drupal/search_api_solr": "^4",
     "drupal/simple_sitemap": "^4",
+    "drupal/token": "^1",
     "drupal/twig_field_value": "^2",
     "drupal/twig_tweak": "^3",
     "drupal/views_argument_validator_regex": "^2",

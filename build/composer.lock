@@ -1602,17 +1602,17 @@
         },
         {
             "name": "drupal/ckeditor5_plugin_pack",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ckeditor5_plugin_pack.git",
-                "reference": "1.4.0"
+                "reference": "1.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor5_plugin_pack-1.4.0.zip",
-                "reference": "1.4.0",
-                "shasum": "79b1b8c9c6be2edf9e22969c435839cc4d9908f7"
+                "url": "https://ftp.drupal.org/files/projects/ckeditor5_plugin_pack-1.4.1.zip",
+                "reference": "1.4.1",
+                "shasum": "0e8578cfaa0145f1c20ffd5b6bba2ee49002a502"
             },
             "require": {
                 "drupal/ckeditor5_premium_features": "^1.5",
@@ -1625,8 +1625,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.4.0",
-                    "datestamp": "1751452590",
+                    "version": "1.4.1",
+                    "datestamp": "1756889886",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1658,20 +1658,20 @@
         },
         {
             "name": "drupal/ckeditor5_premium_features",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ckeditor5_premium_features.git",
-                "reference": "1.5.0"
+                "reference": "1.6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor5_premium_features-1.5.0.zip",
-                "reference": "1.5.0",
-                "shasum": "63c3650eaad369e1d0dc2fa6cf13551bcee97b6e"
+                "url": "https://ftp.drupal.org/files/projects/ckeditor5_premium_features-1.6.0.zip",
+                "reference": "1.6.0",
+                "shasum": "8eab92dd5feba639ad0093b0fc66616b134d6ad9"
             },
             "require": {
-                "drupal/core": "^10.0 || ^11.0",
+                "drupal/core": "^10.3 || ^11.0",
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "php": "^8.0"
@@ -1689,8 +1689,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.5.0",
-                    "datestamp": "1751451620",
+                    "version": "1.6.0",
+                    "datestamp": "1756888798",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -11832,16 +11832,16 @@
         },
         {
             "name": "open-telemetry/sem-conv",
-            "version": "1.36.0",
+            "version": "1.37.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/sem-conv.git",
-                "reference": "60dd18fd21d45e6f4234ecab89c14021b6e3de9a"
+                "reference": "8da7ec497c881e39afa6657d72586e27efbd29a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/sem-conv/zipball/60dd18fd21d45e6f4234ecab89c14021b6e3de9a",
-                "reference": "60dd18fd21d45e6f4234ecab89c14021b6e3de9a",
+                "url": "https://api.github.com/repos/opentelemetry-php/sem-conv/zipball/8da7ec497c881e39afa6657d72586e27efbd29a1",
+                "reference": "8da7ec497c881e39afa6657d72586e27efbd29a1",
                 "shasum": ""
             },
             "require": {
@@ -11885,7 +11885,7 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2025-08-04T03:22:08+00:00"
+            "time": "2025-09-03T12:08:10+00:00"
         },
         {
             "name": "phar-io/manifest",

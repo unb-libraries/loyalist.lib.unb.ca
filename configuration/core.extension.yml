@@ -70,6 +70,7 @@ module:
   user: 0
   view_unpublished: 0
   views_argument_validator_regex: 0
+  views_bulk_operations: 0
   views_rows_wrapper: 0
   views_ui: 0
   pathauto: 1

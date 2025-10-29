@@ -19,7 +19,6 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'post comments'
   - 'use text format filter_html'
   - 'view media'
   - 'view sp metadata'

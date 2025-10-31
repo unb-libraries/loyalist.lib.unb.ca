@@ -169,6 +169,7 @@
     "drupal/noreqnewpass": "^1",
     "drupal/override_node_options": "^2",
     "drupal/pathauto": "^1",
+    "drupal/protected_forms": "^2",
     "drupal/redirect": "^1",
     "drupal/redis": "^1",
     "drupal/samlauth": "^3",

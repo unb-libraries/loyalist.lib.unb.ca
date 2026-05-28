@@ -149,19 +149,18 @@
     "drupal/bootstrap5": "^4",
     "drupal/ckeditor5_plugin_pack": "^1",
     "drupal/colorbox": "^2",
-    "drupal/core": "^10",
-    "drupal/core-composer-scaffold": "^10",
-    "drupal/core-recommended": "^10",
+    "drupal/core": "^11",
+    "drupal/core-composer-scaffold": "^11",
+    "drupal/core-recommended": "^11",
     "drupal/easy_breadcrumb": "^2",
     "drupal/entity_reference_revisions": "^1",
     "drupal/field_group": "^3",
-    "drupal/file_delete": "^2",
+    "drupal/file_delete": "^3",
     "drupal/fontawesome": "^2",
     "drupal/google_analytics": "^4",
     "drupal/health_check": "^3",
-    "drupal/jquery_scrollup": "^2",
     "drupal/media_entity_file_replace": "^1",
-    "drupal/migrate_conditions": "2",
+    "drupal/migrate_conditions": "^2",
     "drupal/migrate_plus": "^6",
     "drupal/migrate_skip_on_404": "^1",
     "drupal/migrate_source_csv": "^3",
@@ -175,6 +174,7 @@
     "drupal/samlauth": "^3",
     "drupal/scheduler": "^2",
     "drupal/scn": "^2",
+    "drupal/scrollup": "^3",
     "drupal/search_api": "^1",
     "drupal/search_api_attachments": "^9",
     "drupal/search_api_solr": "^4",
@@ -190,11 +190,11 @@
     "jacklmoore/colorbox": "dev-master",
     "markgoodyear/scrollup": "dev-master",
     "owlcarousel2/owlcarousel2": "^2",
-    "unb-libraries/composer-drupal-scaffold": "^10",
+    "unb-libraries/composer-drupal-scaffold": "^11",
     "unb-libraries/saml_features": "dev-10.x-1.x"
   },
   "require-dev": {
-    "unb-libraries/drupal-development-libraries": "^10"
+    "unb-libraries/drupal-development-libraries": "^11"
   },
   "type": "project"
 }

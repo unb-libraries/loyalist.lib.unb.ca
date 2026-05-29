@@ -12,7 +12,6 @@ dependencies:
     - link
     - media
     - user
-    - views_rows_wrapper
 id: owl_carousel1
 label: 'Loyalist Carousel'
 module: views
@@ -324,18 +323,16 @@ display:
         groups:
           1: AND
       style:
-        type: rows_wrapper
+        type: grid
         options:
-          use_wrapper: 1
-          use_additional_wrapper: 0
-          element_type: '0'
-          attribute_type: '0'
-          attribute_name: 'owl-carousel owl-theme'
-          original_row_class_name: ''
-          rows_number: '3'
-          wrap_method: '1'
-          default_rows: 0
-          strip_rows: 0
+          grouping: {  }
+          columns: 3
+          automatic_width: true
+          alignment: horizontal
+          row_class_custom: ''
+          row_class_default: true
+          col_class_custom: ''
+          col_class_default: true
       row:
         type: fields
         options:
@@ -385,7 +382,8 @@ display:
     position: 1
     display_options:
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender: {  }
       block_description: 'Loyalist Owl Carousel Block'
       allow:
         items_per_page: false

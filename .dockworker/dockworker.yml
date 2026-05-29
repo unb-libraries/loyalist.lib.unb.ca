@@ -1,8 +1,9 @@
 dockworker:
   version: '6'
   drupal:
-  schemas:
-    ignore_enforcement:
+    schemas:
+      ignore_enforcement:
+        - core.entity_form_display.node.loyalist_record.default.*
   application:
     name: The Loyalist Collection
     uri: https://loyalist.lib.unb.ca

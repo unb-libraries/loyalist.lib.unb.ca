@@ -46,4 +46,5 @@ content:
 hidden:
   langcode: true
   links: true
+  search_api_attachments: true
   search_api_excerpt: true

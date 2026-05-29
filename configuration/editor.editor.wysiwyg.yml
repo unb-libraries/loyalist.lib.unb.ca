@@ -49,6 +49,7 @@ settings:
       properties:
         reversed: false
         startIndex: true
+        styles: true
       multiBlock: true
     ckeditor5_plugin_pack_find_and_replace__find_and_replace:
       ui_type: dialog
@@ -80,7 +81,7 @@ settings:
         - '<kbd>'
         - '<label class for>'
         - '<li id class>'
-        - '<ol id type class>'
+        - '<ol id class>'
         - '<p id class>'
         - '<section id class>'
         - '<span aria-hidden data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date data-color lang class>'
@@ -94,7 +95,7 @@ settings:
         - '<thead class>'
         - '<tr data-ch-id data-ch-days data-ch-date data-ch-format-time data-ch-format-date id class>'
         - '<u class>'
-        - '<ul class id role type>'
+        - '<ul class id role>'
         - '<drupal-media class title>'
         - '<drupal-entity alt class data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode title>'
         - '<col width>'

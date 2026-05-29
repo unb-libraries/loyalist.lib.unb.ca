@@ -194,4 +194,5 @@ hidden:
   field_accompanying_record: true
   field_document_id: true
   langcode: true
+  search_api_attachments: true
   search_api_excerpt: true

@@ -341,14 +341,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          convert_spaces: false
           set_precision: false
           precision: 0
           decimal: .
-          format_plural: 0
+          format_plural: false
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ' ('
           suffix: )
+          convert_spaces: false
       pager:
         type: some
         options:
@@ -838,14 +838,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          convert_spaces: false
           set_precision: false
           precision: 0
           decimal: .
-          format_plural: 0
+          format_plural: false
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ' ('
           suffix: )
+          convert_spaces: false
       pager:
         type: none
         options:
@@ -928,9 +928,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              record_admin: '0'
-              page_editor: '0'
             placeholder: ''
           is_grouped: false
           group_info:

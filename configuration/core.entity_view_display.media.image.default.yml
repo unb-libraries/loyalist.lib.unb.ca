@@ -30,6 +30,7 @@ hidden:
   field_mime_type: true
   langcode: true
   name: true
+  search_api_attachments: true
   search_api_excerpt: true
   thumbnail: true
   uid: true

@@ -92,4 +92,5 @@ content:
 hidden:
   field_motty_sort_name: true
   langcode: true
+  search_api_attachments: true
   search_api_excerpt: true

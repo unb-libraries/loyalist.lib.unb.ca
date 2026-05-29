@@ -1,0 +1,8 @@
+scrollup_position: '1'
+scrollup_button_bg_color: '#000000'
+scrollup_button_hover_bg_color: '#282828'
+scrollup_title: ''
+scrollup_window_position: '100'
+scrollup_speed: '300'
+scrollup_themename:
+  nblce_lib_unb_ca: the_loyalist_collection

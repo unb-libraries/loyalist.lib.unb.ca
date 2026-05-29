@@ -7,7 +7,7 @@ dependencies:
 id: all_vocabulary_taxonomy_entries
 label: 'All vocabulary taxonomy entries'
 type: 'canonical_entities:taxonomy_term'
-pattern: '[term:vocabulary]/[term:name]'
+pattern: '/[term:vocabulary]/[term:name]'
 selection_criteria:
   14c013f2-9a53-4239-983d-e461fe977e6a:
     id: 'entity_bundle:taxonomy_term'

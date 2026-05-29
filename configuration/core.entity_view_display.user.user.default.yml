@@ -36,4 +36,5 @@ content:
 hidden:
   blog__personal_blog_link: true
   langcode: true
+  search_api_attachments: true
   search_api_excerpt: true

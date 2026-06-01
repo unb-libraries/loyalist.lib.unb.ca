@@ -36,13 +36,3 @@ function loyalist_core_page_attachments(array &$attachments) {
     $attachments['#attached']['library'][] = 'the_loyalist_collection/claro-ck5admin-overrides';
   }
 }
-
-/**
- * Implements hook_views_pre_render.
- */
-function loyalist_core_views_pre_render(ViewExecutable $view) {
-  if (strpos($view->getTitle(), 'Owl Carousel') !== false) {
-    // Attach OwlCarousel2 library for Views displays w/ 'Owl Carousel' contained within the title.
-    $view->element['#attached']['library'][] = 'the_loyalist_collection/owlcarousel2';
-  }
-}

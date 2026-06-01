@@ -16,18 +16,6 @@ claro-ck5admin-overrides:
     theme:
       dist/css/ck5style-admin-overrides.css: { minified: true }
 
-owlcarousel2:
-  version: 2.3.4
-  css:
-    theme:
-      /libraries/owlcarousel2/dist/assets/owl.carousel.min.css: { minified: true }
-      dist/css/unblib-owlcarousel2.css: { minified: true }
-  js:
-    /libraries/owlcarousel2/dist/owl.carousel.min.js: { minified: true }
-    dist/js/unblib-owlcarousel2.js: { }
-  dependencies:
-    - core/jquery
-
 unblib-selectize:
   version: 0.15.2
   css:

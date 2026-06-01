@@ -5,7 +5,7 @@ use Drupal\views\ViewExecutable;
 /**
  * Implements hook_views_pre_render().
  */
-function carousel_carousel_views_pre_render(ViewExecutable $view) {
+function loyalist_carousel_views_pre_render(ViewExecutable $view) {
   // Target this particular view/display (replace with real ids).
   if ($view->id() === 'owl_carousel1' && $view->current_display === 'block_1') {
     if (isset($view->element) && is_array($view->element)) {

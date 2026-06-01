@@ -1,0 +1,6 @@
+name: Loyalist Carousel
+type: module
+description: Carousel functionality extension for loyalist.lib.unb.ca
+core: 11.x
+core_version_requirement: ^9 || ^10 || ^11
+package: Custom

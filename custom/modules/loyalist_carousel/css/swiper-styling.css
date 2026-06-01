@@ -1,0 +1,15 @@
+#block-the-loyalist-collection-views-block-owl-carousel1-block-1 [class^="swiper-button-"] {
+  opacity: 0;
+  color: white;
+  font-weight: 1000;
+  transition: opacity .3s;
+}
+
+#block-the-loyalist-collection-views-block-owl-carousel1-block-1:hover [class^="swiper-button-"] {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+}

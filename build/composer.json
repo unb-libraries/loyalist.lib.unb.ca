@@ -82,6 +82,10 @@
       "url": "https://packages.drupal.org/8"
     },
     {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    {
       "package": {
         "name": "fontawesome/fontawesome",
         "version": "6.7.2",
@@ -188,6 +192,7 @@
     "fontawesome/fontawesome": "^6",
     "jacklmoore/colorbox": "dev-master",
     "markgoodyear/scrollup": "dev-master",
+    "npm-asset/swiper": "^9",
     "owlcarousel2/owlcarousel2": "^2",
     "unb-libraries/composer-drupal-scaffold": "^11",
     "unb-libraries/saml_features": "dev-10.x-1.x"

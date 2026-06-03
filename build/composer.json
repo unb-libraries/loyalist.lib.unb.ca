@@ -158,7 +158,7 @@
     "drupal/core-recommended": "^11",
     "drupal/easy_breadcrumb": "^2",
     "drupal/entity_reference_revisions": "^1",
-    "drupal/field_group": "^3",
+    "drupal/field_group": "^4",
     "drupal/file_delete": "^3",
     "drupal/fontawesome": "^2",
     "drupal/google_analytics": "^4",

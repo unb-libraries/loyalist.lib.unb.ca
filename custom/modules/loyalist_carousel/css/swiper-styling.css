@@ -29,6 +29,10 @@
   background-color: rgba(161,4,1,1);
 }
 
+#block-the-loyalist-collection-views-block-owl-carousel1-block-1 [class^="swiper-button-"]:focus-visible {
+  outline: none !important;
+}
+
 #block-the-loyalist-collection-views-block-owl-carousel1-block-1:hover [class^="swiper-button-"] {
   opacity: 1;
 }

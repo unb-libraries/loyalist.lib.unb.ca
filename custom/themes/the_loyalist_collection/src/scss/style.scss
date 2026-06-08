@@ -294,6 +294,15 @@ u {
   margin-left: auto !important;
   background-size: 24px !important;
 }
+// Slide caption
+.slide-caption * {
+  color: var(--bs-gray-400) !important;
+  text-decoration-color: var(--bs-gray-800);
+  transition: text-decoration-color .25s ease-in-out;
+  &:hover {
+    text-decoration-color: var(--bs-gray-400);
+  }
+}
 // END MISC OVERRIDES.
 
 // UTILITY CLASSES.

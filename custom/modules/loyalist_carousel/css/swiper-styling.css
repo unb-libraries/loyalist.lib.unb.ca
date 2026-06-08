@@ -1,15 +1,33 @@
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+#block-the-loyalist-collection-views-block-owl-carousel1-block-1 [class^="swiper-button-prev"] {
+  left: 0;
+}
+
+#block-the-loyalist-collection-views-block-owl-carousel1-block-1 [class^="swiper-button-next"] {
+  right: 0;
+}
+
 #block-the-loyalist-collection-views-block-owl-carousel1-block-1 [class^="swiper-button-"] {
-  opacity: 0;
   color: white;
   font-weight: 1000;
-  transition: opacity .3s;
+}
+
+#block-the-loyalist-collection-views-block-owl-carousel1-block-1 [class^="swiper-button-"]::after {
+  padding: 10px;
+  background-color: rgba(0,0,0,.4);
+  transition: background-color .25s ease-in-out;
+  font-size: 1.6rem;
+}
+
+#block-the-loyalist-collection-views-block-owl-carousel1-block-1 [class^="swiper-button-"]:hover::after {
+  padding: 10px;
+  background-color: rgba(161,4,1,1);
 }
 
 #block-the-loyalist-collection-views-block-owl-carousel1-block-1:hover [class^="swiper-button-"] {
   opacity: 1;
-}
-
-.swiper-slide img {
-  max-width: 100%;
-  height: auto;
 }

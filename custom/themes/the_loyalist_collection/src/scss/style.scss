@@ -299,8 +299,12 @@ u {
   color: var(--bs-gray-400) !important;
   text-decoration-color: var(--bs-gray-800);
   transition: text-decoration-color .25s ease-in-out;
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration-color: var(--bs-gray-400);
+  }
+  &:focus-visible {
+    outline: 1px solid var(--bs-gray-400);
   }
 }
 // END MISC OVERRIDES.

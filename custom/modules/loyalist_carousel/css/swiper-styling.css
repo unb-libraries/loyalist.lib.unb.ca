@@ -23,7 +23,8 @@
   font-size: 1.6rem;
 }
 
-#block-the-loyalist-collection-views-block-owl-carousel1-block-1 [class^="swiper-button-"]:hover::after {
+#block-the-loyalist-collection-views-block-owl-carousel1-block-1 [class^="swiper-button-"]:hover::after,
+#block-the-loyalist-collection-views-block-owl-carousel1-block-1 [class^="swiper-button-"]:focus::after {
   padding: 10px;
   background-color: rgba(161,4,1,1);
 }

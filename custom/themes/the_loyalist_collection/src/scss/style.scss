@@ -305,6 +305,7 @@ u {
   }
   &:focus-visible {
     outline: 1px solid var(--bs-gray-400);
+    text-decoration-color: transparent;
   }
 }
 // END MISC OVERRIDES.

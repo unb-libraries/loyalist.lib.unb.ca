@@ -13,5 +13,21 @@
 }
 
 .swiper-slider {
-  overflow-y: hidden;
+  max-height: 267px;
+
+  @media (min-width: 1400px) {
+    max-height: 525px;
+  }
+
+  @media (min-width: 1200px) {
+    max-height: 458px;
+  }
+
+  @media (min-width: 992px) {
+    max-height: 392px;
+  }
+
+  @media (min-width: 768px) {
+    max-height: 333px;
+  }
 }

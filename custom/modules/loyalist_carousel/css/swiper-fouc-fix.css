@@ -1,3 +1,6 @@
+.swiper-wrapper {
+  flex-wrap: nowrap;
+}
 /* Hide the raw slides until Swiper is fully initialized to avoid FOUC/expanded slides.
    We reveal the slider when the JS adds the .swiper-ready class. */
 .swiper-slider {

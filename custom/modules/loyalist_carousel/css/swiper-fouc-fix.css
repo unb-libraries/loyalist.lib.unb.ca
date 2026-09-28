@@ -1,5 +1,6 @@
 .carousel-swiper {
   max-height: 392px;
+  overflow: hidden;
 }
 .swiper-wrapper {
   flex-wrap: nowrap;

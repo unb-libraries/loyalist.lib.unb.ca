@@ -1,7 +1,7 @@
 FROM ghcr.io/unb-libraries/drupal:11.x-1.x-unblib
 
 # Install additional OS packages.
-ENV ADDITIONAL_OS_PACKAGES="postfix php-ldap php-zip php84-pecl-redis"
+ENV ADDITIONAL_OS_PACKAGES="postfix php${PHP_VERSION}-ldap php${PHP_VERSION}-zip php${PHP_VERSION}-pecl-redis"
 ENV DRUPAL_SITE_ID="loyalist"
 ENV DRUPAL_SITE_URI="loyalist.lib.unb.ca"
 ENV DRUPAL_SITE_UUID="9ae92cc6-c0b6-41d0-b619-778b7e928952"
